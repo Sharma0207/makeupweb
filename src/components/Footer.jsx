@@ -4,7 +4,8 @@ import { DiGitBranch } from "react-icons/di";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-4 bg-black-100/55 text-white flex justify-center gap-6">
+    <footer className="w-full py-6 bg-black-100/55 text-white flex flex-col items-center gap-6">
+      <div className="flex justify-center gap-6 mb-2">
       <a
         href="https://www.instagram.com/the_imperfectjourney/"
         target="_blank"
@@ -22,6 +23,12 @@ const Footer = () => {
       >
         <FaLinkedin size={26} />
       </a>
+
+      </div>
+      
+      <p className="text-sm text-white/70 ">
+        © {new Date().getFullYear()} Developed with ❤️ by Balmukund
+      </p>
     </footer>
   );
 };

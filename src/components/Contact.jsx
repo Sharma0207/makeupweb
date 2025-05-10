@@ -7,6 +7,15 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+if (!import.meta.env.VITE_APP_EMAILJS_SERVICE_ID || 
+  !import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID || 
+  !import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY) {
+console.warn("EmailJS environment variables are not properly defined.");
+}
+
+
+
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -39,7 +48,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Balmukund Kumar",
           from_email: form.email,
-          to_email: "sharmabalmukun0207@gmail.com",
+          to_email: "supersharma0207@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
