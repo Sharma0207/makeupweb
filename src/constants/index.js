@@ -266,7 +266,7 @@ const projects = [
       },
     ],
     image: project11,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/reactPortfolio",
   },
 
   {
@@ -288,7 +288,7 @@ const projects = [
       },
     ],
     image: gearXpert,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/Razorpay-clone",
   },
   {
     name: "💬 Discord Clone",
@@ -309,7 +309,7 @@ const projects = [
       },
     ],
     image: project3,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/DISCORD_CLONE",
   },
 
   {
@@ -335,7 +335,7 @@ const projects = [
       },
     ],
     image: project4,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/developerDetective",
     live_link: "https://developer-detective-findgithub.netlify.app/",
   },
   {
@@ -361,7 +361,7 @@ const projects = [
       },
     ],
     image: project5,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/PasswordGenerator",
   },
   {
     name: "⛅ Weather App",
@@ -386,7 +386,7 @@ const projects = [
       },
     ],
     image: project6,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/Weather_app",
   },
   {
     name: "❌⭕ Tic Tac Toe",
@@ -412,7 +412,8 @@ const projects = [
       },
     ],
     image: project7,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/-Tic-Tac-Toe",
+    live_link: "https://tictactoe-gameby-balmukund.netlify.app/",
   },
   {
     name: "🔄 Share Modal",
@@ -437,7 +438,7 @@ const projects = [
       },
     ],
     image: project8,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/share-modal",
   },
   {
     name: "📝 Blog Context",
@@ -462,7 +463,7 @@ const projects = [
       },
     ],
     image: project9,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/Blog-Context",
   },
   {
     name: "💖 PlanWithLove",
@@ -488,7 +489,7 @@ const projects = [
       },
     ],
     image: project10,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Balmukund02/Plan-with-LOVE",
   },
 ];
 
