@@ -29,6 +29,7 @@ import hero2 from "./hero2.png";
 import makeup1 from "./makeupPics/makeup1.jpg";
 import makeup2 from "./makeupPics/makeup2.jpg";
 import makeup3 from "./makeupPics/makeup3.jpg";
+import makeup3c from "./makeupPics/makeup3c.jpg";
 import makeup4 from "./makeupPics/makeup4.jpg";
 import makeup5 from "./makeupPics/makeup5.jpg";
 import makeup6 from "./makeupPics/makeup6.jpg";
@@ -44,9 +45,28 @@ import makeup15 from "./makeupPics/makeup15.jpg";
 import makeup16 from "./makeupPics/makeup16.jpg";
 import makeup17 from "./makeupPics/makeup17.jpg";
 
+import makeup18 from "./makeupPics/makeup18.jpg";
+import makeup19 from "./makeupPics/makeup19.jpg";
+import makeup20 from "./makeupPics/makeup20.jpg";
+import makeup21 from "./makeupPics/makeup21.jpg";
+import makeup22 from "./makeupPics/makeup22.jpg";
+import makeup23 from "./makeupPics/makeup23.jpg";
+
+import makeup24 from "./makeupPics/makeup24.jpg";
+import makeup25 from "./makeupPics/makeup25.jpg";
+import makeup26 from "./makeupPics/makeup26.jpg";
+
 //experience logo
 import dazlogo from "./dazlogo.png";
 import lakmelogo from "./lakmelogo.png";
+import miss from "./miss.jpg";
+import cetaphillogo from "./product/cetaphillogo.png";
+import hudalogo from "./product/hudalogo.png";
+import narslogo from "./product/narslogo.jpg";
+import recodelogo from "./product/recodelogo.jpg";
+import sugarlogo from "./product/sugarlogo.png";
+import foreverlogo from "./product/foreverlogo.png";
+import kaylogo from "./product/kaylogo.jpg";
 
 import project5 from "./passgen.png";
 import project4 from "./devproj.png";
@@ -78,6 +98,7 @@ export {
   makeup1,
   makeup2,
   makeup3,
+  makeup3c,
   makeup4,
   makeup5,
   makeup6,
@@ -92,8 +113,25 @@ export {
   makeup15,
   makeup16,
   makeup17,
+  makeup18,
+  makeup19,
+  makeup20,
+  makeup22,
+  makeup23,
+  makeup24,
+  makeup25,
+  makeup26,
+  makeup21,
   dazlogo,
   lakmelogo,
+  miss,
+  cetaphillogo,
+  hudalogo,
+  narslogo,
+  recodelogo,
+  sugarlogo,
+  foreverlogo,
+  kaylogo,
 
   //products
   logo,

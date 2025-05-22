@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@carlos8a/react-whatsapp-floating-button": "^1.1.5",
     "@emailjs/browser": "^3.10.0",
     "@gsap/react": "^2.1.2",
     "@heroicons/react": "^2.2.0",

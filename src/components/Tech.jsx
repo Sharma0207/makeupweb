@@ -35,6 +35,15 @@ const Tech = () => {
 
   return (
     <section>
+    <div className="text-center mb-10">
+  <p className="text-sm sm:text-base text-gray-400 tracking-widest uppercase">
+    Trusted Brands & Tools
+  </p>
+  <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-900">
+    Products I Work With.
+  </h2>
+</div>
+
       <div className="tech-icons-wrapper flex flex-row flex-wrap justify-center gap-10">
         {technologies.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>

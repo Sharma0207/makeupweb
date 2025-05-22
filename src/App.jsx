@@ -4,6 +4,7 @@ import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Stars
 import Footer from "./components/Footer";
 import ImageGallery from "./components/ImageGallery";
 import Photoalbum from "./components/Photoalbum";
+import FloatingWhatsAppButton from "./components/FloatingWhatsApp"; 
 
 const App = () => {
   return (
@@ -27,16 +28,17 @@ const App = () => {
          {/* <Works /> */}
          <Photoalbum/>
     
-        {/* <Tech /> */}
+        <Tech />
         
         
-        {/* <Feedbacks /> */}
+        <Feedbacks />
         <div className='relative z-0'>
           <Contact />
 
           <StarsCanvas />
           <Footer/>
         </div>
+        <FloatingWhatsAppButton />
       </div>
     </BrowserRouter>
   );

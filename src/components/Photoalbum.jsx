@@ -1,13 +1,22 @@
 import { useState } from 'react';
 import {
-  makeup1, makeup10, makeup11, makeup12, makeup13, makeup15, makeup16, makeup2, makeup3, makeup4,
-  makeup5, makeup6, makeup7, makeup8,
-  makeup9
+  makeup4, makeup10, makeup9, makeup3, makeup1, 
+  makeup21, makeup13, makeup7, makeup17, makeup16, 
+  makeup23, makeup5, makeup19, makeup6, makeup11, 
+  makeup8, makeup12, makeup24, makeup2, makeup22, 
+  makeup14, makeup15, makeup25, makeup26, makeup18, 
+  makeup20
+  
 } from '../assets';
 
 const slides = [
-  makeup4,makeup10, makeup9, makeup3,makeup1,makeup16,makeup12,makeup11,makeup13,makeup15,
-  makeup5, makeup6, makeup7, makeup8,makeup2
+  makeup4, makeup10, makeup9, makeup3, makeup20, makeup1, 
+  makeup21, makeup13, makeup7, makeup17, makeup16, 
+  makeup23, makeup5, makeup19, makeup6, makeup11, 
+  makeup8, makeup12, makeup24, makeup2, makeup22, 
+  makeup14, makeup15, makeup25, makeup26, makeup18
+ 
+  
 ];
 
 

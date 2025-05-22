@@ -52,6 +52,24 @@ import {
   makeup17,
   dazlogo,
   lakmelogo,
+  miss,
+  makeup19,
+  makeup20,
+  makeup18,
+  makeup23,
+  makeup25,
+  makeup24,
+  makeup26,
+  makeup21,
+  foreverlogo,
+  sugarlogo,
+  narslogo,
+  recodelogo,
+  hudalogo,
+  cetaphillogo,
+  kaylogo,
+  makeup22,
+  makeup3c,
 } from "../assets";
 
 // Import Tekisky separately
@@ -90,6 +108,10 @@ const services = [
     icon: makeup17,
   },
   {
+    title: "Bridal Makeup",
+    icon: makeup20,
+  },
+  {
     title: "Party Makeup",
     icon: makeup7,
   },
@@ -99,11 +121,19 @@ const services = [
   },
   {
     title: "Engagement Look",
+    icon: makeup18,
+  },
+  {
+    title: "Engagement Look",
     icon: makeup15,
   },
   {
     title: "Walima Bride",
     icon: makeup12,
+  },
+  {
+    title: "Walima Bride",
+    icon: makeup19,
   },
   {
     title: "south Indian Bride",
@@ -121,36 +151,55 @@ const services = [
     title: "corporate Look",
     icon: makeup16,
   },
+  {
+    title: "Beauty Pageant Look",
+    icon: makeup21,
+  },
+  {
+    title: "creative makeup",
+    icon: makeup23,
+  },
+  {
+    title: "creative makeup",
+    icon: makeup25,
+  },
+  {
+    title: "creative makeup",
+    icon: makeup24,
+  },
+  {
+    title: "creative makeup",
+    icon: makeup26,
+  },
 ];
-
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Forever52",
+    icon: foreverlogo,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "Sugar Cosmetics",
+    icon: sugarlogo,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Kay Beauty",
+    icon: kaylogo,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "NARS",
+    icon: narslogo,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Recode Studios",
+    icon: recodelogo,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Huda Beauty",
+    icon: hudalogo,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Cetaphil",
+    icon: cetaphillogo,
   },
 ];
 
@@ -163,6 +212,16 @@ const experiences = [
     date: "Jan 2025 - present",
     points: [
       "Trained aspiring makeup artists through hands-on sessions, skin analysis, and in-depth beauty theory, with a focus on bridal, party, and editorial looks.",
+    ],
+  },
+  {
+    title: "Official Makeup Artist – Miss Universe Bihar 2024 & 2025",
+    company_name: "Miss Universe Bihar",
+    icon: miss, // Replace with the appropriate icon reference
+    iconBg: "#ffff", // You can customize this color as well
+    date: "2024 & 2025",
+    points: [
+      "Worked as an official MUA for Miss Universe Bihar, creating stage-ready, camera-ready looks in collaboration with a professional styling team under tight event timelines..",
     ],
   },
   {
@@ -180,27 +239,51 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Huzaif proved me wrong.",
-    name: "MD Mustaqeem",
-    designation: "Ecommerce",
-    company: "QuickMart",
-    image: firstTestimonial,
+      "Mujhe yeh makeup bohot sundar laga! Bridal look perfect tha — eyes, lips sab on point. Makeupbyanchla ki magic zaroor recommend karungi. Thanks!",
+    name: "Ruchi sharma",
+    designation: "Jehanabad",
+    company: "Bihar",
+    image: makeup20,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Huzaif does.",
-    name: "Abdul Raheman",
-    designation: "Ecommerce Business",
-    company: "justbuyz",
-    image: secondTestimonial,
+      "Absolutely loved my party look! The makeup was flawless – from the eyes to the lips.Anchala truly worked her magic. Highly recommend!.",
+    name: "Amisha Sharan",
+    designation: "Delhi",
+    company: "India",
+    image: makeup22,
   },
   {
     testimonial:
-      "After Huzaif optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "James Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: thirdTestimonial,
+      "25th anniversary pe wedding jaisi excitement thi! Pehle thoda nervous thi makeup ko leke, lekin result dekh ke bahut khush hui. Sab keh rahe the, Apni shaadi se bhi zyada khubsurat lag rahi ho!",
+    name: "Mrs Sharma",
+    designation: "Patna",
+    company: "Bihar",
+    image: makeup3c,
+  },
+  {
+    testimonial:
+      "I was a bit nervous about my engagement look at first, but once I saw the final result, I was beyond happy. The makeup was flawless and made me feel so confident and radiant throughout the day!",
+    name: "Priyanka",
+    designation: "Patna",
+    company: "Bihar",
+    image: makeup18,
+  },
+  {
+    testimonial:
+      "I still can’t get over my look for Miss Universe Bihar! I was a little anxious at first, but the final result was absolutely stunning. The makeup brought out my confidence and made me feel stage-ready like never before!",
+    name: "Eshika",
+    designation: "Patna",
+    company: "Bihar",
+    image: makeup21,
+  },
+  {
+    testimonial:
+      "Mera walima look bohot acha tha! Makeup ke baad khud ko bohot confident feel kiya. Sab log meri tareef kar rahe thay aur mujhe bohot pasand aaya. Makeup ne mera look bilkul enhance kar diya tha, jo din ko aur bhi khaas bana diya.",
+    name: "Afsha",
+    designation: "Patna",
+    company: "Bihar",
+    image: makeup19,
   },
 ];
 

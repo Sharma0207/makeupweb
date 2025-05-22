@@ -40,27 +40,27 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
   return (
     <div
       ref={cardRef}
-      className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
+      className="bg-[#DA70D6] p-10 rounded-3xl xs:w-[320px] w-full"
     >
-      <p className="text-white font-black text-[48px]">"</p>
+      <p className="text-white font-black text-[50px]">"</p>
 
       <div className="mt-1">
-        <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
+        <p className="text-white tracking-wider text-[15px]">{testimonial}</p>
 
         <div className="mt-7 flex justify-between items-center gap-1">
           <div className="flex-1 flex flex-col">
-            <p className="text-white font-medium text-[16px]">
-              <span className="blue-text-gradient">@</span> {name}
+            <p className="text-white-100 font-medium text-[19px]">
+              <span className="blue-text-gradient"></span> {name}
             </p>
-            <p className="mt-1 text-secondary text-[12px]">
-              {designation} of {company}
+            <p className="mt-1 text-black font-semibold text-[10px]">
+              {designation},{company}
             </p>
           </div>
 
           <img
             src={image}
             alt={`feedback_by-${name}`}
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-20 h-20 rounded-full object-cover"
           />
         </div>
       </div>
@@ -70,11 +70,11 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
-      <div className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}>
+    <div className={`mt-12 bg-slate-200 rounded-[20px]`}>
+      <div className={`bg-slate-100 rounded-2xl ${styles.padding} min-h-[300px]`}>
         <div>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <p className={styles.sectionSubText}>Real Stories, Real Results</p>
+          <h2 className={styles.sectionHeadText}>TESTIMONIALS.</h2>
         </div>
       </div>
       <div

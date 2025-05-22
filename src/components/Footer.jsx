@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="w-full py-6 bg-black-100/55 text-white flex flex-col items-center gap-6">
       <div className="flex justify-center gap-6 mb-2">
       <a
-        href="https://www.instagram.com/the_imperfectjourney/"
+        href="https://www.instagram.com/makeupbyanchla?igsh=NGpjbG1hc2w5MXR0&utm_source=qr"
         target="_blank"
         rel="noopener noreferrer"
       >
