@@ -22,7 +22,7 @@ import project11 from "./portfolio.png";
 // hero section images
 import lipstic from "./lipstic.png";
 import brush from "./brush.png";
-import hero3 from "./Hero3.png";
+import hero3 from "./hero3.png";
 import hero2 from "./hero2.png";
 
 //makeup crousal
