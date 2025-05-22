@@ -68,7 +68,7 @@ const App = () => {
           <Hero />
           <ImageGallery />
         </div>
-        <div className="mt-8 sm:mt-32 md:mt-0">
+        <div className="mt-8 sm:mt-40 md:mt-0">
           <About />
         </div>
         <Experience />
