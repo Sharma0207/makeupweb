@@ -38,10 +38,10 @@ const ServiceCard = ({ index, title, icon }) => {
 
   return (
     <Tilt className="xs:w-[250px] w-full">
-      <div ref={cardRef} className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card">
-        <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-          <img src={icon} alt="web-development" className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
+      <div ref={cardRef} className="w-full green-pink-gradient p-[1px] rounded-[20px] ">
+        <div className="bg-[#d658c1b4] rounded-[20px] py-1 px-2 min-h-[280px] flex justify-evenly items-center flex-col">
+          <img src={icon}  className="w-52 h-52" />
+          <h3 className="text-white italic font-extralight text-[15px] underline  text-center">{title}</h3>
         </div>
       </div>
     </Tilt>
@@ -67,21 +67,24 @@ const About = () => {
   return (
     <>
       <div ref={headingRef}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        
+        <h2 className={styles.sectionHeadText}>Introduction.</h2>
+        <p className={styles.sectionSubText}> Meet Anchala Sharma</p>
+        <p className="text-[#FFB22C] font-semi-bold">Makeup Artist | Educator | Beauty Enthusiast</p>
       </div>
 
-      <p ref={paragraphRef} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-      I am a dedicated full-stack developer with hands-on experience in building dynamic web applications
-       using the MERN stack (MongoDB, Express.js, React.js, Node.js). 
-       From crafting seamless user interfaces to developing robust backend APIs, 
-       I specialize in delivering end-to-end solutions that are scalable, efficient, and user-friendly.
-       Whether it's designing modern UI/UX or integrating complex third-party APIs,
-        I thrive on solving real-world challenges through clean and impactful code. 
-        Let’s build something exceptional together!
+      <p ref={paragraphRef} className="mt-4 text-black text-[17px] max-w-3xl leading-[30px]">
+      I’m Anchala Sharma — a professional makeup artist and educator known as @makeupbyanchala. With a passion for enhancing natural beauty, I specialize in bridal, editorial, and special occasion makeup, along with personalized training programs for aspiring artists.
+      From flawless glam to expert education, my goal is to help you look and feel your absolute best.<br/>
+<span className="italic text-[#F564A9]">Let’s create beauty that inspires confidence.Here’s a glimpse of the magic in action!</span>
+
+
       </p>
 
+    
+
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-10">
+     
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

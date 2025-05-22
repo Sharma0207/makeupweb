@@ -49,5 +49,5 @@ const Tech = () => {
     </section>
   );
 };
-
 export default SectionWrapper(Tech, "");
+

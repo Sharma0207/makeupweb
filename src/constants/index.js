@@ -38,6 +38,20 @@ import {
   firstTestimonial,
   secondTestimonial,
   thirdTestimonial,
+  makeup9,
+  makeup14,
+  makeup15,
+  makeup12,
+  makeup4,
+  makeup6,
+  makeup7,
+  makeup10,
+  makeup3,
+  makeup5,
+  makeup16,
+  makeup17,
+  dazlogo,
+  lakmelogo,
 } from "../assets";
 
 // Import Tekisky separately
@@ -60,20 +74,52 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Full-Stack Developer",
-    icon: web,
+    title: "Bridal Makeup",
+    icon: makeup9,
   },
   {
-    title: "Frontend Developer",
-    icon: mobile,
+    title: "Bridal Makeup",
+    icon: makeup4,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Bridal Makeup",
+    icon: makeup6,
   },
   {
-    title: "Ui UX Designer",
-    icon: creator,
+    title: "Bridal Makeup",
+    icon: makeup17,
+  },
+  {
+    title: "Party Makeup",
+    icon: makeup7,
+  },
+  {
+    title: "Party Makeup",
+    icon: makeup14,
+  },
+  {
+    title: "Engagement Look",
+    icon: makeup15,
+  },
+  {
+    title: "Walima Bride",
+    icon: makeup12,
+  },
+  {
+    title: "south Indian Bride",
+    icon: makeup10,
+  },
+  {
+    title: "25th Anniversary Look",
+    icon: makeup3,
+  },
+  {
+    title: "Cocktail makeup",
+    icon: makeup5,
+  },
+  {
+    title: "corporate Look",
+    icon: makeup16,
   },
 ];
 
@@ -106,49 +152,27 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Material Ui",
-    icon: mui,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Express Js",
-    icon: express,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "MySql",
-    icon: mysql,
-  },
-
-  {
-    name: "git",
-    icon: git,
-  },
 ];
 
 const experiences = [
   {
-    title: "Full-Stack Developer",
-    company_name: "Tekisky",
-    icon: tekisky,
+    title: "Skin & Makeup Tutor",
+    company_name: "Dazzling world",
+    icon: dazlogo,
     iconBg: "#383E56",
-    date: "Jan 2023 - present",
+    date: "Jan 2025 - present",
     points: [
-      "Developing and maintaining web applications using MERN technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Trained aspiring makeup artists through hands-on sessions, skin analysis, and in-depth beauty theory, with a focus on bridal, party, and editorial looks.",
+    ],
+  },
+  {
+    title: "Certified Makeup & Skin Artist",
+    company_name: "Lakmé Academy",
+    icon: lakmelogo,
+    iconBg: "#383E56",
+    date: "Jan 2024 - Dec 2024",
+    points: [
+      "Completed professional training in makeup and skin care at Lakmé Academy, gaining expertise in beauty techniques and product knowledge.",
     ],
   },
 ];

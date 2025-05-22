@@ -26,11 +26,12 @@ const Navbar = () => {
   }, []);
 
   return (
+    
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-8 z-20 ${
+        scrolled ? "bg-slate-100" : "bg-white"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -44,8 +45,8 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Balmukund &nbsp;
-            <span className='sm:block hidden'> | Kumar</span>
+             &nbsp;
+            <span className='sm:block hidden'> </span>
           </p>
         </Link>
 
@@ -54,8 +55,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-black" : "text-black"
+              } hover:text-blue-500 text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>

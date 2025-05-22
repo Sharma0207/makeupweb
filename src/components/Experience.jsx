@@ -16,8 +16,8 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: "#DA70D6",
+        color: "#000000",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
@@ -35,7 +35,7 @@ const ExperienceCard = ({ experience }) => {
       <div>
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-black text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -61,10 +61,10 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+        From brushes to milestones 
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+         My work in motion.
         </h2>
       </motion.div>
 

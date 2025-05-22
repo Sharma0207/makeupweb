@@ -13,22 +13,17 @@ const Footer = () => {
       >
         <FaInstagram size={26} />
       </a>
-      <a href="https://github.com/Balmukund02" target="_blank" rel="noopener noreferrer">
-        <DiGitBranch size={26} />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/balmukund-kumar02/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin size={26} />
-      </a>
+      
 
       </div>
       
       <p className="text-sm text-white/70 ">
-        © {new Date().getFullYear()} Developed with ❤️ by Balmukund
+        © {new Date().getFullYear()} MAKEUP BY ANCHALA. All rights reserved 
+       
       </p>
+      <p className="text-xs text-black  text-center">
+         Developed with ❤️ by Balmukund sharma
+          </p>
     </footer>
   );
 };
