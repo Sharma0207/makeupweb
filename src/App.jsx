@@ -9,7 +9,7 @@ import FloatingWhatsAppButton from "./components/FloatingWhatsApp";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-slate-100'>
+      <div className='relative z-0 bg-slate-100 overflow-x-hidden'>
         
     
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
