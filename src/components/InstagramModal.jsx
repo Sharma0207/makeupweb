@@ -83,7 +83,7 @@ const InstagramModal = () => {
 
               {/* Follow Button - Responsive Size */}
               <a
-                href="https://www.instagram.com/makeupbyanchala?igsh=NGpjbG1hc2w5MXR0&utm_source=qr"
+                href="https://www.instagram.com/makeupbyanchla?igsh=NGpjbG1hc2w5MXR0&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 sm:px-8 sm:py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 text-sm sm:text-base md:text-lg"
