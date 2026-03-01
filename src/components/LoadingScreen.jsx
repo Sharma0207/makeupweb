@@ -33,7 +33,9 @@ const LoadingScreen = ({ isVisible, onComplete }) => {
                 delay: 1.0,
               }}
             >
-              <span className="tracking-[0.04em]">ANCHALA</span>
+              <span className="tracking-[0.04em]">EVA</span>
+              <span className="font-display italic text-[1.15em] relative -top-[0.05em]">G</span>
+              <span className="tracking-[0.04em]">HER</span>
             </motion.div>
 
             <motion.span
@@ -45,7 +47,7 @@ const LoadingScreen = ({ isVisible, onComplete }) => {
                 delay: 1.5,
               }}
             >
-              P O R T F O L I O
+              M A K E U P
             </motion.span>
           </div>
         </motion.div>
