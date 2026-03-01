@@ -4,6 +4,11 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      fontFamily: {
+        display: ['Playfair Display', 'serif'],
+        body: ['Montserrat', 'sans-serif'],
+        elegant: ['Cormorant Garamond', 'serif'],
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
