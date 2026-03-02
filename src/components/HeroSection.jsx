@@ -31,25 +31,25 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 0.2 }}
       >
         <div className="hidden md:flex gap-8">
-          <a href="#" className="nav-link text-white">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             Portfolio
           </a>
-          <a href="#" className="nav-link text-white">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             About
           </a>
         </div>
 
         <div className="flex flex-col items-center">
-          <span className="logo-text text-base md:text-lg tracking-[0.06em] text-white">
+          <span className="logo-text text-lg md:text-3xl tracking-[0.06em] text-white">
             EVA<span className="font-display italic text-[1.15em] relative -top-[0.02em]">G</span>HER
           </span>
         </div>
 
         <div className="hidden md:flex gap-8">
-          <a href="#" className="nav-link text-white">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             Services
           </a>
-          <a href="#" className="nav-link text-white">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             Contact
           </a>
         </div>
@@ -123,19 +123,6 @@ const HeroSection = () => {
                 animate={{ pathLength: 1, opacity: 0.9 }}
                 transition={{ duration: 2.5, ease: [0.76, 0, 0.24, 1], delay: 0.5 }}
               />
-            </svg>
-          </motion.div>
-
-          {/* Diagonal white lines over the A */}
-          <motion.div
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-              <line x1="30%" y1="0" x2="70%" y2="100%" stroke="white" strokeWidth="1" opacity="0.15" />
-              <line x1="70%" y1="0" x2="30%" y2="100%" stroke="white" strokeWidth="1" opacity="0.15" />
             </svg>
           </motion.div>
 
