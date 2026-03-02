@@ -7,24 +7,23 @@ module.exports = {
       fontFamily: {
         display: ['Playfair Display', 'serif'],
         body: ['Montserrat', 'sans-serif'],
-        elegant: ['Cormorant Garamond', 'serif'],
       },
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        background: "#FFFFFF",
+        primary: "#000000",
+        secondary: "#999999",
+        accent: "#000000",
       },
-      boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+      letterSpacing: {
+        tighter: '-.05em',
+        tight: '-.025em',
+        normal: '0',
+        wide: '.1em',
+        wider: '.2em',
+        widest: '.35em',
       },
       screens: {
         xs: "450px",
-      },
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
       },
     },
   },

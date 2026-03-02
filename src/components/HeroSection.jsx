@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Hero images from user uploads
 const heroImages = [
@@ -31,30 +32,30 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 0.2 }}
       >
         <div className="hidden md:flex gap-8">
-          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+          <Link to="/portfolio" className="nav-link text-white text-sm md:text-base font-body">
             Portfolio
-          </a>
-          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+          </Link>
+          <Link to="/about" className="nav-link text-white text-sm md:text-base font-body">
             About
-          </a>
+          </Link>
         </div>
 
-        <div className="flex flex-col items-center gap-1">
-          <span className="logo-text text-lg md:text-2xl tracking-[0.08em] text-white font-bold">
-            MAKEUP
-          </span>
-          <span className="text-white text-xs md:text-sm tracking-[0.15em] font-body">
-            <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span> ANCHALA
-          </span>
-        </div>
+          <Link to="/" className="flex flex-col items-center gap-1">
+            <span className="logo-text text-lg md:text-2xl tracking-[0.08em] text-white font-bold">
+              MAKEUP
+            </span>
+            <span className="text-white text-xs md:text-sm tracking-[0.15em] font-body">
+              <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span> ANCHALA
+            </span>
+          </Link>
 
         <div className="hidden md:flex gap-8">
-          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+          <Link to="/services" className="nav-link text-white text-sm md:text-base font-body">
             Services
-          </a>
-          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+          </Link>
+          <Link to="/contact" className="nav-link text-white text-sm md:text-base font-body">
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
