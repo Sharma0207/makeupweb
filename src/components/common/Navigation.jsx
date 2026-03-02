@@ -98,6 +98,16 @@ const Navigation = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-6 right-4 z-50 text-3xl"
+            >
+              <span className={`${isPortfolio ? 'text-black' : 'text-white'} hover:opacity-60 transition-opacity`}>
+                ✕
+              </span>
+            </button>
+
             <div className="flex flex-col gap-8 px-6 py-8">
               <Link
                 to="/portfolio"
