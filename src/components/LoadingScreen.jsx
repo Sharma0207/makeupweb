@@ -22,7 +22,7 @@ const LoadingScreen = ({ isVisible, onComplete }) => {
           />
 
           {/* Logo centered */}
-          <div className="flex flex-col items-center gap-2">
+          <div className=" text-black flex flex-col items-center gap-2">
             <motion.div
               className="logo-text text-4xl md:text-5xl"
               initial={{ opacity: 0, y: 15 }}
