@@ -20,15 +20,22 @@ const HeroSection2 = () => {
       ref={sectionRef}
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black"
     >
-      {/* Background image with parallax */}
+      {/* Background image with parallax - responsive images */}
       <motion.div
         className="absolute inset-0 w-full h-full"
         style={{ y: imageY }}
       >
+        {/* Mobile image */}
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F0e67002732654956b0d02015376c9513?format=webp&width=800&height=1200"
+          src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fcb32fcd9daa8419ba576338784d3f106?format=webp&width=800&height=1200"
           alt="Art of Makeup"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover md:hidden"
+        />
+        {/* Desktop image */}
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fddcccf787f794318ae6f0306b5ee317b?format=webp&width=800&height=1200"
+          alt="Art of Makeup"
+          className="w-full h-full object-cover hidden md:block"
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40" />
@@ -41,14 +48,13 @@ const HeroSection2 = () => {
             opacity: textOpacity,
             scale: textScale,
           }}
-          className="font-display text-5xl md:text-7xl tracking-widest text-white leading-tight"
+          className="font-display text-3xl md:text-5xl tracking-widest text-white leading-tight"
         >
-          <span className="block">THE ART OF</span>
-          <span className="block">MAKEUP</span>
+          THE ART OF MAKEUP
         </motion.h1>
       </div>
 
-      {/* Scroll to explore */}
+      {/* Scroll to explore - on image */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
