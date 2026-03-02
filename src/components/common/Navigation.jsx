@@ -45,16 +45,16 @@ const Navigation = () => {
         </Link>
       </div>
 
-      <div className="flex flex-col items-center gap-1">
-        <Link to="/" className="cursor-pointer hover:opacity-70 transition-opacity">
+      <Link to="/" className="cursor-pointer hover:opacity-70 transition-opacity">
+        <div className="flex flex-col items-center gap-1">
           <span className={`logo-text text-lg md:text-2xl tracking-[0.08em] ${logoColor} font-bold`}>
             MAKEUP
           </span>
           <span className={`${logoColor} text-xs md:text-sm tracking-[0.15em] font-body`}>
             <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span> ANCHALA
           </span>
-        </Link>
-      </div>
+        </div>
+      </Link>
 
       <div className="hidden md:flex gap-8">
         <Link
