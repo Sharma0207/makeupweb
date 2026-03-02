@@ -45,7 +45,7 @@ const LoadingScreen = ({ isVisible, onComplete }) => {
                 delay: 1.5,
               }}
             >
-              B Y  <span className="font-display italic text-[1.1em] relative -top-[0.02em]">A</span>NCHALA
+              <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span>  ANCHALA
             </motion.span>
           </div>
         </motion.div>

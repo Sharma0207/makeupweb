@@ -44,7 +44,7 @@ const HeroSection = () => {
             MAKEUP
           </span>
           <span className="text-white text-xs md:text-sm tracking-[0.15em] font-body">
-            BY <span className="font-display italic text-[1.1em] relative -top-[0.02em]">A</span>NCHALA
+            <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span> ANCHALA
           </span>
         </div>
 
