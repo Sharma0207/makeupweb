@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingScreen from "./components/LoadingScreen";
+import Navigation from "./components/common/Navigation";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
@@ -25,6 +26,7 @@ const App = () => {
         isVisible={isLoading}
         onComplete={() => setShowContent(true)}
       />
+      <Navigation />
 
       {(!isLoading || showContent) && (
         <Routes>
