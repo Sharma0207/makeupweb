@@ -22,9 +22,9 @@ const LoadingScreen = ({ isVisible, onComplete }) => {
           />
 
           {/* Logo centered */}
-          <div className=" text-black flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-3">
             <motion.div
-              className="logo-text text-4xl md:text-5xl"
+              className="text-4xl md:text-5xl font-display font-bold tracking-[0.04em] text-black"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -33,13 +33,11 @@ const LoadingScreen = ({ isVisible, onComplete }) => {
                 delay: 1.0,
               }}
             >
-              <span className="tracking-[0.04em]">EVA</span>
-              <span className="font-display italic text-[1.15em] relative -top-[0.05em]">G</span>
-              <span className="tracking-[0.04em]">HER</span>
+              MAKEUP
             </motion.div>
 
             <motion.span
-              className="logo-sub"
+              className="font-body font-400 tracking-[0.2em] uppercase text-black text-xs md:text-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
@@ -47,7 +45,7 @@ const LoadingScreen = ({ isVisible, onComplete }) => {
                 delay: 1.5,
               }}
             >
-              M A K E U P
+              B Y  A N C H A L A
             </motion.span>
           </div>
         </motion.div>

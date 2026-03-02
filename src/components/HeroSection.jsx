@@ -39,9 +39,12 @@ const HeroSection = () => {
           </a>
         </div>
 
-        <div className="flex flex-col items-center">
-          <span className="logo-text text-lg md:text-3xl tracking-[0.06em] text-white">
-            MAKEUP {" "}<span className="font-display italic text-[1.15em] relative -top-[0.02em]">BY</span>{" "}ANCHALA
+        <div className="flex flex-col items-center gap-1">
+          <span className="logo-text text-lg md:text-2xl tracking-[0.08em] text-white font-bold">
+            MAKEUP
+          </span>
+          <span className="text-white text-xs md:text-sm tracking-[0.15em] font-body">
+            BY ANCHALA
           </span>
         </div>
 
@@ -279,7 +282,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            ANCHALA SHARMA
+            Barcelona
           </motion.h2>
 
           {/* Down arrow */}
