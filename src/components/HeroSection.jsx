@@ -23,6 +23,48 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex flex-col bg-white overflow-hidden">
+      {/* Navigation */}
+      <motion.nav
+        className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 md:px-16 py-5 md:py-8 z-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        <div className="hidden md:flex gap-8">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+            Portfolio
+          </a>
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+            About
+          </a>
+        </div>
+
+        <div className="flex flex-col items-center gap-1">
+          <span className="logo-text text-lg md:text-2xl tracking-[0.08em] text-white font-bold">
+            MAKEUP
+          </span>
+          <span className="text-white text-xs md:text-sm tracking-[0.15em] font-body">
+            <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span> ANCHALA
+          </span>
+        </div>
+
+        <div className="hidden md:flex gap-8">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+            Services
+          </a>
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
+            Contact
+          </a>
+        </div>
+
+        {/* Mobile hamburger */}
+        <div className="md:hidden flex flex-col gap-[5px]">
+          <span className="block w-5 h-[1.5px] bg-white" />
+          <span className="block w-5 h-[1.5px] bg-white" />
+          <span className="block w-3 h-[1.5px] bg-white" />
+        </div>
+      </motion.nav>
+
       {/* Split layout - stacked on mobile */}
       <div className="flex-1 flex flex-col md:flex-row min-h-screen">
         {/* Left side - Image carousel */}
@@ -261,6 +303,25 @@ const HeroSection = () => {
                 fill="white"
               />
             </motion.svg>
+          </motion.div>
+
+          {/* Right side vertical nav */}
+          <motion.div
+            className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-8 z-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            {['Mood', 'Contact'].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="font-body text-[0.65rem] tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-300"
+                style={{ writingMode: 'vertical-rl' }}
+              >
+                {item}
+              </a>
+            ))}
           </motion.div>
         </motion.div>
       </div>
