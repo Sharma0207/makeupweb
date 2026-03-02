@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import HeroSection from "./components/HeroSection";
+import Header from "./components/common/Header";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,15 +26,18 @@ const App = () => {
         isVisible={isLoading}
         onComplete={() => setShowContent(true)}
       />
-      
+
       {(!isLoading || showContent) && (
-        <Routes>
-          <Route path="/" element={<HomeWrapper />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomeWrapper />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </>
       )}
     </BrowserRouter>
   );

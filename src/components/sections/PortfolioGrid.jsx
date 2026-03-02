@@ -25,20 +25,20 @@ const PortfolioCard = ({ item, index, slot }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 30 }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className={`${safeSlot.widthClass} ${safeSlot.alignClass} mb-20 md:mb-32`}
+      className={`${safeSlot.widthClass} ${safeSlot.alignClass} mb-8`}
     >
-      <div className="portfolio-item group relative overflow-hidden bg-gray-100 aspect-[3/4]">
+      <div className="portfolio-item group relative overflow-hidden bg-gray-50">
         <img
           src={item.image}
           alt={item.title}
-          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+          className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
           loading="lazy"
         />
-        <div className="portfolio-overlay">
-          <span className="font-body text-xs tracking-[0.15em] uppercase mb-1">
+        <div className="portfolio-overlay flex flex-col items-center justify-center bg-black/40 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center p-6">
+          <span className="text-primary-foreground font-body text-xs tracking-[0.15em] uppercase mb-1">
             {item.category}
           </span>
-          <h3 className="font-display text-2xl tracking-wide">
+          <h3 className="text-primary-foreground font-display text-2xl">
             {item.title}
           </h3>
         </div>

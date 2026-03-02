@@ -6,12 +6,18 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ['Playfair Display', 'serif'],
-        body: ['Montserrat', 'sans-serif'],
+        heading: ['Bebas Neue', 'sans-serif'],
+        body: ['Space Grotesk', 'sans-serif'],
       },
       colors: {
         background: "#FFFFFF",
+        foreground: "#000000",
         primary: "#000000",
+        "primary-foreground": "#FFFFFF",
         secondary: "#999999",
+        "secondary-foreground": "#333333",
+        muted: "#F4F4F5",
+        "muted-foreground": "#999999",
         accent: "#000000",
       },
       letterSpacing: {

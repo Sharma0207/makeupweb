@@ -2,10 +2,10 @@ import React from 'react';
 
 const PageLayout = ({ children }) => {
   return (
-    <div className="relative min-h-screen bg-background flex flex-col pt-24 md:pt-32">
+    <div className="relative min-h-screen bg-background flex flex-col pt-12">
       {/* Vertical center line design anchor */}
       <div className="vertical-line-anchor" />
-      
+
       <main className="relative z-10 w-full flex-grow px-4 md:px-16">
         {children}
       </main>
