@@ -1,12 +1,16 @@
 import React from 'react';
+import Navigation from '../common/Navigation';
 
 const PageLayout = ({ children }) => {
   return (
-    <div className="relative min-h-screen bg-background flex flex-col pt-12">
+    <div className="relative min-h-screen bg-background flex flex-col">
+      {/* Navigation */}
+      <Navigation />
+
       {/* Vertical center line design anchor */}
       <div className="vertical-line-anchor" />
 
-      <main className="relative z-10 w-full flex-grow px-4 md:px-16">
+      <main className="relative z-10 w-full flex-grow px-4 md:px-16 pt-24">
         {children}
       </main>
 
