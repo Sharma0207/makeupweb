@@ -27,7 +27,7 @@ const PortfolioCard = ({ item, index, slot }) => {
       transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={`${safeSlot.widthClass} ${safeSlot.alignClass} mb-20 md:mb-32`}
     >
-      <div className="portfolio-item relative overflow-hidden bg-gray-100 aspect-[3/4]">
+      <div className="portfolio-item group relative overflow-hidden bg-gray-100 aspect-[3/4]">
         <img
           src={item.image}
           alt={item.title}

@@ -84,7 +84,7 @@
 
 /* Portfolio Grid Specifics */
 .portfolio-item {
-  @apply relative overflow-hidden group;
+  @apply relative overflow-hidden;
 }
 
 .portfolio-overlay {
