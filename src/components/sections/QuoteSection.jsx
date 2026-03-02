@@ -16,7 +16,7 @@ const QuoteSection = () => {
   return (
     <section ref={sectionRef} className="bg-background py-32 lg:py-44">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <div className="font-display text-3xl md:text-5xl tracking-widest leading-relaxed text-primary">
+        <div className="font-display text-2xl md:text-4xl tracking-widest leading-snug text-primary">
           <motion.span
             style={{
               scaleY: line1ScaleY,
@@ -26,7 +26,7 @@ const QuoteSection = () => {
               transformOrigin: "center center",
             }}
           >
-            " Upto story
+            " Every face tells a story,
           </motion.span>
           <motion.span
             style={{
@@ -37,7 +37,7 @@ const QuoteSection = () => {
               transformOrigin: "center center",
             }}
           >
-            To it "
+            and makeup is my brush to paint it. "
           </motion.span>
         </div>
       </div>

@@ -62,7 +62,7 @@ const HeroSection2 = () => {
         <motion.span
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="text-white text-xs md:text-sm tracking-widest font-body uppercase drop-shadow-lg"
+          className="text-black text-xs md:text-sm tracking-widest font-body uppercase drop-shadow-lg"
         >
           Scroll to explore
         </motion.span>
