@@ -26,7 +26,7 @@ const QuoteSection = () => {
               transformOrigin: "center center",
             }}
           >
-            " Every face tells a story,
+            " Upto story
           </motion.span>
           <motion.span
             style={{
@@ -37,21 +37,9 @@ const QuoteSection = () => {
               transformOrigin: "center center",
             }}
           >
-            and makeup is my brush to paint it. "
+            To it "
           </motion.span>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-12"
-        >
-          <p className="text-secondary text-sm md:text-base tracking-widest uppercase font-body">
-            — Anchala Sharma
-          </p>
-        </motion.div>
       </div>
     </section>
   );
