@@ -4,13 +4,13 @@ import Navigation from '../common/Navigation';
 const PageLayout = ({ children }) => {
   return (
     <div className="relative min-h-screen bg-background flex flex-col">
-      {/* Navigation */}
+      {/* Navigation (fixed, so no need to reserve space in flex) */}
       <Navigation />
 
       {/* Vertical center line design anchor */}
       <div className="vertical-line-anchor" />
 
-      <main className="relative z-10 w-full flex-grow px-4 md:px-16 pt-24">
+      <main className="relative z-10 w-full flex-grow px-4 md:px-16 pt-32">
         {children}
       </main>
 
