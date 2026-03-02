@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "react-icons/fa";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const slides = [
@@ -134,7 +134,7 @@ const SliderSection = () => {
               className="flex h-12 w-12 items-center justify-center border border-primary/20 text-primary transition-colors hover:bg-primary/10 disabled:opacity-30"
               aria-label="Previous"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <MdChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={() => scroll("right")}
@@ -142,7 +142,7 @@ const SliderSection = () => {
               className="flex h-12 w-12 items-center justify-center border border-primary/20 text-primary transition-colors hover:bg-primary/10 disabled:opacity-30"
               aria-label="Next"
             >
-              <ChevronRight className="h-5 w-5" />
+              <MdChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>
