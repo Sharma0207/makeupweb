@@ -1,46 +1,75 @@
-import { motion } from "framer-motion";
-import heroImage from "../assets/hero2.jpg";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Hero images from user uploads
+const heroImages = [
+  "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fdc819d960ee1422c813bf93b1234e855?format=webp&width=800&height=1200",
+  "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F00fa925426784b21849e1bb82e492e4a?format=webp&width=800&height=1200",
+  "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F250ddc55d1c441b98043e5c8748c5f2b?format=webp&width=800&height=1200",
+  "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F695302c53cb642dcb60eb3035ff28f3e?format=webp&width=800&height=1200",
+];
+
+const SLIDE_DURATION = 4000;
 
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, SLIDE_DURATION);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex flex-col bg-white overflow-hidden">
       {/* Navigation */}
       <motion.nav
-        className="absolute top-0 left-0 right-0 flex items-center justify-between px-8 md:px-16 py-8 z-20"
+        className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 md:px-16 py-5 md:py-8 z-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.2 }}
       >
-        <div className="flex gap-8">
-          <a href="#" className="nav-link text-white">
+        <div className="hidden md:flex gap-8">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             Portfolio
           </a>
-          <a href="#" className="nav-link text-white">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             About
           </a>
         </div>
 
-        <div className="flex flex-col items-center">
-          <span className="logo-text text-lg tracking-[0.06em] text-white">
-            EVA<span className="font-display italic text-[1.15em] relative -top-[0.02em]">G</span>HER
+        <div className="flex flex-col items-center gap-1">
+          <span className="logo-text text-lg md:text-2xl tracking-[0.08em] text-white font-bold">
+            MAKEUP
+          </span>
+          <span className="text-white text-xs md:text-sm tracking-[0.15em] font-body">
+            <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span> ANCHALA
           </span>
         </div>
 
-        <div className="flex gap-8">
-          <a href="#" className="nav-link text-white">
+        <div className="hidden md:flex gap-8">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             Services
           </a>
-          <a href="#" className="nav-link text-white">
+          <a href="#" className="nav-link text-white text-sm md:text-base font-body">
             Contact
           </a>
         </div>
+
+        {/* Mobile hamburger */}
+        <div className="md:hidden flex flex-col gap-[5px]">
+          <span className="block w-5 h-[1.5px] bg-white" />
+          <span className="block w-5 h-[1.5px] bg-white" />
+          <span className="block w-3 h-[1.5px] bg-white" />
+        </div>
       </motion.nav>
 
-      {/* Split layout */}
-      <div className="flex-1 flex min-h-screen">
-        {/* Left side - Image */}
+      {/* Split layout - stacked on mobile */}
+      <div className="flex-1 flex flex-col md:flex-row min-h-screen">
+        {/* Left side - Image carousel */}
         <motion.div
-          className="hidden md:block w-1/2 relative bg-gray-100 overflow-hidden"
+          className="w-full h-[50vh] md:h-auto md:w-1/2 relative bg-gray-100 overflow-hidden"
           initial={{ clipPath: "inset(0 100% 0 0)" }}
           animate={{ clipPath: "inset(0 0% 0 0)" }}
           transition={{
@@ -49,17 +78,24 @@ const HeroSection = () => {
             delay: 0.3,
           }}
         >
-          {/* Hero image */}
-          <img
-            src={heroImage}
-            alt="Hero portrait"
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
+          {/* Image carousel with dissolve animation */}
+          <AnimatePresence mode="sync">
+            <motion.img
+              key={currentIndex}
+              src={heroImages[currentIndex]}
+              alt="Hero portrait"
+              className="absolute inset-0 w-full h-full object-cover object-top"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+            />
+          </AnimatePresence>
         </motion.div>
 
         {/* Right side - Black with large A */}
         <motion.div
-          className="w-full md:w-1/2 relative bg-black flex items-center justify-center overflow-hidden"
+          className="w-full h-[50vh] md:h-auto md:w-1/2 relative bg-black flex items-center justify-center overflow-hidden"
           initial={{ clipPath: "inset(0 0 0 100%)" }}
           animate={{ clipPath: "inset(0 0 0 0%)" }}
           transition={{
@@ -77,7 +113,7 @@ const HeroSection = () => {
           >
             <svg
               viewBox="0 0 500 700"
-              className="w-[80%] h-[90%] max-w-[500px]"
+              className="w-[60%] md:w-[80%] h-[80%] md:h-[90%] max-w-[500px]"
               preserveAspectRatio="xMidYMid meet"
             >
               {/* Large outlined letter A */}
@@ -93,23 +129,10 @@ const HeroSection = () => {
             </svg>
           </motion.div>
 
-          {/* Diagonal white lines over the A */}
-          <motion.div
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-              <line x1="30%" y1="0" x2="70%" y2="100%" stroke="white" strokeWidth="1" opacity="0.15" />
-              <line x1="70%" y1="0" x2="30%" y2="100%" stroke="white" strokeWidth="1" opacity="0.15" />
-            </svg>
-          </motion.div>
-
           {/* "Makeup artist" handwritten text */}
           <motion.div
             className="absolute z-10"
-            style={{ bottom: '28%', left: '10%', right: '10%' }}
+            style={{ bottom: '28%', left: '5%', right: '5%' }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94], delay: 1.2 }}
@@ -259,19 +282,19 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            Barcelona
+            Anchala Sharma
           </motion.h2>
 
           {/* Down arrow */}
           <motion.div
-            className="absolute z-10 bottom-8 left-1/2 -translate-x-1/2"
+            className="absolute z-10 bottom-4 md:bottom-8 left-1/2 -translate-x-1/2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 2 }}
           >
             <motion.svg
               viewBox="0 0 30 18"
-              className="w-7 h-4"
+              className="w-5 h-3 md:w-7 md:h-4"
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
