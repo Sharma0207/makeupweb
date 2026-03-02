@@ -5,49 +5,54 @@ const HeroSection2 = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end start"],
+    offset: ["start end", "center center"],
   });
 
-  // Parallax on background image - slow zoom on scroll
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  // Fade out content on scroll
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const contentY = useTransform(scrollYProgress, [0, 0.5], [0, -60]);
+  // Parallax effect for image
+  const imageY = useTransform(scrollYProgress, [0, 1], [100, -100]);
+
+  // Text animations
+  const textOpacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  const textScale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-white">
-      {/* Background Image with parallax */}
-      <motion.div className="absolute inset-0" style={{ scale: bgScale, y: bgY }}>
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black"
+    >
+      {/* Background image with parallax */}
+      <motion.div
+        className="absolute inset-0 w-full h-full"
+        style={{ y: imageY }}
+      >
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fdc819d960ee1422c813bf93b1234e855?format=webp&width=1200&height=1200"
-          alt="Anchala Sharma - Makeup Artist"
-          className="h-full w-full object-cover"
+          src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F0e67002732654956b0d02015376c9513?format=webp&width=800&height=1200"
+          alt="Art of Makeup"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
-      {/* Hero Content */}
-      <motion.div
-        style={{ opacity: contentOpacity, y: contentY }}
-        className="relative z-10 flex h-screen flex-col items-center justify-center px-4"
-      >
+      {/* Content overlay */}
+      <div className="relative z-10 text-center px-6">
         <motion.h1
-          initial={{ opacity: 0, scaleY: 0 }}
-          animate={{ opacity: 1, scaleY: 1 }}
-          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          style={{ transformOrigin: "center center" }}
-          className="text-center font-display text-5xl md:text-7xl tracking-[0.08em] text-white font-bold"
+          style={{
+            opacity: textOpacity,
+            scale: textScale,
+          }}
+          className="font-display text-5xl md:text-7xl tracking-widest text-white leading-tight"
         >
-          THE ART OF MAKEUP
+          <span className="block">THE ART OF</span>
+          <span className="block">MAKEUP</span>
         </motion.h1>
-      </motion.div>
+      </div>
 
       {/* Scroll to explore */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2"
       >
         <motion.span
