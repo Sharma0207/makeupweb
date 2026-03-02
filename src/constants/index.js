@@ -70,22 +70,61 @@ const services = [
   },
 ];
 
-const portfolio = [
+export const categories = ["All", "Bridal", "Editorial", "Party", "Creative"];
+
+export const portfolioItems = [
   {
+    id: 1,
     title: "Ethereal Bride",
-    category: "BRIDAL",
+    category: "Bridal",
     image: makeup9,
   },
   {
-    title: "High Fashion",
-    category: "EDITORIAL",
+    id: 2,
+    title: "Vogue Editorial",
+    category: "Editorial",
     image: makeup23,
   },
   {
-    title: "Evening Glam",
-    category: "PARTY",
+    id: 3,
+    title: "Midnight Glam",
+    category: "Party",
     image: makeup7,
   },
+  {
+    id: 4,
+    title: "Artistic Vision",
+    category: "Creative",
+    image: makeup25,
+  },
+  {
+    id: 5,
+    title: "Royal Nuptials",
+    category: "Bridal",
+    image: makeup4,
+  },
+  {
+    id: 6,
+    title: "Modern Muse",
+    category: "Editorial",
+    image: makeup26,
+  },
+  {
+    id: 7,
+    title: "Celebration Glow",
+    category: "Party",
+    image: makeup14,
+  },
+  {
+    id: 8,
+    title: "Conceptual Beauty",
+    category: "Creative",
+    image: makeup24,
+  },
+  {
+    id: 9,
+    title: "Classic Elegance",
+    category: "Bridal",
+    image: makeup6,
+  },
 ];
-
-export { services, portfolio };
