@@ -282,7 +282,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            Barcelona
+            Anchala Sharma
           </motion.h2>
 
           {/* Down arrow */}
