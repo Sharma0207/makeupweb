@@ -41,7 +41,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col items-center">
           <span className="logo-text text-lg md:text-3xl tracking-[0.06em] text-white">
-            MAKEUP<span className="font-display italic text-[1.15em] relative -top-[0.02em]">BY</span>ANCHALA
+            MAKEUP {" "}<span className="font-display italic text-[1.15em] relative -top-[0.02em]">BY</span>ANCHALA
           </span>
         </div>
 
