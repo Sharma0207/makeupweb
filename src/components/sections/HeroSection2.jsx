@@ -18,7 +18,7 @@ const HeroSection2 = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white"
     >
       {/* Background image with parallax - responsive images */}
       <motion.div
@@ -31,30 +31,28 @@ const HeroSection2 = () => {
           alt="Art of Makeup"
           className="w-full h-full object-cover md:hidden"
         />
-        {/* Desktop image */}
+        {/* Desktop/Laptop image - larger screen */}
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fddcccf787f794318ae6f0306b5ee317b?format=webp&width=800&height=1200"
+          src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fd85e01fed6414c6ab4e4feca50ca5ef2?format=webp&width=800&height=1200"
           alt="Art of Makeup"
           className="w-full h-full object-cover hidden md:block"
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
-      {/* Content overlay */}
+      {/* Content overlay with text on image */}
       <div className="relative z-10 text-center px-6">
         <motion.h1
           style={{
             opacity: textOpacity,
             scale: textScale,
           }}
-          className="font-display text-3xl md:text-5xl tracking-widest text-white leading-tight"
+          className="font-display text-3xl md:text-4xl tracking-widest text-white leading-tight drop-shadow-lg"
         >
           THE ART OF MAKEUP
         </motion.h1>
       </div>
 
-      {/* Scroll to explore - on image */}
+      {/* Scroll to explore - on image with animation */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -64,7 +62,7 @@ const HeroSection2 = () => {
         <motion.span
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="text-white text-xs md:text-sm tracking-widest font-body uppercase"
+          className="text-white text-xs md:text-sm tracking-widest font-body uppercase drop-shadow-lg"
         >
           Scroll to explore
         </motion.span>
