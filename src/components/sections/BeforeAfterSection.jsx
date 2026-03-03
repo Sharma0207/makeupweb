@@ -26,10 +26,10 @@ const transformations = [
   },
   {
     id: 3,
-    before: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
-    after: "https://images.unsplash.com/photo-1512207736139-c97394bf8c1e?w=500&h=500&fit=crop",
-    tagline: "Confidence In Every Stroke",
-    description: "Celebrating your unique beauty",
+    before: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2Fc69f84ae256a41dca66fd4645dd03351?format=webp&width=800&height=1200",
+    after: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F2d85daf145e446b18be69cf97b803f03?format=webp&width=800&height=1200",
+    tagline: "Everyday Elegance",
+    description: "Subtle yet stunning makeup transformation",
   },
 ];
 
@@ -226,6 +226,24 @@ const BeforeAfterSection = () => {
               <FiChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
             </button>
           </div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <a
+              href="https://wa.me/+919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border-2 border-white text-white px-8 py-3 font-body text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 rounded-lg group"
+            >
+              Book Your Transformation
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>
