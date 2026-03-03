@@ -28,22 +28,26 @@ const HeroSection2 = () => {
 
         {/* Desktop stacked images - smooth continuous scroll */}
         <motion.div
-          className="hidden md:flex flex-col absolute inset-0 w-full overflow-hidden bg-white"
+          className="hidden md:flex flex-col absolute inset-0 w-full h-full overflow-hidden bg-white"
           style={{ y: imageY }}
         >
           {/* Image 1 - scrolls up smoothly */}
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F55d173f479f94d8d946eeb1508729e33?format=webp&width=800&height=1200"
-            alt="Art of Makeup - Image 1"
-            className="w-full h-full object-cover flex-shrink-0"
-          />
+          <div className="w-full h-screen flex-shrink-0">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F55d173f479f94d8d946eeb1508729e33?format=webp&width=800&height=1200"
+              alt="Art of Makeup - Image 1"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
           {/* Image 2 - appears as image 1 scrolls up */}
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fabfd6e744ce04588842d187fb63ae562?format=webp&width=800&height=1200"
-            alt="Art of Makeup - Image 2"
-            className="w-full h-full object-cover flex-shrink-0"
-          />
+          <div className="w-full h-screen flex-shrink-0">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fabfd6e744ce04588842d187fb63ae562?format=webp&width=800&height=1200"
+              alt="Art of Makeup - Image 2"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </motion.div>
 
         {/* Fixed text overlay - stays on both images */}
