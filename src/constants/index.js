@@ -76,8 +76,9 @@ export const experiences = [
   {
     title: "Skin & Makeup Tutor",
     company_name: "Dazzling world",
-    icon: "🎨",
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F0f3d8ce9c1c24823a40f1821b771e9ad%2Fc9deac8ab95d4a40bf88a4785acb7a10?format=webp&width=800&height=1200",
     iconBg: "#DA70D6",
+    isImage: true,
     date: "Jan 2025 - present",
     points: [
       "Trained aspiring makeup artists through hands-on sessions, skin analysis, and in-depth beauty theory, with a focus on bridal, party, and editorial looks.",
@@ -86,8 +87,9 @@ export const experiences = [
   {
     title: "Official Makeup Artist – Miss Universe Bihar 2024 & 2025",
     company_name: "Miss Universe Bihar",
-    icon: "👑",
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F0f3d8ce9c1c24823a40f1821b771e9ad%2F2f714665e49f4a70b868598411883dff?format=webp&width=800&height=1200",
     iconBg: "#FFD700",
+    isImage: true,
     date: "2024 & 2025",
     points: [
       "Worked as an official MUA for Miss Universe Bihar, creating stage-ready, camera-ready looks in collaboration with a professional styling team under tight event timelines.",
@@ -96,8 +98,9 @@ export const experiences = [
   {
     title: "Certified Makeup & Skin Artist",
     company_name: "Lakmé Academy",
-    icon: "🎓",
+    icon: "https://cdn.builder.io/api/v1/image/assets%2F0f3d8ce9c1c24823a40f1821b771e9ad%2F1ed3aab5faae4efb9d38b003de8d9fc2?format=webp&width=800&height=1200",
     iconBg: "#383E56",
+    isImage: true,
     date: "Jan 2024 - Dec 2024",
     points: [
       "Completed professional training in makeup and skin care at Lakmé Academy, gaining expertise in beauty techniques and product knowledge.",

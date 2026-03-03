@@ -28,8 +28,19 @@ const ExperienceCard = ({ experience }) => {
         justifyContent: "center",
         fontSize: "1.5rem",
         boxShadow: "0 0 0 4px #ffffff, 0 0 0 1px rgba(0,0,0,0.1)",
+        padding: "8px",
       }}
-      icon={<span>{experience.icon}</span>}
+      icon={
+        experience.isImage ? (
+          <img
+            src={experience.icon}
+            alt={experience.company_name}
+            className="w-full h-full object-contain"
+          />
+        ) : (
+          <span>{experience.icon}</span>
+        )
+      }
     >
       <div>
         <h3
