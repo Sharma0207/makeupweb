@@ -3,21 +3,6 @@ import { motion } from "framer-motion";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    { name: "Instagram", url: "https://instagram.com", icon: "📸" },
-    { name: "Facebook", url: "https://facebook.com", icon: "f" },
-    { name: "Pinterest", url: "https://pinterest.com", icon: "P" },
-    { name: "Email", url: "mailto:hello@example.com", icon: "✉️" },
-  ];
-
-  const quickLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Contact", href: "/contact" },
-  ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -39,177 +24,107 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary text-white">
-      {/* Main Footer Content */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-16 py-16 lg:py-24">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+    <footer className="bg-black text-white relative">
+      {/* Main Content */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mx-auto max-w-4xl px-6 lg:px-16 py-24 lg:py-32 text-center"
+      >
+        {/* Header Label */}
+        <motion.p
+          variants={itemVariants}
+          className="font-body text-xs md:text-sm tracking-[0.35em] uppercase mb-8 text-white/70"
         >
-          {/* Brand Section */}
-          <motion.div variants={itemVariants}>
-            <h2 className="font-display text-2xl tracking-widest uppercase mb-4">
-              Anchala
-            </h2>
-            <p className="font-body text-sm text-white/70 leading-relaxed">
-              Professional makeup artist dedicated to enhancing natural beauty and creating unforgettable looks for your special moments.
-            </p>
-          </motion.div>
+          Get In Touch
+        </motion.p>
 
-          {/* Quick Links */}
-          <motion.div variants={itemVariants}>
-            <h3 className="font-display text-sm tracking-widest uppercase mb-6 font-semibold">
-              Quick Links
-            </h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        {/* Email Link - Large & Prominent */}
+        <motion.a
+          variants={itemVariants}
+          href="mailto:anchalas133@gmail.com"
+          className="inline-block mb-12 group"
+        >
+          <span className="font-display text-3xl md:text-5xl tracking-tight uppercase text-white border-b-2 border-white pb-3 md:pb-4 transition-all duration-300 group-hover:border-white/70">
+            anchalas133@gmail.com
+          </span>
+        </motion.a>
 
-          {/* Services */}
-          <motion.div variants={itemVariants}>
-            <h3 className="font-display text-sm tracking-widest uppercase mb-6 font-semibold">
-              Services
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="/services"
-                  className="font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
-                >
-                  Bridal Makeup
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services"
-                  className="font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
-                >
-                  Special Events
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services"
-                  className="font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
-                >
-                  Photoshoots
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services"
-                  className="font-body text-sm text-white/70 hover:text-white transition-colors duration-300"
-                >
-                  Makeup Lessons
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Contact & Social */}
-          <motion.div variants={itemVariants}>
-            <h3 className="font-display text-sm tracking-widest uppercase mb-6 font-semibold">
-              Connect
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-body text-xs uppercase tracking-widest text-white/50 mb-2">
-                  Email
-                </p>
-                <a
-                  href="mailto:hello@example.com"
-                  className="font-body text-sm text-white/70 hover:text-white transition-colors"
-                >
-                  hello@anchalasharma.com
-                </a>
-              </div>
-              <div>
-                <p className="font-body text-xs uppercase tracking-widest text-white/50 mb-2">
-                  Phone
-                </p>
-                <a
-                  href="tel:+919876543210"
-                  className="font-body text-sm text-white/70 hover:text-white transition-colors"
-                >
-                  +91 98765 43210
-                </a>
-              </div>
-              {/* Social Icons */}
-              <div className="flex gap-4 pt-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.2, y: -3 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 border border-white/30 flex items-center justify-center text-sm hover:border-white hover:bg-white/10 transition-all duration-300"
-                    title={social.name}
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+        {/* Phone Number */}
+        <motion.div variants={itemVariants} className="mb-8">
+          <a
+            href="tel:+919110939727"
+            className="font-body text-sm md:text-base tracking-wide text-white/80 hover:text-white transition-colors duration-300"
+          >
+            +91 9110939727
+          </a>
         </motion.div>
 
-        {/* Divider */}
-        <div className="border-t border-white/10 pt-8">
-          {/* Bottom Section */}
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex flex-col md:flex-row justify-between items-center gap-6"
+        {/* Address */}
+        <motion.div variants={itemVariants} className="mb-12">
+          <p className="font-body text-sm md:text-base tracking-wide text-white/80">
+            Patna, Bihar, India
+          </p>
+        </motion.div>
+
+        {/* Social Links - Instagram Only */}
+        <motion.div
+          variants={itemVariants}
+          className="flex gap-4 justify-center items-center mb-16"
+        >
+          <motion.a
+            href="https://instagram.com/makeupbyanchla"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.15, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
+            aria-label="Instagram"
           >
-            <p className="font-body text-xs text-white/50 uppercase tracking-widest">
-              © {currentYear} Anchala Sharma. All rights reserved.
-            </p>
+            <svg
+              fill="currentColor"
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+            >
+              <g>
+                <path d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"></path>
+                <path d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"></path>
+                <path d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"></path>
+              </g>
+            </svg>
+          </motion.a>
+        </motion.div>
+      </motion.div>
 
-            <div className="flex gap-8">
-              <a
-                href="#"
-                className="font-body text-xs text-white/50 hover:text-white/70 uppercase tracking-widest transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="font-body text-xs text-white/50 hover:text-white/70 uppercase tracking-widest transition-colors"
-              >
-                Terms of Service
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+      {/* Divider */}
+      <div className="border-t border-white/10" />
 
-      {/* Back to Top Button */}
-      <motion.button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-white text-primary flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow z-40"
-        title="Back to top"
+      {/* Bottom Section */}
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mx-auto max-w-7xl px-6 lg:px-16 py-6 text-center"
       >
-        ↑
-      </motion.button>
+        <p className="font-body text-xs text-white/50 uppercase tracking-[0.2em]">
+          © {currentYear} Makeup by Anchla &nbsp;
+          <span className="text-white/30">·</span>&nbsp;
+          Site by{" "}
+          <a
+            href="https://www.flexirl.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/50 hover:text-white/70 transition-colors duration-300 border-b border-white/30 hover:border-white/70"
+          >
+            Flexirl
+          </a>
+        </p>
+      </motion.div>
     </footer>
   );
 };

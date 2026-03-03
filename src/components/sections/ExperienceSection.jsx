@@ -5,6 +5,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../constants";
+import ImpactStats from "./ImpactStats";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -98,6 +99,9 @@ const ExperienceSection = () => {
             My Work in Motion
           </motion.h2>
         </div>
+
+        {/* Impact Stats */}
+        <ImpactStats />
 
         {/* Vertical Timeline */}
         <motion.div
