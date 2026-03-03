@@ -21,13 +21,13 @@ const CTASection = () => {
     <div
       ref={containerRef}
       className="relative w-full overflow-hidden"
-      style={{ height: "320vh" }}
+      style={{ height: "200vh" }}
     >
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-background">
-        {/* Expanding background overlay */}
+        {/* Background image with zoom animation */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-primary/40 via-primary/20 to-primary/30"
+          className="absolute inset-0"
           style={{
             width: imageWidth,
             height: imageHeight,
@@ -36,7 +36,16 @@ const CTASection = () => {
             x: "-50%",
             y: "-50%",
           }}
-        />
+        >
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F14c23c9745ba45e7b628e58f869989ba%2Fd410dac294ba4437ababa1e6e2d40aeb?format=webp&width=800&height=1200"
+            alt="Makeup styling"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+
+        {/* Overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-black/30" />
 
         {/* Elegant card — centered, appears after expansion */}
         <motion.div
