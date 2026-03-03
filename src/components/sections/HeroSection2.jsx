@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import StackedWrapper from "../StackedWrapper";
 
 const HeroSection2 = () => {
   const sectionRef = useRef(null);
@@ -18,14 +17,13 @@ const HeroSection2 = () => {
   const sectionY = useTransform(scrollYProgress, [-0.5, 0], [50, 0]);
 
   return (
-    <StackedWrapper index={0} totalSections={2}>
-      <section
-        ref={sectionRef}
-        className="relative h-screen md:min-h-[200vh] w-full bg-black"
-      >
+    <section
+      ref={sectionRef}
+      className="relative min-h-[200vh] w-full bg-black"
+    >
       {/* Sticky container for text and images - with entrance transition */}
       <motion.div
-        className="h-screen w-full flex items-center justify-center overflow-hidden bg-black md:sticky md:top-0"
+        className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-black"
         style={{
           opacity: sectionOpacity,
           y: sectionY,
@@ -82,7 +80,6 @@ const HeroSection2 = () => {
         </motion.div>
       </motion.div>
     </section>
-    </StackedWrapper>
   );
 };
 
