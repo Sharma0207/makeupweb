@@ -82,6 +82,23 @@ const About = () => {
                 </motion.p>
               </div>
             </div>
+
+            {/* Portrait image - right column */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="hidden lg:flex items-center justify-center"
+            >
+              <div className="relative overflow-hidden rounded-lg">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F5afe148e7955446c981b8ef1e6be66e5?format=webp&width=800&height=1200"
+                  alt="Anchala Sharma - Makeup Artist"
+                  className="w-full h-auto object-cover"
+                  style={{ aspectRatio: "3/4" }}
+                />
+              </div>
+            </motion.div>
           </div>
         </section>
 
