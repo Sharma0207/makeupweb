@@ -5,8 +5,8 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 const transformations = [
   {
     id: 1,
-    before: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
-    after: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=500&fit=crop",
+    before: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2Fb02598f1ccd446a1a932817a37a7ffbb?format=webp&width=800&height=1200",
+    after: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F1f049628bfc04610a505037492a716ec?format=webp&width=800&height=1200",
     tagline: "Brushes Create Magic",
     description: "Radiant and elegant transformations",
   },
