@@ -425,3 +425,31 @@ export const testimonials = [
     text: "Mera walima look bohot acha tha! Makeup ke baad khud ko bohot confident feel kiya. Sab log meri tareef kar rahe thay aur mujhe bohot pasand aaya. Makeup ne mera look bilkul enhance kar diya tha, jo din ko aur bhi khaas bana diya.",
   },
 ];
+
+export const faqs = [
+  {
+    id: 1,
+    question: "Who is a professional bridal makeup artist for weddings and special events?",
+    answer: "Makeup By Anchala is a professional bridal makeup artist specializing in HD bridal makeup, airbrush makeup, and customized wedding looks. Each look is carefully designed according to your skin type, face structure, outfit, and personal style to ensure a flawless and long-lasting finish.",
+  },
+  {
+    id: 2,
+    question: "What makeup services do you offer?",
+    answer: "We offer a complete range of makeup services, including: HD Bridal Makeup, Airbrush Bridal Makeup, Engagement & Reception Makeup, Haldi & Mehendi Makeup, Party & Event Makeup, Photoshoot & Glam Makeup. All services include premium, skin-friendly products and a long-lasting, camera-ready finish.",
+  },
+  {
+    id: 3,
+    question: "What is the cost of bridal makeup?",
+    answer: "The cost depends on the type of makeup (HD or airbrush), event type, and location. Every bride has different requirements, so packages are customized accordingly. For detailed pricing and availability, please contact us directly via WhatsApp or Instagram.",
+  },
+  {
+    id: 4,
+    question: "Do you travel for bridal and event makeup bookings?",
+    answer: "Yes, I travel to different cities and venues for bridal and event makeup bookings. Travel charges may apply depending on the location and event schedule. Early booking is recommended to secure your date, especially during peak wedding season.",
+  },
+  {
+    id: 5,
+    question: "How early should I book my wedding makeup artist?",
+    answer: "It is best to book at least 1–2 months in advance to ensure availability. Early booking also gives time for consultation or trial sessions so we can finalize your perfect look stress-free.",
+  },
+];

@@ -1,44 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const faqs = [
-  {
-    id: 1,
-    question: "What is your booking process?",
-    answer:
-      "To book a session, visit our contact page and fill out the form with your event details. I'll get back to you within 24 hours to confirm availability, discuss your vision, and finalize the booking.",
-  },
-  {
-    id: 2,
-    question: "Do you offer trial sessions before the event?",
-    answer:
-      "Yes! I highly recommend trial sessions for special occasions. This allows us to test looks, discuss preferences, and ensure you feel completely confident on your big day.",
-  },
-  {
-    id: 3,
-    question: "How long does a makeup session typically take?",
-    answer:
-      "A regular makeup session takes 30-45 minutes, while bridal makeup with trial usually takes 1.5-2 hours. The time may vary based on the complexity of the look requested.",
-  },
-  {
-    id: 4,
-    question: "What if I'm unsure about what makeup style I want?",
-    answer:
-      "Don't worry! I'll help guide you based on your face shape, skin tone, and personal style. Bring inspiration photos and let me know your preferences, and I'll create the perfect look for you.",
-  },
-  {
-    id: 5,
-    question: "Do you travel for events outside the city?",
-    answer:
-      "Yes, I do travel for special occasions like weddings and major events. Travel charges may apply depending on the distance. Please mention your location when booking.",
-  },
-  {
-    id: 6,
-    question: "Are your products hypoallergenic and cruelty-free?",
-    answer:
-      "I use only high-quality, professional-grade products from reputable brands. Many of the products I use are hypoallergenic and cruelty-free. Please inform me of any allergies or sensitivities beforehand.",
-  },
-];
+import { faqs } from "../../constants";
 
 const FAQSection = () => {
   const [expandedId, setExpandedId] = useState(null);
