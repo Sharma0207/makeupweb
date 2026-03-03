@@ -13,9 +13,9 @@ const CTASection = () => {
   const imageWidth = useTransform(scrollYProgress, [0, 0.05, 0.28], ["35%", "35%", "100%"]);
   const imageHeight = useTransform(scrollYProgress, [0, 0.05, 0.28], ["50%", "50%", "100%"]);
 
-  // Phase 2: Card fades in and slides up
-  const cardOpacity = useTransform(scrollYProgress, [0.25, 0.45, 0.85, 1], [0, 1, 1, 0]);
-  const cardY = useTransform(scrollYProgress, [0.25, 0.48], [60, 0]);
+  // Phase 2: Card fades in and slides up (appears earlier)
+  const cardOpacity = useTransform(scrollYProgress, [0.12, 0.28, 0.85, 1], [0, 1, 1, 0]);
+  const cardY = useTransform(scrollYProgress, [0.12, 0.32], [60, 0]);
 
   return (
     <div
