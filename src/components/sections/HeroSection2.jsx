@@ -5,11 +5,12 @@ const HeroSection2 = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end end"],
+    offset: ["start center", "end center"],
   });
 
-  // Smooth vertical offset - creates smooth scroll reveal between two images
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, "-100%"]);
+  // Smooth opacity transition between images
+  const image1Opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const image2Opacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
 
   return (
     <section
@@ -26,29 +27,24 @@ const HeroSection2 = () => {
           className="absolute inset-0 w-full h-full object-cover md:hidden"
         />
 
-        {/* Desktop stacked images - smooth continuous scroll */}
-        <motion.div
-          className="hidden md:flex flex-col absolute inset-0 w-full h-full overflow-hidden bg-white"
-          style={{ y: imageY }}
-        >
-          {/* Image 1 - scrolls up smoothly */}
-          <div className="w-full h-screen flex-shrink-0">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F55d173f479f94d8d946eeb1508729e33?format=webp&width=800&height=1200"
-              alt="Art of Makeup - Image 1"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        {/* Desktop images - smooth cross-fade */}
+        <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-white">
+          {/* Image 1 - fades out */}
+          <motion.img
+            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F55d173f479f94d8d946eeb1508729e33?format=webp&width=800&height=1200"
+            alt="Art of Makeup - Image 1"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: image1Opacity }}
+          />
 
-          {/* Image 2 - appears as image 1 scrolls up */}
-          <div className="w-full h-screen flex-shrink-0">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fabfd6e744ce04588842d187fb63ae562?format=webp&width=800&height=1200"
-              alt="Art of Makeup - Image 2"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </motion.div>
+          {/* Image 2 - fades in */}
+          <motion.img
+            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fabfd6e744ce04588842d187fb63ae562?format=webp&width=800&height=1200"
+            alt="Art of Makeup - Image 2"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: image2Opacity }}
+          />
+        </div>
 
         {/* Fixed text overlay - stays on both images */}
         <div className="relative z-10 text-center px-6">
