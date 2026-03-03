@@ -37,7 +37,7 @@ const BeforeAfterSection = () => {
   };
 
   return (
-    <section className="bg-background py-32 lg:py-44 border-t border-primary/10">
+    <section className="bg-black py-32 lg:py-44 border-t border-white/10">
       <div className="mx-auto max-w-6xl px-6 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -46,7 +46,7 @@ const BeforeAfterSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-xs md:text-sm tracking-[0.35em] uppercase font-body mb-4 text-secondary"
+            className="text-xs md:text-sm tracking-[0.35em] uppercase font-body mb-4 text-white/60"
           >
             Transformations
           </motion.p>
@@ -55,7 +55,7 @@ const BeforeAfterSection = () => {
             whileInView={{ opacity: 1, scaleY: 1 }}
             transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
-            className="font-display tracking-widest uppercase text-primary"
+            className="font-display tracking-widest uppercase text-white"
             style={{ fontSize: "clamp(2rem, 4vw, 4rem)", transformOrigin: "center center" }}
           >
             Before & After
@@ -65,7 +65,7 @@ const BeforeAfterSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-secondary font-body text-sm md:text-base mt-6 max-w-xl mx-auto"
+            className="text-white/70 font-body text-sm md:text-base mt-6 max-w-xl mx-auto"
           >
             Drag the slider to see the incredible transformations I create. Each look is tailored to bring out your best.
           </motion.p>
@@ -82,7 +82,7 @@ const BeforeAfterSection = () => {
               viewport={{ once: true, margin: "-100px" }}
             >
               {/* Before/After Slider */}
-              <div className="mb-6 cursor-grab active:cursor-grabbing border border-primary/10">
+              <div className="mb-6 cursor-grab active:cursor-grabbing border border-white/10">
                 <div
                   className="relative w-full aspect-square bg-muted"
                   onMouseMove={(e) => handleSliderChange(transformation.id, e)}
@@ -141,10 +141,10 @@ const BeforeAfterSection = () => {
               </div>
 
               {/* Title and Description */}
-              <h3 className="font-display text-lg tracking-wide uppercase text-primary mb-2">
+              <h3 className="font-display text-lg tracking-wide uppercase text-white mb-2">
                 {transformation.title}
               </h3>
-              <p className="font-body text-sm text-secondary leading-relaxed">
+              <p className="font-body text-sm text-white/60 leading-relaxed">
                 {transformation.description}
               </p>
             </motion.div>
