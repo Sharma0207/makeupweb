@@ -53,10 +53,12 @@ const CTASection = () => {
           style={{ opacity: cardOpacity, y: cardY }}
         >
           <div
-            className="relative flex flex-col items-center text-center w-full"
+            className="relative flex flex-col items-center text-center w-full backdrop-blur-sm"
             style={{
               maxWidth: "640px",
               padding: "0",
+              backgroundColor: "rgba(0, 0, 0, 0.75)",
+              borderRadius: "8px",
             }}
           >
             {/* Content container */}
@@ -66,7 +68,8 @@ const CTASection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-xs md:text-sm tracking-[0.4em] uppercase font-body mb-6 text-secondary/80"
+                className="text-xs md:text-sm tracking-[0.4em] uppercase font-body mb-6"
+                style={{ color: "rgba(255, 255, 255, 0.7)" }}
               >
                 Your Next Moment
               </motion.p>
@@ -76,11 +79,12 @@ const CTASection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
-                className="font-display text-primary tracking-wider uppercase mb-6"
+                className="font-display tracking-wider uppercase mb-6"
                 style={{
                   fontSize: "clamp(1.8rem, 4vw, 3rem)",
                   lineHeight: 1.2,
                   letterSpacing: "0.08em",
+                  color: "white",
                 }}
               >
                 Ready to Glow?
@@ -91,8 +95,8 @@ const CTASection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
-                className="font-body text-sm md:text-base leading-relaxed text-secondary/75 mb-10"
-                style={{ maxWidth: "520px", margin: "0 auto 40px" }}
+                className="font-body text-sm md:text-base leading-relaxed mb-10"
+                style={{ maxWidth: "520px", margin: "0 auto 40px", color: "rgba(255, 255, 255, 0.8)" }}
               >
                 Let's create a look that makes you feel confident, beautiful, and absolutely radiant. Book a consultation or session today.
               </motion.p>
@@ -106,13 +110,13 @@ const CTASection = () => {
               >
                 <a
                   href="/contact"
-                  className="inline-block bg-primary text-white px-8 md:px-12 py-3 md:py-4 font-body text-xs tracking-[0.3em] uppercase font-semibold transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
+                  className="inline-block bg-white text-black px-8 md:px-12 py-3 md:py-4 font-body text-xs tracking-[0.3em] uppercase font-semibold transition-all duration-300 hover:bg-white/90 hover:shadow-lg"
                 >
                   Book Now
                 </a>
                 <a
                   href="/portfolio"
-                  className="inline-block border border-primary/60 text-primary px-8 md:px-12 py-3 md:py-4 font-body text-xs tracking-[0.3em] uppercase transition-all duration-300 hover:border-primary hover:bg-primary/5"
+                  className="inline-block border border-white text-white px-8 md:px-12 py-3 md:py-4 font-body text-xs tracking-[0.3em] uppercase transition-all duration-300 hover:bg-white/10"
                 >
                   View Portfolio
                 </a>
