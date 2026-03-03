@@ -102,84 +102,71 @@ const InteractiveMakeupSection = () => {
         />
       </div>
 
-      {/* Scattered number circles */}
+      {/* Scattered number circles with blur effect */}
       <div className="absolute inset-0 z-[3]">
         {makeupProducts.map((product, i) => (
           <motion.button
             key={product.id}
             onClick={() => setActiveIndex(i)}
-            className={`absolute w-16 h-16 rounded-full flex items-center justify-center font-display text-sm tracking-wider cursor-pointer transition-all duration-500 ${
+            className={`absolute w-14 h-14 rounded-full flex items-center justify-center font-display text-xs tracking-wider cursor-pointer transition-all duration-500 ${
               i === activeIndex
-                ? "bg-foreground/30 text-foreground backdrop-blur-md border border-foreground/50"
-                : "bg-foreground/15 text-foreground/70 backdrop-blur-md border border-foreground/20 hover:bg-foreground/25 hover:text-foreground"
+                ? "bg-white/40 text-foreground backdrop-blur-lg border border-white/60 shadow-lg"
+                : "bg-white/20 text-foreground/80 backdrop-blur-md border border-white/30 hover:bg-white/35"
             }`}
             style={{
               top: product.position.top,
               left: product.position.left,
             }}
-            whileHover={{ scale: 1.15 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-2xl">{product.emoji}</span>
+            <span className="font-semibold">{product.number}</span>
           </motion.button>
         ))}
       </div>
 
-      {/* White detail card - bottom left */}
-      <div className="absolute bottom-8 left-8 z-[4] max-w-[500px]">
+      {/* Description card - bottom left */}
+      <div className="absolute bottom-12 left-12 z-[4] max-w-[520px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={active.id}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-card-surface rounded-lg p-8 shadow-2xl"
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="bg-white/95 backdrop-blur-sm rounded-lg overflow-hidden shadow-2xl border border-white/50"
           >
-            {/* Product number and title */}
-            <div className="flex items-baseline gap-3 mb-4">
-              <span className="font-display text-2xl text-card-text/50 font-light">
-                {active.number}
-              </span>
-              <h3 className="font-display text-3xl tracking-[0.25em] text-card-text font-medium">
-                {active.title}
-              </h3>
-            </div>
+            <div className="flex gap-0">
+              {/* Product thumbnail */}
+              <div className="w-32 h-40 flex-shrink-0 bg-gradient-to-br from-pink-50 to-amber-50 flex items-center justify-center border-r border-white/30">
+                <span className="text-5xl">{active.emoji}</span>
+              </div>
 
-            {/* Description */}
-            <p className="text-card-text/75 font-body text-sm leading-relaxed mb-6">
-              {active.description}
-            </p>
+              {/* Product details */}
+              <div className="p-6 flex flex-col justify-center flex-1">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="font-display text-lg text-gray-400">
+                    {active.number}
+                  </span>
+                  <h3 className="font-display text-2xl tracking-[0.15em] text-gray-900 font-semibold">
+                    {active.title}
+                  </h3>
+                </div>
 
-            {/* Category tag */}
-            <div className="flex items-center gap-2">
-              <span className="text-card-text/40 font-body text-xs tracking-[0.2em] uppercase">
-                Category:
-              </span>
-              <span className="text-card-text/70 font-body text-sm font-medium">
-                {active.category}
-              </span>
+                {/* Description */}
+                <p className="text-gray-700 font-body text-xs leading-relaxed mb-3">
+                  {active.description}
+                </p>
+
+                {/* Category */}
+                <span className="text-gray-500 font-body text-xs tracking-widest uppercase">
+                  {active.category}
+                </span>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
       </div>
-
-      {/* Top nav bar */}
-      <header className="absolute top-0 left-0 right-0 z-[5] flex items-center justify-between px-8 py-6">
-        <button className="text-foreground">
-          <svg width="28" height="18" viewBox="0 0 28 18" fill="none">
-            <line x1="0" y1="1" x2="28" y2="1" stroke="currentColor" strokeWidth="2" />
-            <line x1="0" y1="9" x2="28" y2="9" stroke="currentColor" strokeWidth="2" />
-            <line x1="0" y1="17" x2="28" y2="17" stroke="currentColor" strokeWidth="2" />
-          </svg>
-        </button>
-        <span className="font-display text-2xl tracking-[0.35em] text-foreground font-medium">
-          EVER
-        </span>
-        <span className="font-body text-xs tracking-[0.2em] uppercase text-foreground">
-          Makeup Products
-        </span>
-      </header>
     </section>
   );
 };
