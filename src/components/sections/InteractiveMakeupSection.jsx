@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import modelImage from "@/assets/hero2.jpg";
 
 const makeupProducts = [
   {
@@ -96,7 +95,7 @@ const InteractiveMakeupSection = () => {
       {/* Model image - foreground, centered */}
       <div className="absolute inset-0 flex items-center justify-center z-[2]">
         <img
-          src={modelImage}
+          src="https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fdc819d960ee1422c813bf93b1234e855?format=webp&width=1200&height=1200"
           alt="Makeup Model"
           className="h-full w-auto max-w-none object-cover"
           loading="eager"
