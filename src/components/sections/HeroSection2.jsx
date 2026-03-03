@@ -15,10 +15,10 @@ const HeroSection2 = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[200vh] w-full bg-white"
+      className="relative min-h-[200vh] w-full bg-black"
     >
       {/* Sticky container for text and images */}
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-white">
+      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-black">
 
         {/* Mobile image - single image */}
         <img
@@ -28,7 +28,7 @@ const HeroSection2 = () => {
         />
 
         {/* Desktop images - smooth cross-fade */}
-        <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-white">
+        <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-black">
           {/* Image 1 - fades out */}
           <motion.img
             src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F55d173f479f94d8d946eeb1508729e33?format=webp&width=800&height=1200"
