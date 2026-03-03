@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Header from "../components/common/Header";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -33,11 +32,10 @@ const clients = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      <main className="pt-32">
+      <main className="pt-20">
         {/* Hero intro section */}
         <section className="relative min-h-[80vh] flex items-center overflow-hidden px-6 md:px-12 lg:px-16">
-          <div className="w-full max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Main intro text */}
             <div className="relative z-10">
               <motion.p
