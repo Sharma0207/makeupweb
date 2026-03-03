@@ -8,8 +8,8 @@ const HeroSection2 = () => {
     offset: ["start start", "end end"],
   });
 
-  // Smooth vertical offset - makes it feel like scrolling through one tall image
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  // Smooth vertical offset - creates smooth scroll reveal between two images
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, "-100%"]);
 
   return (
     <section
@@ -28,21 +28,21 @@ const HeroSection2 = () => {
 
         {/* Desktop stacked images - smooth continuous scroll */}
         <motion.div
-          className="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-white"
+          className="hidden md:flex flex-col absolute inset-0 w-full overflow-hidden bg-white"
           style={{ y: imageY }}
         >
-          {/* Upper image - scrolls up smoothly */}
+          {/* Image 1 - scrolls up smoothly */}
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F86d6e4ea527e42f2be1181ccbaa784e1?format=webp&width=800&height=1200"
-            alt="Art of Makeup - Upper"
-            className="w-full h-full object-cover"
+            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F55d173f479f94d8d946eeb1508729e33?format=webp&width=800&height=1200"
+            alt="Art of Makeup - Image 1"
+            className="w-full h-full object-cover flex-shrink-0"
           />
 
-          {/* Lower image - appears as upper scrolls up */}
+          {/* Image 2 - appears as image 1 scrolls up */}
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F00a5aa60b44b44e9bc7dc7a2060c35b8?format=webp&width=800&height=1200"
-            alt="Art of Makeup - Lower"
-            className="w-full h-full object-cover"
+            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fabfd6e744ce04588842d187fb63ae562?format=webp&width=800&height=1200"
+            alt="Art of Makeup - Image 2"
+            className="w-full h-full object-cover flex-shrink-0"
           />
         </motion.div>
 
