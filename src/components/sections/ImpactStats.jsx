@@ -7,21 +7,20 @@ const ImpactStats = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
-        duration: 0.6,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.5,
+        ease: "easeOut",
       },
     },
   };
@@ -31,39 +30,30 @@ const ImpactStats = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-20"
+      viewport={{ once: true, margin: "-50px" }}
+      className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 mb-12"
     >
       {impactStats.map((stat, index) => (
         <motion.div
           key={`stat-${index}`}
           variants={itemVariants}
-          className="relative overflow-hidden rounded-lg group"
+          className="group"
         >
-          {/* Gradient background layer */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-          {/* Main content container */}
-          <div className="relative bg-white border border-primary/20 p-6 md:p-8 rounded-lg transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-lg group-hover:-translate-y-2">
-            {/* Emoji accent */}
-            <div className="text-4xl md:text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-              {stat.emoji}
+          <div className="relative bg-white/60 backdrop-blur-sm border border-primary/15 p-3 md:p-4 rounded-md transition-all duration-300 group-hover:border-primary/40 group-hover:bg-white/80 group-hover:shadow-md">
+            {/* Emoji accent - doubled up */}
+            <div className="text-2xl md:text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">
+              {stat.emoji}{stat.emoji}
             </div>
 
-            {/* Number with creative styling */}
-            <div className="mb-3">
-              <p className="font-display text-3xl md:text-4xl font-bold tracking-tight text-primary bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80">
-                {stat.number}
-              </p>
-            </div>
-
-            {/* Label with fun formatting */}
-            <p className="font-body text-sm md:text-base tracking-wide uppercase font-semibold text-secondary/80 group-hover:text-secondary transition-colors duration-300">
-              {stat.label}
+            {/* Number - minimal */}
+            <p className="font-display text-2xl md:text-3xl font-bold tracking-tight text-primary mb-1">
+              {stat.number}
             </p>
 
-            {/* Decorative line */}
-            <div className="mt-4 h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-primary/40 to-transparent transition-all duration-300" />
+            {/* Label - compact */}
+            <p className="font-body text-xs md:text-sm tracking-wide font-semibold text-secondary/70 group-hover:text-secondary transition-colors duration-300 line-clamp-2">
+              {stat.label}
+            </p>
           </div>
         </motion.div>
       ))}
