@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Header from "@/components/common/Header";
+import Header from "../components/common/Header";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
