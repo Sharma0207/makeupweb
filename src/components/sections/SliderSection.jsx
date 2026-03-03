@@ -29,6 +29,31 @@ const slides = [
     name: "Royal Glamour",
     category: "Bridal Makeup",
   },
+  {
+    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fa544e5250f6e404b8e7887d239ab8bbd?format=webp&width=800&height=1200",
+    name: "Vintage Romance",
+    category: "Bridal Makeup",
+  },
+  {
+    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F9755293d269d472a843981addbee219d?format=webp&width=800&height=1200",
+    name: "Modern Editorial",
+    category: "Editorial & Shoot",
+  },
+  {
+    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fe5ab4c8bf524420194bb974eacfbf1db?format=webp&width=800&height=1200",
+    name: "Celebration Glow",
+    category: "Party & Occasion",
+  },
+  {
+    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F5a13c68f766e4f0a9a5d5b8f2662ae7a?format=webp&width=800&height=1200",
+    name: "Creative Vision",
+    category: "Creative Art",
+  },
+  {
+    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fa18c3b2976f74c2ab18f0c4f4445a6f8?format=webp&width=800&height=1200",
+    name: "Bridal Elegance",
+    category: "Bridal Makeup",
+  },
 ];
 
 const SliderCard = ({ slide, index }) => {
