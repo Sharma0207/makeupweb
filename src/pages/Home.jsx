@@ -8,7 +8,6 @@ import UnderstatedBeautySection from '../components/sections/UnderstatedBeautySe
 import CTASection from '../components/sections/CTASection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import ProductMarqueeSection from '../components/sections/ProductMarqueeSection';
-import InstagramFeedSection from '../components/sections/InstagramFeedSection';
 import BeforeAfterSection from '../components/sections/BeforeAfterSection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
 import FAQSection from '../components/sections/FAQSection';
@@ -43,9 +42,6 @@ const Home = () => {
 
       {/* Product Marquee Section */}
       <ProductMarqueeSection />
-
-      {/* Instagram Feed Section */}
-      <InstagramFeedSection />
 
       {/* Before & After Section */}
       <BeforeAfterSection />
