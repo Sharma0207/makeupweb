@@ -16,10 +16,11 @@ const gridPattern = [
 
 const defaultSlot = { position: "center", widthClass: "w-[45%]", alignClass: "mx-auto" };
 
-const PortfolioCard = ({ item, index, slot }) => {
+const PortfolioCard = React.forwardRef(({ item, index, slot }, ref) => {
   const safeSlot = slot || defaultSlot;
   return (
     <motion.div
+      ref={ref}
       layout
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
@@ -45,7 +46,9 @@ const PortfolioCard = ({ item, index, slot }) => {
       </div>
     </motion.div>
   );
-};
+});
+
+PortfolioCard.displayName = "PortfolioCard";
 
 const PortfolioGrid = ({ activeFilter }) => {
   const filteredItems =
