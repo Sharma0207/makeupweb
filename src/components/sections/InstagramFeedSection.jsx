@@ -85,7 +85,7 @@ const InstagramFeedSection = () => {
             viewport={{ once: true }}
             className="text-secondary font-body text-sm md:text-base mt-6 max-w-xl mx-auto"
           >
-            Check out my latest makeup transformations and beauty moments on Instagram. Get inspired and stay updated with new looks.
+            Check out my latest makeup transformations and beauty moments on Instagram.
           </motion.p>
         </div>
 
@@ -101,7 +101,7 @@ const InstagramFeedSection = () => {
             <motion.div
               key={post.id}
               variants={itemVariants}
-              className="relative overflow-hidden rounded-lg aspect-square group cursor-pointer"
+              className="relative overflow-hidden aspect-square group cursor-pointer border border-primary/10"
             >
               <img
                 src={post.image}
@@ -111,9 +111,9 @@ const InstagramFeedSection = () => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                 <div className="text-center text-white">
-                  <p className="font-display text-xl tracking-wide uppercase">
+                  <p className="font-display text-lg tracking-wide uppercase">
                     {post.caption}
                   </p>
                 </div>
@@ -134,7 +134,7 @@ const InstagramFeedSection = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full font-body text-xs tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300"
+            className="inline-block border-2 border-primary text-primary px-8 py-3 font-body text-xs tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300"
           >
             Follow on Instagram
           </a>

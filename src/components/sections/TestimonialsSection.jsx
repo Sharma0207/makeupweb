@@ -90,19 +90,19 @@ const TestimonialsSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.6 }}
-                className="bg-white border border-primary/10 rounded-lg p-8 md:p-10"
+                className="bg-white border border-primary/10 p-8 md:p-10"
               >
                 {/* Rating */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                    <span key={i} className="text-xl">
-                      ⭐
+                    <span key={i} className="text-lg">
+                      ★
                     </span>
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="font-body text-lg leading-relaxed text-primary mb-8 italic">
+                <p className="font-body text-base leading-relaxed text-primary mb-8">
                   "{testimonials[activeIndex].text}"
                 </p>
 
@@ -111,7 +111,7 @@ const TestimonialsSection = () => {
                   <img
                     src={testimonials[activeIndex].image}
                     alt={testimonials[activeIndex].name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-12 h-12 rounded-full object-cover border border-primary/10"
                     loading="lazy"
                   />
                   <div>
@@ -134,7 +134,7 @@ const TestimonialsSection = () => {
                   onClick={() => setActiveIndex(index)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`p-4 rounded-lg border-2 transition-all duration-300 text-left ${
+                  className={`p-4 border transition-all duration-300 text-left ${
                     activeIndex === index
                       ? "border-primary bg-primary/5"
                       : "border-primary/20 hover:border-primary/40"
@@ -157,7 +157,7 @@ const TestimonialsSection = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={handlePrev}
-              className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              className="w-12 h-12 border-2 border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all"
             >
               ←
             </motion.button>
@@ -165,7 +165,7 @@ const TestimonialsSection = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={handleNext}
-              className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              className="w-12 h-12 border-2 border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all"
             >
               →
             </motion.button>

@@ -10,43 +10,37 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: experience.iconBg,
-        color: experience.iconBg === "#FFD700" ? "#000000" : "#FFFFFF",
-        borderRadius: "0.375rem",
-        boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
+        background: "#FFFFFF",
+        color: "#000000",
+        borderRadius: "0px",
+        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)",
+        border: "1px solid rgba(0, 0, 0, 0.1)",
       }}
       contentArrowStyle={{
-        borderRight: `7px solid ${experience.iconBg}`,
+        borderRight: "7px solid #FFFFFF",
       }}
       date={experience.date}
-      dateClassName="text-primary font-display tracking-widest"
+      dateClassName="text-primary font-display tracking-widest text-sm"
       iconStyle={{
         background: experience.iconBg,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        fontSize: "2rem",
-        boxShadow: "0 0 0 4px #ffffff, 0 0 0 8px rgba(0,0,0,0.1)",
+        fontSize: "1.5rem",
+        boxShadow: "0 0 0 4px #ffffff, 0 0 0 1px rgba(0,0,0,0.1)",
       }}
       icon={<span>{experience.icon}</span>}
     >
       <div>
         <h3
-          className="font-display text-xl md:text-2xl tracking-widest uppercase font-semibold"
-          style={{
-            color: experience.iconBg === "#FFD700" ? "#000000" : "#FFFFFF",
-          }}
+          className="font-display text-lg md:text-xl tracking-widest uppercase font-semibold text-primary"
         >
           {experience.title}
         </h3>
         <p
-          className="font-display text-sm tracking-wider font-semibold"
+          className="font-body text-sm font-semibold text-secondary"
           style={{
             margin: "8px 0",
-            color:
-              experience.iconBg === "#FFD700"
-                ? "rgba(0, 0, 0, 0.7)"
-                : "rgba(255, 255, 255, 0.8)",
           }}
         >
           {experience.company_name}
@@ -57,13 +51,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="font-body text-sm leading-relaxed"
-            style={{
-              color:
-                experience.iconBg === "#FFD700"
-                  ? "rgba(0, 0, 0, 0.8)"
-                  : "rgba(255, 255, 255, 0.9)",
-            }}
+            className="font-body text-sm leading-relaxed text-primary/80"
           >
             {point}
           </li>
@@ -84,7 +72,7 @@ const ExperienceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-xs md:text-sm tracking-[0.35em] uppercase font-body text-secondary"
+            className="text-xs md:text-sm tracking-[0.35em] uppercase font-body mb-4 text-secondary"
           >
             From Brushes to Milestones
           </motion.p>
@@ -130,7 +118,7 @@ const ExperienceSection = () => {
             to bottom,
             #000000 0%,
             #999999 50%,
-            #cccccc 100%
+            #CCCCCC 100%
           );
         }
 
@@ -139,19 +127,20 @@ const ExperienceSection = () => {
         }
 
         .vertical-timeline-element-content {
-          border-radius: 0.375rem;
+          border-radius: 0px;
           transition: all 0.3s ease;
         }
 
         .vertical-timeline-element-content:hover {
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
-          transform: translateY(-5px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+          transform: translateY(-4px);
         }
 
         .vertical-timeline-element-date {
           font-family: 'Playfair Display', serif;
           font-weight: 600;
           letter-spacing: 0.15em;
+          font-size: 0.875rem;
         }
 
         @media only screen and (max-width: 1170px) {

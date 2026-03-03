@@ -52,7 +52,7 @@ const Footer = () => {
           {/* Brand Section */}
           <motion.div variants={itemVariants}>
             <h2 className="font-display text-2xl tracking-widest uppercase mb-4">
-              Anchala Sharma
+              Anchala
             </h2>
             <p className="font-body text-sm text-white/70 leading-relaxed">
               Professional makeup artist dedicated to enhancing natural beauty and creating unforgettable looks for your special moments.
@@ -157,7 +157,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.2, y: -3 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-sm hover:border-white hover:bg-white/10 transition-all duration-300"
+                    className="w-10 h-10 border border-white/30 flex items-center justify-center text-sm hover:border-white hover:bg-white/10 transition-all duration-300"
                     title={social.name}
                   >
                     {social.icon}
@@ -205,7 +205,7 @@ const Footer = () => {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow z-40"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-white text-primary flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow z-40"
         title="Back to top"
       >
         ↑

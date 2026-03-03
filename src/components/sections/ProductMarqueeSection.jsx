@@ -22,7 +22,7 @@ const ProductMarqueeSection = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-5%"]);
 
   return (
-    <section ref={sectionRef} className="bg-primary text-white overflow-hidden py-16 lg:py-24">
+    <section ref={sectionRef} className="bg-muted py-16 lg:py-24 border-t border-b border-primary/10">
       <div className="relative">
         {/* Section Label */}
         <div className="text-center mb-12">
@@ -31,16 +31,16 @@ const ProductMarqueeSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-xs md:text-sm tracking-[0.35em] uppercase font-body text-white/70"
+            className="text-xs md:text-sm tracking-[0.35em] uppercase font-body text-secondary"
           >
-            Premium Products
+            Professional Tools
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, scaleY: 0 }}
             whileInView={{ opacity: 1, scaleY: 1 }}
             transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
-            className="font-display tracking-widest uppercase text-white text-2xl md:text-3xl"
+            className="font-display tracking-widest uppercase text-primary text-2xl md:text-3xl"
             style={{ transformOrigin: "center center" }}
           >
             Brands I Work With
@@ -56,7 +56,7 @@ const ProductMarqueeSection = () => {
           {brands.map((brand, i) => (
             <motion.div
               key={i}
-              className="flex-shrink-0 font-display text-3xl md:text-4xl lg:text-5xl tracking-widest uppercase font-light text-white/80 hover:text-white transition-colors duration-300"
+              className="flex-shrink-0 font-display text-2xl md:text-3xl lg:text-4xl tracking-widest uppercase font-light text-primary/60 hover:text-primary transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
             >
               {brand}
@@ -67,7 +67,7 @@ const ProductMarqueeSection = () => {
           {brands.map((brand, i) => (
             <motion.div
               key={`dup-${i}`}
-              className="flex-shrink-0 font-display text-3xl md:text-4xl lg:text-5xl tracking-widest uppercase font-light text-white/80 hover:text-white transition-colors duration-300"
+              className="flex-shrink-0 font-display text-2xl md:text-3xl lg:text-4xl tracking-widest uppercase font-light text-primary/60 hover:text-primary transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
             >
               {brand}
@@ -81,7 +81,7 @@ const ProductMarqueeSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center text-sm md:text-base font-body text-white/70 mt-16"
+          className="text-center text-sm md:text-base font-body text-secondary mt-16"
         >
           Using only the finest professional-grade makeup brands to ensure quality, longevity, and the best results for your special moments.
         </motion.p>
