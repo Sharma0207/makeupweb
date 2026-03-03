@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import StackedWrapper from "../StackedWrapper";
 
 const QuoteSection = () => {
   const sectionRef = useRef(null);
@@ -14,8 +15,9 @@ const QuoteSection = () => {
   const line2Opacity = useTransform(scrollYProgress, [0.25, 0.6], [0, 1]);
 
   return (
-    <section ref={sectionRef} className="bg-background py-32 lg:py-44">
-      <div className="mx-auto max-w-4xl px-6 text-center">
+    <StackedWrapper index={1} totalSections={2}>
+      <section ref={sectionRef} className="bg-background py-32 lg:py-44">
+        <div className="mx-auto max-w-4xl px-6 text-center">
         <div className="font-display text-2xl md:text-4xl tracking-widest leading-snug text-primary">
           <motion.span
             style={{
@@ -42,6 +44,7 @@ const QuoteSection = () => {
         </div>
       </div>
     </section>
+    </StackedWrapper>
   );
 };
 
