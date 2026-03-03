@@ -72,6 +72,39 @@ const services = [
 
 export const categories = ["All", "Bridal", "Editorial", "Party", "Creative"];
 
+export const experiences = [
+  {
+    title: "Skin & Makeup Tutor",
+    company_name: "Dazzling world",
+    icon: "🎨",
+    iconBg: "#DA70D6",
+    date: "Jan 2025 - present",
+    points: [
+      "Trained aspiring makeup artists through hands-on sessions, skin analysis, and in-depth beauty theory, with a focus on bridal, party, and editorial looks.",
+    ],
+  },
+  {
+    title: "Official Makeup Artist – Miss Universe Bihar 2024 & 2025",
+    company_name: "Miss Universe Bihar",
+    icon: "👑",
+    iconBg: "#FFD700",
+    date: "2024 & 2025",
+    points: [
+      "Worked as an official MUA for Miss Universe Bihar, creating stage-ready, camera-ready looks in collaboration with a professional styling team under tight event timelines.",
+    ],
+  },
+  {
+    title: "Certified Makeup & Skin Artist",
+    company_name: "Lakmé Academy",
+    icon: "🎓",
+    iconBg: "#383E56",
+    date: "Jan 2024 - Dec 2024",
+    points: [
+      "Completed professional training in makeup and skin care at Lakmé Academy, gaining expertise in beauty techniques and product knowledge.",
+    ],
+  },
+];
+
 export const portfolioItems = [
   // Bridal Collection
   {
