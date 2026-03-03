@@ -1,40 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Priya Kapoor",
-    role: "Bride",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "Anchala made me feel absolutely gorgeous on my wedding day. Her attention to detail and professionalism was unmatched. Highly recommended!",
-  },
-  {
-    id: 2,
-    name: "Sakshi Patel",
-    role: "Instagram Influencer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "Her makeup artistry is incredible. She understands exactly what will work for photos and always delivers stunning results.",
-  },
-  {
-    id: 3,
-    name: "Divya Singh",
-    role: "Corporate Event",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "Professional, creative, and always on time. Anchala is the perfect choice for any makeup needs. She's a true artist!",
-  },
-  {
-    id: 4,
-    name: "Neha Gupta",
-    role: "Model",
-    image: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=100&h=100&fit=crop",
-    rating: 5,
-    text: "Working with Anchala on editorial shoots has been amazing. Her creativity and technical skills are outstanding.",
-  },
-];
+import { testimonials } from "../../constants";
 
 const TestimonialsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);

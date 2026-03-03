@@ -19,9 +19,9 @@ import {
   makeup16,
   makeup21,
   makeup23,
-  makeup25,
   makeup24,
   makeup26,
+  makeup22,
 } from "../assets";
 
 export const navLinks = [
@@ -380,5 +380,48 @@ export const portfolioItems = [
     title: "Bridal Perfection",
     category: "Bridal",
     image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fed2ba3e8c6bc44138e2b9ad9313f5a4b?format=webp&width=800&height=1200",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Ruchi sharma",
+    role: "Jehanabad, Bihar",
+    image: makeup20,
+    rating: 5,
+    text: "Mujhe yeh makeup bohot sundar laga! Bridal look perfect tha — eyes, lips sab on point. Makeupbyanchla ki magic zaroor recommend karungi. Thanks!",
+  },
+  {
+    id: 2,
+    name: "Amisha Sharan",
+    role: "Delhi, India",
+    image: makeup22,
+    rating: 5,
+    text: "Absolutely loved my party look! The makeup was flawless – from the eyes to the lips.Anchala truly worked her magic. Highly recommend!.",
+  },
+  {
+    id: 3,
+    name: "Mrs Sharma",
+    role: "Patna, Bihar",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2Fd01261ceeb484f048d308f77e969ae73?format=webp&width=800&height=1200",
+    rating: 5,
+    text: "25th anniversary pe wedding jaisi excitement thi! Pehle thoda nervous thi makeup ko leke, lekin result dekh ke bahut khush hui. Sab keh rahe the, Apni shaadi se bhi zyada khubsurat lag rahi ho!",
+  },
+  {
+    id: 4,
+    name: "Eshika",
+    role: "Patna, Bihar",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2F1b9b03d3252647f6b579b230f14229ea?format=webp&width=800&height=1200",
+    rating: 5,
+    text: "I still can’t get over my look for Miss Universe Bihar! I was a little anxious at first, but the final result was absolutely stunning. The makeup brought out my confidence and made me feel stage-ready like never before!",
+  },
+  {
+    id: 5,
+    name: "Afsha",
+    role: "Patna, Bihar",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2F3511bff9cb824ca5bcffd56648a49376?format=webp&width=800&height=1200",
+    rating: 5,
+    text: "Mera walima look bohot acha tha! Makeup ke baad khud ko bohot confident feel kiya. Sab log meri tareef kar rahe thay aur mujhe bohot pasand aaya. Makeup ne mera look bilkul enhance kar diya tha, jo din ko aur bhi khaas bana diya.",
   },
 ];
