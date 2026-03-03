@@ -88,7 +88,7 @@ const About = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="hidden lg:flex items-center justify-center"
+              className="flex items-center justify-center"
             >
               <div className="relative overflow-hidden rounded-lg">
                 <img
