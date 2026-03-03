@@ -12,13 +12,23 @@ const HeroSection2 = () => {
   const image1Opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const image2Opacity = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
 
+  // Entrance transition - fade in from bottom
+  const sectionOpacity = useTransform(scrollYProgress, [-0.5, 0], [0, 1]);
+  const sectionY = useTransform(scrollYProgress, [-0.5, 0], [50, 0]);
+
   return (
     <section
       ref={sectionRef}
       className="relative min-h-[200vh] w-full bg-black"
     >
-      {/* Sticky container for text and images */}
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+      {/* Sticky container for text and images - with entrance transition */}
+      <motion.div
+        className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-black"
+        style={{
+          opacity: sectionOpacity,
+          y: sectionY,
+        }}
+      >
 
         {/* Mobile image - single image */}
         <img
@@ -68,7 +78,7 @@ const HeroSection2 = () => {
             Scroll to explore
           </motion.span>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
