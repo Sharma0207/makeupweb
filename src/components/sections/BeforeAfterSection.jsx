@@ -4,6 +4,13 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const transformations = [
   {
+    id: 0,
+    before: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F5ca5d97d77634cbba9d9c48e2202d533?format=webp&width=800&height=1200",
+    after: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F5025d09b8668492ebc5393223be88607?format=webp&width=800&height=1200",
+    tagline: "Natural to Glamorous",
+    description: "A complete transformation with stunning bridal makeup artistry",
+  },
+  {
     id: 1,
     before: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2Fb02598f1ccd446a1a932817a37a7ffbb?format=webp&width=800&height=1200",
     after: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F1f049628bfc04610a505037492a716ec?format=webp&width=800&height=1200",
