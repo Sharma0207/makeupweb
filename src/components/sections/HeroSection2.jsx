@@ -5,12 +5,11 @@ const HeroSection2 = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end center"],
+    offset: ["start start", "end end"],
   });
 
-  // First image opacity - smooth fade out as you scroll
-  const firstImageOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
-  const firstImageScale = useTransform(scrollYProgress, [0, 0.6], [1, 1.02]);
+  // Smooth vertical offset - makes it feel like scrolling through one tall image
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
     <section
@@ -27,26 +26,25 @@ const HeroSection2 = () => {
           className="absolute inset-0 w-full h-full object-cover md:hidden"
         />
 
-        {/* Desktop stacked images with scroll reveal effect */}
-        <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-white">
-          {/* Lower image - base layer (underneath) */}
+        {/* Desktop stacked images - smooth continuous scroll */}
+        <motion.div
+          className="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-white"
+          style={{ y: imageY }}
+        >
+          {/* Upper image - scrolls up smoothly */}
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F86d6e4ea527e42f2be1181ccbaa784e1?format=webp&width=800&height=1200"
+            alt="Art of Makeup - Upper"
+            className="w-full h-full object-cover"
+          />
+
+          {/* Lower image - appears as upper scrolls up */}
           <img
             src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F00a5aa60b44b44e9bc7dc7a2060c35b8?format=webp&width=800&height=1200"
             alt="Art of Makeup - Lower"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="w-full h-full object-cover"
           />
-
-          {/* Upper image - fades away on scroll to reveal lower image */}
-          <motion.img
-            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F86d6e4ea527e42f2be1181ccbaa784e1?format=webp&width=800&height=1200"
-            alt="Art of Makeup - Upper"
-            className="absolute inset-0 w-full h-full object-cover z-20"
-            style={{
-              opacity: firstImageOpacity,
-              scale: firstImageScale,
-            }}
-          />
-        </div>
+        </motion.div>
 
         {/* Fixed text overlay - stays on both images */}
         <div className="relative z-10 text-center px-6">
