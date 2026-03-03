@@ -21,11 +21,11 @@ const HeroSection2 = () => {
     <StackedWrapper index={0} totalSections={2}>
       <section
         ref={sectionRef}
-        className="relative min-h-[200vh] w-full md:min-h-screen bg-black"
+        className="relative h-screen md:min-h-[200vh] w-full bg-black"
       >
       {/* Sticky container for text and images - with entrance transition */}
       <motion.div
-        className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-black md:static"
+        className="h-screen w-full flex items-center justify-center overflow-hidden bg-black md:sticky md:top-0"
         style={{
           opacity: sectionOpacity,
           y: sectionY,

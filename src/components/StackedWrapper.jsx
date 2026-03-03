@@ -31,8 +31,8 @@ const StackedWrapper = ({ children, index, totalSections }) => {
   return (
     <div
       ref={containerRef}
-      className="sticky top-0 w-full md:min-h-screen overflow-hidden md:static"
-      style={{ zIndex: index + 10 }}
+      className="w-full md:min-h-screen overflow-hidden"
+      style={{ zIndex: index === 0 ? 20 : index === 1 ? 10 : index }}
     >
       <motion.div
         style={{ scale, opacity }}
