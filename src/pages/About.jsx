@@ -92,7 +92,7 @@ const About = () => {
             >
               <div className="relative overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F5afe148e7955446c981b8ef1e6be66e5?format=webp&width=800&height=1200"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F8e682a29c35e4ae39103d1f8e17e9f1a?format=webp&width=800&height=1200"
                   alt="Anchala Sharma - Makeup Artist"
                   className="w-full h-auto object-cover"
                   style={{ aspectRatio: "3/4" }}
