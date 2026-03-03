@@ -108,6 +108,29 @@ export const experiences = [
   },
 ];
 
+export const impactStats = [
+  {
+    number: "50+",
+    label: "Bridal Smiles",
+    emoji: "💍",
+  },
+  {
+    number: "25+",
+    label: "Model Ramp Work",
+    emoji: "🎭",
+  },
+  {
+    number: "20+",
+    label: "Brands Collaborated",
+    emoji: "⭐",
+  },
+  {
+    number: "100+",
+    label: "Students Trained",
+    emoji: "👑",
+  },
+];
+
 export const portfolioItems = [
   // Bridal Collection
   {
