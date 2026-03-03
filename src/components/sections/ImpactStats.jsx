@@ -31,7 +31,7 @@ const ImpactStats = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
-      className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 mb-12"
+      className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 mb-10"
     >
       {impactStats.map((stat, index) => (
         <motion.div
@@ -39,19 +39,14 @@ const ImpactStats = () => {
           variants={itemVariants}
           className="group"
         >
-          <div className="relative bg-white/60 backdrop-blur-sm border border-primary/15 p-3 md:p-4 rounded-md transition-all duration-300 group-hover:border-primary/40 group-hover:bg-white/80 group-hover:shadow-md">
-            {/* Emoji accent - doubled up */}
-            <div className="text-2xl md:text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-300">
-              {stat.emoji}{stat.emoji}
-            </div>
-
+          <div className="relative p-3 md:p-4 border-b border-primary/20 transition-all duration-300 group-hover:border-primary/40">
             {/* Number - minimal */}
-            <p className="font-display text-2xl md:text-3xl font-bold tracking-tight text-primary mb-1">
+            <p className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-primary mb-1">
               {stat.number}
             </p>
 
             {/* Label - compact */}
-            <p className="font-body text-xs md:text-sm tracking-wide font-semibold text-secondary/70 group-hover:text-secondary transition-colors duration-300 line-clamp-2">
+            <p className="font-body text-xs md:text-sm tracking-wide text-secondary/60 group-hover:text-secondary transition-colors duration-300 line-clamp-2">
               {stat.label}
             </p>
           </div>
