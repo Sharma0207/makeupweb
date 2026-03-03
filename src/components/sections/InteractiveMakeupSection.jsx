@@ -135,46 +135,34 @@ const InteractiveMakeupSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-white/95 backdrop-blur-sm rounded-lg overflow-hidden shadow-2xl border border-white/50"
+            className="bg-white/95 backdrop-blur-sm rounded-lg shadow-2xl border border-white/50 p-6"
           >
-            <div className="flex gap-0">
-              {/* Product thumbnail */}
-              <div className="w-32 h-40 flex-shrink-0 bg-gradient-to-br from-pink-50 to-amber-50 flex items-center justify-center border-r border-white/30">
-                <span className="text-5xl">{active.emoji}</span>
-              </div>
-
-              {/* Product details */}
-              <div className="p-6 flex flex-col justify-between flex-1">
-                <div>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="font-display text-lg text-gray-400">
-                      {active.number}
-                    </span>
-                    <h3 className="font-display text-2xl tracking-[0.15em] text-gray-900 font-semibold">
-                      {active.title}
-                    </h3>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-gray-700 font-body text-xs leading-relaxed mb-3">
-                    {active.description}
-                  </p>
-
-                  {/* Category */}
-                  <span className="text-gray-500 font-body text-xs tracking-widest uppercase">
-                    {active.category}
-                  </span>
-                </div>
-
-                {/* Services CTA Button */}
-                <a
-                  href="/services"
-                  className="mt-4 inline-block bg-foreground text-white px-6 py-2 rounded-full font-body text-xs tracking-widest uppercase hover:bg-foreground/90 transition-all duration-300"
-                >
-                  View Services
-                </a>
-              </div>
+            <div className="flex items-baseline gap-2 mb-3">
+              <span className="font-display text-lg text-gray-400">
+                {active.number}
+              </span>
+              <h3 className="font-display text-2xl tracking-[0.15em] text-gray-900 font-semibold">
+                {active.title}
+              </h3>
             </div>
+
+            {/* Description */}
+            <p className="text-gray-700 font-body text-xs leading-relaxed mb-4">
+              {active.description}
+            </p>
+
+            {/* Category */}
+            <span className="text-gray-500 font-body text-xs tracking-widest uppercase mb-4 block">
+              {active.category}
+            </span>
+
+            {/* Services CTA Button */}
+            <a
+              href="/services"
+              className="inline-block bg-foreground text-white px-6 py-2 rounded-full font-body text-xs tracking-widest uppercase hover:bg-foreground/90 transition-all duration-300"
+            >
+              View Services
+            </a>
           </motion.div>
         </AnimatePresence>
       </div>
