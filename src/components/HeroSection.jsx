@@ -245,11 +245,18 @@ const HeroSection = () => {
 
           {/* Down arrow */}
           <motion.div
-            className="absolute z-10 bottom-4 md:bottom-8 left-1/2 -translate-x-1/2"
+            className="absolute z-10 bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 2 }}
           >
+            <motion.span
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="text-white text-xs md:text-sm tracking-widest font-body uppercase"
+            >
+              Scroll to explore
+            </motion.span>
             <motion.svg
               viewBox="0 0 30 18"
               className="w-5 h-3 md:w-7 md:h-4"

@@ -16,7 +16,7 @@ const QuoteSection = () => {
   return (
     <section ref={sectionRef} className="bg-background py-32 lg:py-44">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <div className="font-display text-3xl md:text-5xl tracking-widest leading-relaxed text-primary">
+        <div className="font-display text-2xl md:text-4xl tracking-widest leading-snug text-primary">
           <motion.span
             style={{
               scaleY: line1ScaleY,
@@ -40,18 +40,6 @@ const QuoteSection = () => {
             and makeup is my brush to paint it. "
           </motion.span>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-12"
-        >
-          <p className="text-secondary text-sm md:text-base tracking-widest uppercase font-body">
-            — Anchala Sharma
-          </p>
-        </motion.div>
       </div>
     </section>
   );

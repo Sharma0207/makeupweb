@@ -8,7 +8,7 @@ import UnderstatedBeautySection from '../components/sections/UnderstatedBeautySe
 const Home = () => {
   return (
     <>
-      {/* Hero Section 2 - Parallax */}
+      {/* Hero Section 2 - with image and parallax effects */}
       <HeroSection2 />
 
       {/* Quote Section */}
