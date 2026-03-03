@@ -10,7 +10,7 @@ const makeupProducts = [
       "Define your eyes with precision. Our kajal is crafted to deliver intense color without smudging, creating a bold and timeless look that lasts all day.",
     category: "Eye Makeup",
     emoji: "🖤",
-    position: { top: "25%", left: "45%" },
+    position: { top: "28%", left: "42%" },
   },
   {
     id: "lipstick",
@@ -20,7 +20,7 @@ const makeupProducts = [
       "Luxurious color that complements your natural beauty. From subtle to bold, each shade is designed to enhance your lips with lasting vibrancy and comfort.",
     category: "Lip Color",
     emoji: "💋",
-    position: { top: "55%", left: "35%" },
+    position: { top: "52%", left: "48%" },
   },
   {
     id: "foundation",
@@ -30,7 +30,7 @@ const makeupProducts = [
       "Flawless coverage that feels lightweight. Our foundation blends seamlessly for an even, radiant complexion that enhances rather than masks your natural beauty.",
     category: "Base",
     emoji: "✨",
-    position: { top: "45%", left: "65%" },
+    position: { top: "42%", left: "55%" },
   },
   {
     id: "eyeshadow",
@@ -40,7 +40,7 @@ const makeupProducts = [
       "Rich pigments that blend effortlessly. Create depth and dimension with our eyeshadow palette, designed for both subtle everyday looks and dramatic evening wear.",
     category: "Eye Color",
     emoji: "👁️",
-    position: { top: "30%", left: "70%" },
+    position: { top: "32%", left: "58%" },
   },
   {
     id: "blush",
@@ -50,7 +50,7 @@ const makeupProducts = [
       "Natural flush of color that brings life to your cheeks. Perfectly pigmented to blend seamlessly and give you that fresh, radiant glow all day long.",
     category: "Cheek Color",
     emoji: "🌸",
-    position: { top: "60%", left: "55%" },
+    position: { top: "45%", left: "40%" },
   },
   {
     id: "mascara",
@@ -60,7 +60,7 @@ const makeupProducts = [
       "Volumize and lengthen your lashes. Our mascara formula coats every lash for dramatic impact without clumping, creating bold, beautiful eyes.",
     category: "Lash Definition",
     emoji: "💫",
-    position: { top: "28%", left: "58%" },
+    position: { top: "26%", left: "52%" },
   },
 ];
 
@@ -95,9 +95,10 @@ const InteractiveMakeupSection = () => {
       {/* Model image - foreground, centered */}
       <div className="absolute inset-0 flex items-center justify-center z-[2]">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fdc819d960ee1422c813bf93b1234e855?format=webp&width=1200&height=1200"
+          src="https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F5afe148e7955446c981b8ef1e6be66e5?format=webp&width=800&height=1200"
           alt="Makeup Model"
           className="h-full w-auto max-w-none object-cover"
+          style={{ transform: "rotate(-10deg)" }}
           loading="eager"
         />
       </div>
@@ -143,25 +144,35 @@ const InteractiveMakeupSection = () => {
               </div>
 
               {/* Product details */}
-              <div className="p-6 flex flex-col justify-center flex-1">
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="font-display text-lg text-gray-400">
-                    {active.number}
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="font-display text-lg text-gray-400">
+                      {active.number}
+                    </span>
+                    <h3 className="font-display text-2xl tracking-[0.15em] text-gray-900 font-semibold">
+                      {active.title}
+                    </h3>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-700 font-body text-xs leading-relaxed mb-3">
+                    {active.description}
+                  </p>
+
+                  {/* Category */}
+                  <span className="text-gray-500 font-body text-xs tracking-widest uppercase">
+                    {active.category}
                   </span>
-                  <h3 className="font-display text-2xl tracking-[0.15em] text-gray-900 font-semibold">
-                    {active.title}
-                  </h3>
                 </div>
 
-                {/* Description */}
-                <p className="text-gray-700 font-body text-xs leading-relaxed mb-3">
-                  {active.description}
-                </p>
-
-                {/* Category */}
-                <span className="text-gray-500 font-body text-xs tracking-widest uppercase">
-                  {active.category}
-                </span>
+                {/* Services CTA Button */}
+                <a
+                  href="/services"
+                  className="mt-4 inline-block bg-foreground text-white px-6 py-2 rounded-full font-body text-xs tracking-widest uppercase hover:bg-foreground/90 transition-all duration-300"
+                >
+                  View Services
+                </a>
               </div>
             </div>
           </motion.div>
