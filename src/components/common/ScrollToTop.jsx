@@ -1,40 +1,27 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FiArrowUp } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { FiMessageCircle } from "react-icons/fi";
 
-const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleScroll = () => {
-    setIsVisible(window.scrollY > 300);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+const WhatsAppButton = () => {
+  const phoneNumber = "919110939727";
+  const message = "Hi, I wanted to know more about makeup types and services";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          onClick={scrollToTop}
-          initial={{ opacity: 0, y: 20, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.8 }}
-          transition={{ duration: 0.3 }}
-          className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
-          aria-label="Scroll to top"
-        >
-          <FiArrowUp className="w-6 h-6" />
-        </motion.button>
-      )}
-    </AnimatePresence>
+    <motion.a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      className="fixed bottom-8 right-8 z-40 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-2xl"
+      aria-label="Chat on WhatsApp"
+    >
+      <FiMessageCircle className="w-7 h-7" />
+    </motion.a>
   );
 };
 
-export default ScrollToTop;
+export default WhatsAppButton;

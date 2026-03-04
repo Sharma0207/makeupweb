@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Lenis from "lenis";
 import LoadingScreen from "./components/LoadingScreen";
 import Navigation from "./components/common/Navigation";
-import ScrollToTop from "./components/common/ScrollToTop";
+import WhatsAppButton from "./components/common/ScrollToTop";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
@@ -53,7 +53,7 @@ const App = () => {
         onComplete={() => setShowContent(true)}
       />
       <Navigation />
-      <ScrollToTop />
+      <WhatsAppButton />
 
       {(!isLoading || showContent) && (
         <Routes>
