@@ -149,8 +149,26 @@ const SliderSection = () => {
     setTimeout(checkScroll, 400);
   };
 
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "start start"],
+  });
+
+  const scaleAnimation = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
+  const yAnimation = useTransform(scrollYProgress, [0, 0.5], [40, 0]);
+  const opacityAnimation = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+
   return (
-    <section className="bg-background py-20">
+    <motion.section
+      ref={sectionRef}
+      className="bg-background py-20"
+      style={{
+        scale: scaleAnimation,
+        y: yAnimation,
+        opacity: opacityAnimation,
+      }}
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-16">
         {/* Section Title */}
         <motion.div
@@ -218,7 +236,7 @@ const SliderSection = () => {
           </Link>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -3,32 +3,32 @@ import { motion, AnimatePresence } from "framer-motion";
 import { portfolioItems } from "../../constants";
 
 const gridPattern = [
-  { position: "left", widthClass: "w-[45%]", alignClass: "mr-auto" },
-  { position: "right", widthClass: "w-[48%]", alignClass: "ml-auto -mt-[15%]" },
-  { position: "center", widthClass: "w-[40%]", alignClass: "mx-auto" },
+  { position: "left", widthClass: "w-[95%] md:w-[45%]", alignClass: "mr-auto md:mr-auto" },
+  { position: "right", widthClass: "w-[95%] md:w-[48%]", alignClass: "mx-auto md:ml-auto md:-mt-[15%]" },
+  { position: "center", widthClass: "w-[95%] md:w-[40%]", alignClass: "mx-auto" },
   {
     position: "full-right",
-    widthClass: "w-[55%]",
-    alignClass: "ml-auto -mt-[10%]",
+    widthClass: "w-[95%] md:w-[55%]",
+    alignClass: "mx-auto md:ml-auto md:-mt-[10%]",
   },
   {
     position: "full-left",
-    widthClass: "w-[42%]",
-    alignClass: "mr-auto -mt-[8%]",
+    widthClass: "w-[95%] md:w-[42%]",
+    alignClass: "mx-auto md:mr-auto md:-mt-[8%]",
   },
-  { position: "right", widthClass: "w-[50%]", alignClass: "ml-auto" },
-  { position: "left", widthClass: "w-[38%]", alignClass: "mr-auto -mt-[12%]" },
-  { position: "center", widthClass: "w-[45%]", alignClass: "mx-auto" },
+  { position: "right", widthClass: "w-[95%] md:w-[50%]", alignClass: "mx-auto md:ml-auto" },
+  { position: "left", widthClass: "w-[95%] md:w-[38%]", alignClass: "mx-auto md:mr-auto md:-mt-[12%]" },
+  { position: "center", widthClass: "w-[95%] md:w-[45%]", alignClass: "mx-auto" },
   {
     position: "full-left",
-    widthClass: "w-[48%]",
-    alignClass: "mr-auto -mt-[5%]",
+    widthClass: "w-[95%] md:w-[48%]",
+    alignClass: "mx-auto md:mr-auto md:-mt-[5%]",
   },
 ];
 
 const defaultSlot = {
   position: "center",
-  widthClass: "w-[45%]",
+  widthClass: "w-[95%] md:w-[45%]",
   alignClass: "mx-auto",
 };
 
