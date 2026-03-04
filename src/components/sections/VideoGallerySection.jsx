@@ -9,39 +9,64 @@ import "swiper/css/parallax";
 const videos = [
   {
     id: 1,
-    title: "Bridal Beauty",
+    title: "Bridal Elegance",
     description: "Complete bridal makeup transformation",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fbd50714122a34609a21b77a8cd173c12?alt=media&token=671f95a5-4119-40a1-a524-0f4f588923a7&apiKey=37ad2b39330a492489c1a509e5a35af1",
   },
   {
     id: 2,
     title: "Party Glam",
     description: "Bold and vibrant evening makeup look",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9b1ccdd8a5d046da918cc8731cf30082?alt=media&token=5741c996-4be7-43eb-8798-e6276282b2c5&apiKey=37ad2b39330a492489c1a509e5a35af1",
   },
   {
     id: 3,
     title: "Everyday Elegance",
     description: "Natural everyday makeup tutorial",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F3e9a7e27a97e4636bd01fc2480c59b7a?alt=media&token=656b2f12-24f3-42fc-99a6-df434ea43087&apiKey=37ad2b39330a492489c1a509e5a35af1",
   },
   {
     id: 4,
-    title: "Editorial Look",
-    description: "High fashion editorial makeup styling",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    title: "Riya's Makeover",
+    description: "Beautiful transformation makeup look",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F7ac92690dfeb44c9a920447afd32bc83?alt=media&token=7d652419-c531-4869-baf5-47000231b140&apiKey=37ad2b39330a492489c1a509e5a35af1",
   },
   {
     id: 5,
     title: "Creative Special FX",
-    description: "Artistic and creative makeup transformation",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    description: "Artistic and creative makeup styling",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2Feb654abf447f46889fbf64d6284bb721?alt=media&token=b4f125ec-1cad-475a-b814-f575f654345d&apiKey=37ad2b39330a492489c1a509e5a35af1",
+  },
+  {
+    id: 6,
+    title: "Flawless Finish",
+    description: "Professional makeup application",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F97eb93cdb56e46418885512c93f11e35?alt=media&token=1917814b-3252-4502-a650-6a9b196462b2&apiKey=37ad2b39330a492489c1a509e5a35af1",
+  },
+  {
+    id: 7,
+    title: "Radiant Glow",
+    description: "Stunning makeup transformation",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fe55ed8c3a4ee4969a71e006ea8e5ffc8?alt=media&token=5067e2ba-f021-438c-9f59-49f825161a4a&apiKey=37ad2b39330a492489c1a509e5a35af1",
   },
 ];
 
 const VideoGallerySection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loadingVideos, setLoadingVideos] = useState(new Set());
   const swiperRef = useRef(null);
+
+  const handleVideoLoadStart = (videoId) => {
+    setLoadingVideos((prev) => new Set(prev).add(videoId));
+  };
+
+  const handleVideoLoadComplete = (videoId) => {
+    setLoadingVideos((prev) => {
+      const newSet = new Set(prev);
+      newSet.delete(videoId);
+      return newSet;
+    });
+  };
 
   const handleSlideChange = useCallback((swiper) => {
     setActiveIndex(swiper.realIndex);
@@ -90,16 +115,33 @@ const VideoGallerySection = () => {
                 className="relative mx-4 md:mx-6"
               >
                 {/* Video container - 9:16 aspect ratio */}
-                <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{ aspectRatio: "9/16", width: "clamp(280px, 80vw, 450px)" }}>
+                <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{
+                  aspectRatio: "9/16",
+                  width: "clamp(260px, 85vw, 380px)",
+                  maxWidth: "calc(100vh * 9 / 16)",
+                  maxHeight: "100vh"
+                }}>
+                  {/* Loading indicator */}
+                  {loadingVideos.has(video.id) && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-10">
+                      <div className="w-12 h-12 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    </div>
+                  )}
+
                   {/* Video element */}
                   <video
                     src={video.url}
                     alt={video.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover bg-black transition-opacity duration-300"
                     controls
                     controlsList="nodownload"
                     playsInline
-                    loading="lazy"
+                    preload="metadata"
+                    crossOrigin="anonymous"
+                    muted={false}
+                    onLoadStart={() => handleVideoLoadStart(video.id)}
+                    onCanPlay={() => handleVideoLoadComplete(video.id)}
+                    onError={() => handleVideoLoadComplete(video.id)}
                   />
 
                   {/* Gradient overlay for text readability */}
