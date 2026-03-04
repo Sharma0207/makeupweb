@@ -14,7 +14,14 @@ const QuoteSection = () => {
   const line2Opacity = useTransform(scrollYProgress, [0.25, 0.6], [0, 1]);
 
   return (
-    <section ref={sectionRef} className="bg-background h-full  py-32 lg:py-44 ">
+    <motion.section
+      ref={sectionRef}
+      className="bg-background h-full  py-32 lg:py-44 "
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <div className="mx-auto max-w-4xl px-6 text-center">
         <div className="font-display text-[18px] tracking-wide md:text-[1.800rem] md:tracking-widest leading-snug text-primary">
           <motion.span
@@ -41,7 +48,7 @@ const QuoteSection = () => {
           </motion.span>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
