@@ -79,47 +79,47 @@ const Contact = () => {
             >
               {/* Call Us */}
               <motion.div custom={0} variants={fadeUp}>
-                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-black">
+                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-gray-400">
                   CALL US
                 </h3>
-                <div className="bg-white p-6 rounded-lg space-y-3 font-body text-sm md:text-base">
-                  <p className="text-black">
-                    <span className="block font-semibold">+91 XXXXXXXXXX</span>
-                    <span className="text-gray-600 text-xs">Primary Contact</span>
+                <div className="space-y-3 font-body text-sm md:text-base">
+                  <p className="text-white">
+                    <span className="block font-semibold">+91 9110939727</span>
+                    <span className="text-gray-400 text-xs">Primary Contact</span>
                   </p>
-                  <p className="text-black border-t border-gray-200 pt-3">
-                    <span className="block font-semibold">+91 XXXXXXXXXX</span>
-                    <span className="text-gray-600 text-xs">Booking Assistant</span>
+                  <p className="text-white border-t border-gray-700 pt-3">
+                    <span className="block font-semibold">+91 9934242539</span>
+                    <span className="text-gray-400 text-xs">Booking Assistant</span>
                   </p>
                 </div>
               </motion.div>
 
               {/* Write Us */}
               <motion.div custom={1} variants={fadeUp}>
-                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-black">
+                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-gray-400">
                   EMAIL US
                 </h3>
-                <div className="bg-white p-6 rounded-lg">
+                <div>
                   <a
-                    href="mailto:anchala@makeup.com"
-                    className="text-black hover:text-pink-600 transition-colors duration-300 font-body text-sm md:text-base font-semibold break-all"
+                    href="mailto:Ssha@GMAIL.COM"
+                    className="text-white hover:text-pink-400 transition-colors duration-300 font-body text-sm md:text-base font-semibold break-all"
                   >
-                    anchala@makeup.com
+                    Ssha@GMAIL.COM
                   </a>
                 </div>
               </motion.div>
 
               {/* Location */}
               <motion.div custom={2} variants={fadeUp}>
-                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-black">
+                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-gray-400">
                   VISIT US
                 </h3>
-                <div className="bg-white p-6 rounded-lg">
-                  <p className="text-black font-body text-sm md:text-base leading-relaxed font-semibold">
-                    Mumbai, India
+                <div>
+                  <p className="text-white font-body text-sm md:text-base leading-relaxed font-semibold">
+                    Patna, Bihar, India
                     <br />
-                    <span className="text-gray-600 font-normal text-xs mt-2 block">Available for destination makeup artistry</span>
-                    <span className="text-gray-600 font-normal text-xs block">Wedding • Events • Photoshoots</span>
+                    <span className="text-gray-400 font-normal text-xs mt-2 block">Available for destination makeup artistry</span>
+                    <span className="text-gray-400 font-normal text-xs block">Wedding • Events • Photoshoots</span>
                   </p>
                 </div>
               </motion.div>
@@ -264,10 +264,10 @@ const Contact = () => {
           {/* Phone & Email */}
           <div className="text-xs font-body tracking-wider space-y-2">
             <p className="text-white">
-              <span className="font-bold">Call:</span> +91 XXXXXXXXXX
+              <span className="font-bold">Call:</span> +91 9110939727
             </p>
             <p className="text-white">
-              <span className="font-bold">Email:</span> anchala@makeup.com
+              <span className="font-bold">Email:</span> Ssha@GMAIL.COM
             </p>
           </div>
 
