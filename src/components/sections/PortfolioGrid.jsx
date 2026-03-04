@@ -3,33 +3,57 @@ import { motion, AnimatePresence } from "framer-motion";
 import { portfolioItems } from "../../constants";
 
 const gridPattern = [
-  { position: "left", widthClass: "w-[95%] md:w-[45%]", alignClass: "mr-auto md:mr-auto" },
-  { position: "right", widthClass: "w-[95%] md:w-[48%]", alignClass: "mx-auto md:ml-auto md:-mt-[15%]" },
-  { position: "center", widthClass: "w-[95%] md:w-[40%]", alignClass: "mx-auto" },
+  {
+    position: "left",
+    widthClass: "w-full md:w-[45%]",
+    alignClass: "md:mr-auto",
+  },
+  {
+    position: "right",
+    widthClass: "w-full md:w-[48%]",
+    alignClass: "md:ml-auto md:-mt-[15%]",
+  },
+  {
+    position: "center",
+    widthClass: "w-full md:w-[40%]",
+    alignClass: "md:mx-auto",
+  },
   {
     position: "full-right",
-    widthClass: "w-[95%] md:w-[55%]",
-    alignClass: "mx-auto md:ml-auto md:-mt-[10%]",
+    widthClass: "w-full md:w-[55%]",
+    alignClass: "md:ml-auto md:-mt-[10%]",
   },
   {
     position: "full-left",
-    widthClass: "w-[95%] md:w-[42%]",
-    alignClass: "mx-auto md:mr-auto md:-mt-[8%]",
+    widthClass: "w-full md:w-[42%]",
+    alignClass: "md:mr-auto md:-mt-[8%]",
   },
-  { position: "right", widthClass: "w-[95%] md:w-[50%]", alignClass: "mx-auto md:ml-auto" },
-  { position: "left", widthClass: "w-[95%] md:w-[38%]", alignClass: "mx-auto md:mr-auto md:-mt-[12%]" },
-  { position: "center", widthClass: "w-[95%] md:w-[45%]", alignClass: "mx-auto" },
+  {
+    position: "right",
+    widthClass: "w-full md:w-[50%]",
+    alignClass: "md:ml-auto",
+  },
+  {
+    position: "left",
+    widthClass: "w-full md:w-[38%]",
+    alignClass: "md:mr-auto md:-mt-[12%]",
+  },
+  {
+    position: "center",
+    widthClass: "w-full md:w-[45%]",
+    alignClass: "md:mx-auto",
+  },
   {
     position: "full-left",
-    widthClass: "w-[95%] md:w-[48%]",
-    alignClass: "mx-auto md:mr-auto md:-mt-[5%]",
+    widthClass: "w-full md:w-[48%]",
+    alignClass: "md:mr-auto md:-mt-[5%]",
   },
 ];
 
 const defaultSlot = {
   position: "center",
-  widthClass: "w-[95%] md:w-[45%]",
-  alignClass: "mx-auto",
+  widthClass: "w-full md:w-[45%]",
+  alignClass: "md:mx-auto",
 };
 
 const PortfolioCard = React.forwardRef(({ item, index, slot }, ref) => {
