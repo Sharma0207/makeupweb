@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const UnderstatedBeautySection = () => {
   const sectionRef = useRef(null);
@@ -9,8 +9,20 @@ const UnderstatedBeautySection = () => {
     offset: ["start end", "end start"],
   });
 
+  const scaleAnimation = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
+  const opacityAnimation = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
+  const yAnimation = useTransform(scrollYProgress, [0, 0.4], [50, 0]);
+
   return (
-    <section ref={sectionRef} className="relative bg-background">
+    <motion.section
+      ref={sectionRef}
+      className="relative bg-black"
+      style={{
+        scale: scaleAnimation,
+        opacity: opacityAnimation,
+        y: yAnimation
+      }}
+    >
       {/* Section title */}
       <div className="py-20 lg:py-32">
         <div className="mx-auto max-w-4xl px-6 text-center">
@@ -47,7 +59,7 @@ const UnderstatedBeautySection = () => {
           </motion.p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
