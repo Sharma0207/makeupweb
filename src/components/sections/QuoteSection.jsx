@@ -14,9 +14,9 @@ const QuoteSection = () => {
   const line2Opacity = useTransform(scrollYProgress, [0.25, 0.6], [0, 1]);
 
   return (
-    <section ref={sectionRef} className="bg-background py-32 lg:py-44">
+    <section ref={sectionRef} className="bg-background  py-32 lg:py-44 ">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <div className="font-display text-2xl md:text-4xl tracking-widest leading-snug text-primary">
+        <div className="font-display text-[18px] tracking-wide md:text-[1.800rem] md:tracking-widest leading-snug text-primary">
           <motion.span
             style={{
               scaleY: line1ScaleY,

@@ -1,6 +1,11 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+// Placeholder images - replace with actual local images when ready
+import mobile from "../../assets/hero2/mobile1.jpg";
+import desktopImage1 from "../../assets/hero2/artofmakeupimage1.png";
+import desktopImage2 from "../../assets/hero2/artofmakeupimage2.png";
+
 const HeroSection2 = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -19,7 +24,7 @@ const HeroSection2 = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[200vh] w-full bg-black"
+      className="relative md:min-h-[200vh] min-h-[100vh] w-full bg-black"
     >
       {/* Sticky container for text and images - with entrance transition */}
       <motion.div
@@ -29,10 +34,9 @@ const HeroSection2 = () => {
           y: sectionY,
         }}
       >
-
         {/* Mobile image - single image */}
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fcb32fcd9daa8419ba576338784d3f106?format=webp&width=800&height=1200"
+          src={mobile}
           alt="Art of Makeup"
           className="absolute inset-0 w-full h-full object-cover md:hidden"
         />
@@ -41,7 +45,7 @@ const HeroSection2 = () => {
         <div className="hidden md:block absolute inset-0 w-full h-full overflow-hidden bg-black">
           {/* Image 1 - fades out */}
           <motion.img
-            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F55d173f479f94d8d946eeb1508729e33?format=webp&width=800&height=1200"
+            src={desktopImage1}
             alt="Art of Makeup - Image 1"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ opacity: image1Opacity }}
@@ -49,7 +53,7 @@ const HeroSection2 = () => {
 
           {/* Image 2 - fades in */}
           <motion.img
-            src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fabfd6e744ce04588842d187fb63ae562?format=webp&width=800&height=1200"
+            src={desktopImage2}
             alt="Art of Makeup - Image 2"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ opacity: image2Opacity }}
@@ -58,7 +62,7 @@ const HeroSection2 = () => {
 
         {/* Fixed text overlay - stays on both images */}
         <div className="relative z-10 text-center px-6">
-          <motion.h1 className="font-display text-3xl md:text-4xl tracking-widest text-white leading-tight drop-shadow-lg">
+          <motion.h1 className="font-display text-2xl md:text-4xl tracking-widest text-white leading-tight drop-shadow-lg">
             THE ART OF MAKEUP
           </motion.h1>
         </div>

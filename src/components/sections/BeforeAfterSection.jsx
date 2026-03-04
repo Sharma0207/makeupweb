@@ -2,32 +2,35 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
+// Import all images from beforeafter folder
+import before1 from "../../assets/beforeafter/before1.jpeg";
+import before2 from "../../assets/beforeafter/before2.jpg";
+import before3 from "../../assets/beforeafter/before3.jpeg";
+import after1 from "../../assets/beforeafter/after1.jpeg";
+import after2 from "../../assets/beforeafter/after2.jpg";
+import after3 from "../../assets/beforeafter/after3.jpeg";
+
 const transformations = [
   {
     id: 0,
-    before: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F5ca5d97d77634cbba9d9c48e2202d533?format=webp&width=800&height=1200",
-    after: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F5025d09b8668492ebc5393223be88607?format=webp&width=800&height=1200",
+    before: before1,
+    after: after1,
     tagline: "Natural to Glamorous",
-    description: "A complete transformation with stunning bridal makeup artistry",
+    description:
+      "A complete transformation with stunning bridal makeup artistry",
   },
   {
     id: 1,
-    before: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2Fb02598f1ccd446a1a932817a37a7ffbb?format=webp&width=800&height=1200",
-    after: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F1f049628bfc04610a505037492a716ec?format=webp&width=800&height=1200",
+    before: before2,
+    after: after2,
     tagline: "Brushes Create Magic",
     description: "Radiant and elegant transformations",
   },
+
   {
     id: 2,
-    before: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
-    after: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=500&fit=crop",
-    tagline: "Where Art Meets Beauty",
-    description: "Bold artistic expressions come to life",
-  },
-  {
-    id: 3,
-    before: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2Fc69f84ae256a41dca66fd4645dd03351?format=webp&width=800&height=1200",
-    after: "https://cdn.builder.io/api/v1/image/assets%2F1fcc1bf089804dbcb25502fab34b5e07%2F2d85daf145e446b18be69cf97b803f03?format=webp&width=800&height=1200",
+    before: before3,
+    after: after3,
     tagline: "Everyday Elegance",
     description: "Subtle yet stunning makeup transformation",
   },
@@ -40,7 +43,9 @@ const BeforeAfterSection = () => {
   const current = transformations[currentIndex];
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + transformations.length) % transformations.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + transformations.length) % transformations.length,
+    );
     setSliderPosition(50);
   };
 
@@ -75,7 +80,10 @@ const BeforeAfterSection = () => {
             transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
             className="font-display tracking-widest uppercase text-white"
-            style={{ fontSize: "clamp(2rem, 4vw, 4rem)", transformOrigin: "center center" }}
+            style={{
+              fontSize: "clamp(2rem, 4vw, 4rem)",
+              transformOrigin: "center center",
+            }}
           >
             Before & After
           </motion.h2>
@@ -86,7 +94,8 @@ const BeforeAfterSection = () => {
             viewport={{ once: true }}
             className="text-white/70 font-body text-sm md:text-base mt-6 max-w-xl mx-auto"
           >
-            Drag the slider to see the incredible transformations I create. Each look is tailored to bring out your best.
+            Drag the slider to see the incredible transformations I create. Each
+            look is tailored to bring out your best.
           </motion.p>
         </div>
 
@@ -110,7 +119,7 @@ const BeforeAfterSection = () => {
                     handleSliderChange(
                       Object.assign(e.touches[0], {
                         currentTarget: e.currentTarget,
-                      })
+                      }),
                     )
                   }
                 >
@@ -211,7 +220,9 @@ const BeforeAfterSection = () => {
                     setSliderPosition(50);
                   }}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? "bg-white w-8" : "bg-white/30 hover:bg-white/60"
+                    index === currentIndex
+                      ? "bg-white w-8"
+                      : "bg-white/30 hover:bg-white/60"
                   }`}
                   aria-label={`Go to transformation ${index + 1}`}
                 />

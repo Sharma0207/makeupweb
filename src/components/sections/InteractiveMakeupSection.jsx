@@ -7,7 +7,7 @@ const makeupProducts = [
     number: "01",
     title: "KAJAL",
     description:
-      "Define your eyes with precision. Our kajal is crafted to deliver intense color without smudging, creating a bold and timeless look that lasts all day.",
+      "I enhance the eyes using deep kajal to define the waterline and create a bold, expressive look. It adds depth to the eyes and completes traditional as well as modern makeup styles while staying long-lasting and smudge resistant.",
     category: "Eye Makeup",
     emoji: "🖤",
     position: { top: "28%", left: "42%" },
@@ -17,8 +17,8 @@ const makeupProducts = [
     number: "02",
     title: "LIPSTICK",
     description:
-      "Luxurious color that complements your natural beauty. From subtle to bold, each shade is designed to enhance your lips with lasting vibrancy and comfort.",
-    category: "Lip Color",
+      "I carefully select lipstick shades that complement the skin tone, outfit, and overall makeup style. From soft nude tones to bold bridal reds, I ensure the lip color enhances the face and stays fresh throughout the event.",
+    category: "Lip Makeup",
     emoji: "💋",
     position: { top: "52%", left: "48%" },
   },
@@ -27,8 +27,8 @@ const makeupProducts = [
     number: "03",
     title: "FOUNDATION",
     description:
-      "Flawless coverage that feels lightweight. Our foundation blends seamlessly for an even, radiant complexion that enhances rather than masks your natural beauty.",
-    category: "Base",
+      "I apply professional HD foundation techniques to create a smooth and flawless base. Using high-quality products suited to the client’s skin type, I blend the foundation seamlessly for a natural, radiant, and long-lasting finish.",
+    category: "Base Makeup",
     emoji: "✨",
     position: { top: "42%", left: "55%" },
   },
@@ -37,8 +37,8 @@ const makeupProducts = [
     number: "04",
     title: "EYESHADOW",
     description:
-      "Rich pigments that blend effortlessly. Create depth and dimension with our eyeshadow palette, designed for both subtle everyday looks and dramatic evening wear.",
-    category: "Eye Color",
+      "I design custom eyeshadow looks that match the outfit and occasion, from soft bridal shimmer to bold glam styles. By blending premium pigments and textures, I create depth, dimension, and beautifully defined eyes.",
+    category: "Eye Makeup",
     emoji: "👁️",
     position: { top: "32%", left: "58%" },
   },
@@ -47,8 +47,8 @@ const makeupProducts = [
     number: "05",
     title: "BLUSH",
     description:
-      "Natural flush of color that brings life to your cheeks. Perfectly pigmented to blend seamlessly and give you that fresh, radiant glow all day long.",
-    category: "Cheek Color",
+      "I apply blush to bring warmth and natural glow to the face. The shade and placement are chosen carefully to enhance facial features and give a healthy, radiant finish that looks beautiful both in person and on camera.",
+    category: "Face Makeup",
     emoji: "🌸",
     position: { top: "45%", left: "40%" },
   },
@@ -57,8 +57,8 @@ const makeupProducts = [
     number: "06",
     title: "MASCARA",
     description:
-      "Volumize and lengthen your lashes. Our mascara formula coats every lash for dramatic impact without clumping, creating bold, beautiful eyes.",
-    category: "Lash Definition",
+      "I finish the eye makeup by applying mascara to lift, lengthen, and volumize the lashes. This step opens up the eyes and adds the final touch of drama and elegance to the complete makeup look.",
+    category: "Lash Enhancement",
     emoji: "💫",
     position: { top: "26%", left: "52%" },
   },

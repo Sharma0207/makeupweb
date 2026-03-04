@@ -24,6 +24,71 @@ import {
   makeup22,
 } from "../assets";
 
+// Import all images from portfolio folder
+import portfolio1 from "../assets/portfolio/1.jpg";
+import portfolio2 from "../assets/portfolio/2.jpg";
+import portfolio3 from "../assets/portfolio/3.jpg";
+import portfolio4 from "../assets/portfolio/4.jpg";
+import portfolio5 from "../assets/portfolio/5.jpg";
+import portfolio6 from "../assets/portfolio/6.jpg";
+import portfolio7 from "../assets/portfolio/7.jpg";
+import portfolio8 from "../assets/portfolio/8.jpeg";
+import portfolio9 from "../assets/portfolio/9.jpg";
+import portfolio10 from "../assets/portfolio/10.jpg";
+import portfolio11 from "../assets/portfolio/11.webp";
+import portfolio12 from "../assets/portfolio/12.webp";
+import portfolio13 from "../assets/portfolio/13.jpg";
+import portfolio14 from "../assets/portfolio/14.jpg";
+import portfolio15 from "../assets/portfolio/15.jpg";
+import portfolio16 from "../assets/portfolio/16.jpg";
+import portfolio17 from "../assets/portfolio/17.jpg";
+import portfolio18 from "../assets/portfolio/18.jpg";
+import portfolio19 from "../assets/portfolio/19.jpg";
+import portfolio20 from "../assets/portfolio/20.jpg";
+import portfolio22 from "../assets/portfolio/22.jpg";
+import portfolio23 from "../assets/portfolio/23.jpg";
+import portfolio24 from "../assets/portfolio/24.jpg";
+import portfolio25 from "../assets/portfolio/25.jpg";
+import portfolio26 from "../assets/portfolio/26.jpg";
+import portfolio27 from "../assets/portfolio/27.jpg";
+import portfolio28 from "../assets/portfolio/28.jpg";
+import portfolio29 from "../assets/portfolio/29.JPG";
+import portfolio30 from "../assets/portfolio/30.JPG";
+import portfolio31 from "../assets/portfolio/31.JPG";
+import portfolio32 from "../assets/portfolio/32.JPG";
+import portfolio33 from "../assets/portfolio/33.JPG";
+import portfolio34 from "../assets/portfolio/34.JPG";
+import portfolio35 from "../assets/portfolio/35.JPG";
+import portfolio36 from "../assets/portfolio/36.JPG";
+import portfolio37 from "../assets/portfolio/37.JPG";
+import portfolio38 from "../assets/portfolio/38.JPG";
+import portfolio39 from "../assets/portfolio/39.JPG";
+import portfolio40 from "../assets/portfolio/40.JPG";
+import portfolio41 from "../assets/portfolio/41.JPG";
+import portfolio42 from "../assets/portfolio/42.JPG";
+import portfolio43 from "../assets/portfolio/43.JPG";
+import portfolio44 from "../assets/portfolio/44.JPG";
+import portfolio45 from "../assets/portfolio/45.JPG";
+import portfolio46 from "../assets/portfolio/46.JPG";
+import portfolio47 from "../assets/portfolio/47.JPG";
+import portfolio48 from "../assets/portfolio/48.JPG";
+import portfolio49 from "../assets/portfolio/49.JPG";
+import portfolio50 from "../assets/portfolio/50.JPG";
+import portfolio51 from "../assets/portfolio/51.JPG";
+import portfolio52 from "../assets/portfolio/52.JPG";
+import portfolio53 from "../assets/portfolio/53.JPG";
+import portfolio54 from "../assets/portfolio/54.JPG";
+import portfolio55 from "../assets/portfolio/55.JPG";
+import portfolio56 from "../assets/portfolio/56.JPG";
+import portfolio57 from "../assets/portfolio/57.JPG";
+import portfolio58 from "../assets/portfolio/58.JPG";
+import portfolio59 from "../assets/portfolio/59.JPG";
+import portfolio60 from "../assets/portfolio/60.JPG";
+import portfolio61 from "../assets/portfolio/61.JPG";
+import portfolio62 from "../assets/portfolio/62.JPG";
+import portfolio63 from "../assets/portfolio/63.JPG";
+import portfolio64 from "../assets/portfolio/64.JPG";
+
 export const navLinks = [
   {
     id: "home",
@@ -55,17 +120,20 @@ export const navLinks = [
 const services = [
   {
     title: "Bridal Makeup",
-    description: "Exquisite bridal transformations tailored to your unique style and heritage.",
+    description:
+      "Exquisite bridal transformations tailored to your unique style and heritage.",
     category: "BRIDAL",
   },
   {
     title: "Editorial & Shoot",
-    description: "Visionary makeup for high-fashion, commercial, and creative photography.",
+    description:
+      "Visionary makeup for high-fashion, commercial, and creative photography.",
     category: "EDITORIAL",
   },
   {
     title: "Party & Occasion",
-    description: "Sophisticated glam for celebrations that demand a flawless presence.",
+    description:
+      "Sophisticated glam for celebrations that demand a flawless presence.",
     category: "GLAMOUR",
   },
 ];
@@ -132,254 +200,383 @@ export const impactStats = [
 ];
 
 export const portfolioItems = [
-  // Bridal Collection
   {
     id: 1,
-    title: "Ethereal Bride",
+    title: "Portfolio 1",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fe80c961db7c84ec385e75f32294c73a3?format=webp&width=800&height=1200",
+    image: portfolio1,
   },
   {
     id: 2,
-    title: "Royal Nuptials",
+    title: "Portfolio 2",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F75a7d68bbbc3493f993fa3942769c6a0?format=webp&width=800&height=1200",
+    image: portfolio2,
   },
   {
     id: 3,
-    title: "Golden Bride",
+    title: "Portfolio 3",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fa544e5250f6e404b8e7887d239ab8bbd?format=webp&width=800&height=1200",
+    image: portfolio3,
   },
   {
     id: 4,
-    title: "Vintage Romance",
+    title: "Portfolio 4",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fa18c3b2976f74c2ab18f0c4f4445a6f8?format=webp&width=800&height=1200",
+    image: portfolio4,
   },
   {
     id: 5,
-    title: "Bridal Elegance",
+    title: "Portfolio 5",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fc2d7b200181840c69f73371e7197b89b?format=webp&width=800&height=1200",
+    image: portfolio5,
   },
   {
     id: 6,
-    title: "Royal Bride I",
+    title: "Portfolio 6",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F26318ad71d6e47f1b401f8d92e8acd34?format=webp&width=800&height=1200",
+    image: portfolio6,
   },
   {
     id: 7,
-    title: "Bride in Gold",
+    title: "Portfolio 7",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F14e92d74e15d4fbaa08c86fd8e1b9d1b?format=webp&width=800&height=1200",
+    image: portfolio7,
   },
   {
     id: 8,
-    title: "Ethereal Elegance",
-    category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fdfd24792d93d461d900e2aba46fda6ed?format=webp&width=800&height=1200",
+    title: "Portfolio 8",
+    category: "Editorial",
+    image: portfolio8,
   },
   {
     id: 9,
-    title: "Regal Beauty",
-    category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fc10e7d72db51439cb9f3893a7b671942?format=webp&width=800&height=1200",
+    title: "Portfolio 9",
+    category: "Editorial",
+    image: portfolio9,
   },
-
-  // Editorial Collection
   {
     id: 10,
-    title: "Vogue Editorial",
+    title: "Portfolio 10",
     category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F40e21f4c79254d1a9ad29e02af942dd3?format=webp&width=800&height=1200",
+    image: portfolio10,
   },
   {
     id: 11,
-    title: "Modern Editorial",
+    title: "Portfolio 11",
     category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F9755293d269d472a843981addbee219d?format=webp&width=800&height=1200",
+    image: portfolio11,
   },
   {
     id: 12,
-    title: "Fashion Forward",
+    title: "Portfolio 12",
     category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F434f5dafa97046d9aae337540cf7d166?format=webp&width=800&height=1200",
+    image: portfolio12,
   },
   {
     id: 13,
-    title: "High Fashion",
-    category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F14ce30b0569846fa903b5550bc1d1b03?format=webp&width=800&height=1200",
+    title: "Portfolio 13",
+    category: "Party",
+    image: portfolio13,
   },
   {
     id: 14,
-    title: "Editorial Glam",
-    category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Ffa906080d10b483e983e453849f19d1b?format=webp&width=800&height=1200",
+    title: "Portfolio 14",
+    category: "Party",
+    image: portfolio14,
   },
   {
     id: 15,
-    title: "Studio Shoot",
-    category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F43fa87bb9ca04d9c9217aa3717a67657?format=webp&width=800&height=1200",
+    title: "Portfolio 15",
+    category: "Party",
+    image: portfolio15,
   },
-
-  // Party & Occasion Collection
   {
     id: 16,
-    title: "Elegant Evening",
+    title: "Portfolio 16",
     category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fce7379d7b22948ef847fa670e71769bc?format=webp&width=800&height=1200",
+    image: portfolio16,
   },
   {
     id: 17,
-    title: "Celebration Glow",
-    category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fe5ab4c8bf524420194bb974eacfbf1db?format=webp&width=800&height=1200",
+    title: "Portfolio 17",
+    category: "Creative",
+    image: portfolio17,
   },
   {
     id: 18,
-    title: "Party Glamour",
-    category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Faa8bf5467440405cb0890a3068f1d4a0?format=webp&width=800&height=1200",
+    title: "Portfolio 18",
+    category: "Creative",
+    image: portfolio18,
   },
   {
     id: 19,
-    title: "Night Out",
-    category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F72ac3eb65c5b421daf892897f41979b4?format=webp&width=800&height=1200",
+    title: "Portfolio 19",
+    category: "Creative",
+    image: portfolio19,
   },
   {
     id: 20,
-    title: "Occasion Ready",
-    category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F35a0e666f03a4a6db2b5b9dbf05c0469?format=webp&width=800&height=1200",
+    title: "Portfolio 20",
+    category: "Creative",
+    image: portfolio20,
   },
-  {
-    id: 21,
-    title: "Festive Look",
-    category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fb08a397317804039a65c0c052c617957?format=webp&width=800&height=1200",
-  },
-
-  // Creative & Artistic Collection
   {
     id: 22,
-    title: "Artistic Vision",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F6f9a4cda2b0946c789882fe84a0224bc?format=webp&width=800&height=1200",
+    title: "Portfolio 22",
+    category: "Bridal",
+    image: portfolio22,
   },
   {
     id: 23,
-    title: "Creative Expression",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F5a13c68f766e4f0a9a5d5b8f2662ae7a?format=webp&width=800&height=1200",
+    title: "Portfolio 23",
+    category: "Bridal",
+    image: portfolio23,
   },
   {
     id: 24,
-    title: "Art Form",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F76f1275c090f4f51ae88004f1f75e5ca?format=webp&width=800&height=1200",
+    title: "Portfolio 24",
+    category: "Bridal",
+    image: portfolio24,
   },
   {
     id: 25,
-    title: "Canvas Beauty",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F63a696ba5fa940a08e8427b53a7c91f7?format=webp&width=800&height=1200",
+    title: "Portfolio 25",
+    category: "Bridal",
+    image: portfolio25,
   },
   {
     id: 26,
-    title: "Experimental Art",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F0789e950fe1041d6b3e5f02d3eba85dd?format=webp&width=800&height=1200",
+    title: "Portfolio 26",
+    category: "Bridal",
+    image: portfolio26,
   },
   {
     id: 27,
-    title: "Bold Expression",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F2e376e12aeac488194ed72a6a61a2e57?format=webp&width=800&height=1200",
+    title: "Portfolio 27",
+    category: "Editorial",
+    image: portfolio27,
   },
-
-  // Additional Premium Showcase
   {
     id: 28,
-    title: "Radiant Bride",
-    category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Ff45c85f3a82a42118886d297889d7fa2?format=webp&width=800&height=1200",
+    title: "Portfolio 28",
+    category: "Editorial",
+    image: portfolio28,
   },
   {
     id: 29,
-    title: "Masterpiece",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F63112ffd98f54736b66c61dadcd88f89?format=webp&width=800&height=1200",
+    title: "Portfolio 29",
+    category: "Editorial",
+    image: portfolio29,
   },
   {
     id: 30,
-    title: "Perfect Finish",
-    category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F6a33ad4d30bd4fdf80589508eaf47d9b?format=webp&width=800&height=1200",
+    title: "Portfolio 30",
+    category: "Party",
+    image: portfolio30,
   },
   {
     id: 31,
-    title: "Glamorous Night",
+    title: "Portfolio 31",
     category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F4d7c59777ecf495589001356f2ab3007?format=webp&width=800&height=1200",
+    image: portfolio31,
   },
   {
     id: 32,
-    title: "Stunning Bride",
-    category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F595758c0ffc0446aa6cc6411d4cf7ec1?format=webp&width=800&height=1200",
+    title: "Portfolio 32",
+    category: "Party",
+    image: portfolio32,
   },
   {
     id: 33,
-    title: "Modern Look",
-    category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F3e91dba5780446acad14b0ca8aaa2749?format=webp&width=800&height=1200",
+    title: "Portfolio 33",
+    category: "Creative",
+    image: portfolio33,
   },
   {
     id: 34,
-    title: "Artistic Beauty",
+    title: "Portfolio 34",
     category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F2f86d8f3e9c94d54978c5de33a8cceee?format=webp&width=800&height=1200",
+    image: portfolio34,
   },
   {
     id: 35,
-    title: "Chic Occasion",
-    category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F991895310f79416d976e4979819e8a3c?format=webp&width=800&height=1200",
+    title: "Portfolio 35",
+    category: "Creative",
+    image: portfolio35,
   },
   {
     id: 36,
-    title: "Wedding Ready",
+    title: "Portfolio 36",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F8946a1fd67254cb0a65714fdd5e2d9d6?format=webp&width=800&height=1200",
+    image: portfolio36,
   },
   {
     id: 37,
-    title: "Fashion Editorial",
-    category: "Editorial",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F26c5e5b8692148f1ad11841112ee9794?format=webp&width=800&height=1200",
+    title: "Portfolio 37",
+    category: "Bridal",
+    image: portfolio37,
   },
   {
     id: 38,
-    title: "Creative Makeup",
-    category: "Creative",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F2b04f81d281c43b199b8a9c78c260d4c?format=webp&width=800&height=1200",
+    title: "Portfolio 38",
+    category: "Bridal",
+    image: portfolio38,
   },
   {
     id: 39,
-    title: "Evening Elegance",
-    category: "Party",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fd9dc8726783140ed935327ef87ed44a0?format=webp&width=800&height=1200",
+    title: "Portfolio 39",
+    category: "Editorial",
+    image: portfolio39,
   },
   {
     id: 40,
-    title: "Bridal Perfection",
+    title: "Portfolio 40",
+    category: "Editorial",
+    image: portfolio40,
+  },
+  {
+    id: 41,
+    title: "Portfolio 41",
+    category: "Party",
+    image: portfolio41,
+  },
+  {
+    id: 42,
+    title: "Portfolio 42",
+    category: "Party",
+    image: portfolio42,
+  },
+  {
+    id: 43,
+    title: "Portfolio 43",
+    category: "Creative",
+    image: portfolio43,
+  },
+  {
+    id: 44,
+    title: "Portfolio 44",
+    category: "Creative",
+    image: portfolio44,
+  },
+  {
+    id: 45,
+    title: "Portfolio 45",
     category: "Bridal",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fed2ba3e8c6bc44138e2b9ad9313f5a4b?format=webp&width=800&height=1200",
+    image: portfolio45,
+  },
+  {
+    id: 46,
+    title: "Portfolio 46",
+    category: "Bridal",
+    image: portfolio46,
+  },
+  {
+    id: 47,
+    title: "Portfolio 47",
+    category: "Bridal",
+    image: portfolio47,
+  },
+  {
+    id: 48,
+    title: "Portfolio 48",
+    category: "Editorial",
+    image: portfolio48,
+  },
+  {
+    id: 49,
+    title: "Portfolio 49",
+    category: "Editorial",
+    image: portfolio49,
+  },
+  {
+    id: 50,
+    title: "Portfolio 50",
+    category: "Party",
+    image: portfolio50,
+  },
+  {
+    id: 51,
+    title: "Portfolio 51",
+    category: "Party",
+    image: portfolio51,
+  },
+  {
+    id: 52,
+    title: "Portfolio 52",
+    category: "Creative",
+    image: portfolio52,
+  },
+  {
+    id: 53,
+    title: "Portfolio 53",
+    category: "Creative",
+    image: portfolio53,
+  },
+  {
+    id: 54,
+    title: "Portfolio 54",
+    category: "Bridal",
+    image: portfolio54,
+  },
+  {
+    id: 55,
+    title: "Portfolio 55",
+    category: "Bridal",
+    image: portfolio55,
+  },
+  {
+    id: 56,
+    title: "Portfolio 56",
+    category: "Editorial",
+    image: portfolio56,
+  },
+  {
+    id: 57,
+    title: "Portfolio 57",
+    category: "Editorial",
+    image: portfolio57,
+  },
+  {
+    id: 58,
+    title: "Portfolio 58",
+    category: "Party",
+    image: portfolio58,
+  },
+  {
+    id: 59,
+    title: "Portfolio 59",
+    category: "Party",
+    image: portfolio59,
+  },
+  {
+    id: 60,
+    title: "Portfolio 60",
+    category: "Creative",
+    image: portfolio60,
+  },
+  {
+    id: 61,
+    title: "Portfolio 61",
+    category: "Creative",
+    image: portfolio61,
+  },
+  {
+    id: 62,
+    title: "Portfolio 62",
+    category: "Bridal",
+    image: portfolio62,
+  },
+  {
+    id: 63,
+    title: "Portfolio 63",
+    category: "Bridal",
+    image: portfolio63,
+  },
+  {
+    id: 64,
+    title: "Portfolio 64",
+    category: "Editorial",
+    image: portfolio64,
   },
 ];
 
@@ -404,7 +601,8 @@ export const testimonials = [
     id: 3,
     name: "Mrs Sharma",
     role: "Patna, Bihar",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2Fd01261ceeb484f048d308f77e969ae73?format=webp&width=800&height=1200",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2Fd01261ceeb484f048d308f77e969ae73?format=webp&width=800&height=1200",
     rating: 5,
     text: "25th anniversary pe wedding jaisi excitement thi! Pehle thoda nervous thi makeup ko leke, lekin result dekh ke bahut khush hui. Sab keh rahe the, Apni shaadi se bhi zyada khubsurat lag rahi ho!",
   },
@@ -412,15 +610,17 @@ export const testimonials = [
     id: 4,
     name: "Eshika",
     role: "Patna, Bihar",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2F1b9b03d3252647f6b579b230f14229ea?format=webp&width=800&height=1200",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2F1b9b03d3252647f6b579b230f14229ea?format=webp&width=800&height=1200",
     rating: 5,
-    text: "I still can’t get over my look for Miss Universe Bihar! I was a little anxious at first, but the final result was absolutely stunning. The makeup brought out my confidence and made me feel stage-ready like never before!",
+    text: "I still can't get over my look for Miss Universe Bihar! I was a little anxious at first, but the final result was absolutely stunning. The makeup brought out my confidence and made me feel stage-ready like never before!",
   },
   {
     id: 5,
     name: "Afsha",
     role: "Patna, Bihar",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2F3511bff9cb824ca5bcffd56648a49376?format=webp&width=800&height=1200",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Fd7deb4639dab45149e2d6b8962802a13%2F3511bff9cb824ca5bcffd56648a49376?format=webp&width=800&height=1200",
     rating: 5,
     text: "Mera walima look bohot acha tha! Makeup ke baad khud ko bohot confident feel kiya. Sab log meri tareef kar rahe thay aur mujhe bohot pasand aaya. Makeup ne mera look bilkul enhance kar diya tha, jo din ko aur bhi khaas bana diya.",
   },
@@ -429,27 +629,33 @@ export const testimonials = [
 export const faqs = [
   {
     id: 1,
-    question: "Who is a professional bridal makeup artist for weddings and special events?",
-    answer: "Makeup By Anchala is a professional bridal makeup artist specializing in HD bridal makeup, airbrush makeup, and customized wedding looks. Each look is carefully designed according to your skin type, face structure, outfit, and personal style to ensure a flawless and long-lasting finish.",
+    question:
+      "Who is a professional bridal makeup artist for weddings and special events?",
+    answer:
+      "Makeup By Anchala is a professional bridal makeup artist specializing in HD bridal makeup, airbrush makeup, and customized wedding looks. Each look is carefully designed according to your skin type, face structure, outfit, and personal style to ensure a flawless and long-lasting finish.",
   },
   {
     id: 2,
     question: "What makeup services do you offer?",
-    answer: "We offer a complete range of makeup services, including: HD Bridal Makeup, Airbrush Bridal Makeup, Engagement & Reception Makeup, Haldi & Mehendi Makeup, Party & Event Makeup, Photoshoot & Glam Makeup. All services include premium, skin-friendly products and a long-lasting, camera-ready finish.",
+    answer:
+      "We offer a complete range of makeup services, including: HD Bridal Makeup, Airbrush Bridal Makeup, Engagement & Reception Makeup, Haldi & Mehendi Makeup, Party & Event Makeup, Photoshoot & Glam Makeup. All services include premium, skin-friendly products and a long-lasting, camera-ready finish.",
   },
   {
     id: 3,
     question: "What is the cost of bridal makeup?",
-    answer: "The cost depends on the type of makeup (HD or airbrush), event type, and location. Every bride has different requirements, so packages are customized accordingly. For detailed pricing and availability, please contact us directly via WhatsApp or Instagram.",
+    answer:
+      "The cost depends on the type of makeup (HD or airbrush), event type, and location. Every bride has different requirements, so packages are customized accordingly. For detailed pricing and availability, please contact us directly via WhatsApp or Instagram.",
   },
   {
     id: 4,
     question: "Do you travel for bridal and event makeup bookings?",
-    answer: "Yes, I travel to different cities and venues for bridal and event makeup bookings. Travel charges may apply depending on the location and event schedule. Early booking is recommended to secure your date, especially during peak wedding season.",
+    answer:
+      "Yes, I travel to different cities and venues for bridal and event makeup bookings. Travel charges may apply depending on the location and event schedule. Early booking is recommended to secure your date, especially during peak wedding season.",
   },
   {
     id: 5,
     question: "How early should I book my wedding makeup artist?",
-    answer: "It is best to book at least 1–2 months in advance to ensure availability. Early booking also gives time for consultation or trial sessions so we can finalize your perfect look stress-free.",
+    answer:
+      "It is best to book at least 1–2 months in advance to ensure availability. Early booking also gives time for consultation or trial sessions so we can finalize your perfect look stress-free.",
   },
 ];

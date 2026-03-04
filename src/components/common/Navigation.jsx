@@ -51,13 +51,23 @@ const Navigation = () => {
           </Link>
         </div>
 
-        <Link to="/" className="cursor-pointer hover:opacity-70 transition-opacity">
+        <Link
+          to="/"
+          className="cursor-pointer hover:opacity-70 transition-opacity"
+        >
           <div className="flex flex-col items-center gap-1">
-            <span className={`logo-text text-lg md:text-2xl tracking-[0.08em] ${logoColor} font-bold`}>
+            <span
+              className={`logo-text text-lg md:text-2xl tracking-[0.08em] ${logoColor} font-bold`}
+            >
               MAKEUP
             </span>
-            <span className={`${logoColor} text-xs md:text-sm tracking-[0.15em] font-body`}>
-              <span className="font-display italic text-[1.05em] relative -top-[0.02em]">BY</span> ANCHALA
+            <span
+              className={`${logoColor} text-xs md:text-sm tracking-[0.15em] font-body`}
+            >
+              <span className="font-display italic text-[1.05em] relative -top-[0.02em]">
+                BY
+              </span>{" "}
+              ANCHALA
             </span>
           </div>
         </Link>
@@ -82,9 +92,15 @@ const Navigation = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden flex flex-col gap-[5px] cursor-pointer z-50"
         >
-          <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isPortfolio ? 'bg-black' : 'bg-white'} ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isPortfolio ? 'bg-black' : 'bg-white'} ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-3 h-[1.5px] transition-all duration-300 ${isPortfolio ? 'bg-black' : 'bg-white'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span
+            className={`block w-5 h-[1.5px] transition-all duration-300 ${isPortfolio ? "bg-black" : "bg-white"} ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+          />
+          <span
+            className={`block w-5 h-[1.5px] transition-all duration-300 ${isPortfolio ? "bg-black" : "bg-white"} ${isMobileMenuOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`block w-3 h-[1.5px] transition-all duration-300 ${isPortfolio ? "bg-black" : "bg-white"} ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+          />
         </button>
       </motion.nav>
 
@@ -92,7 +108,7 @@ const Navigation = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className={`fixed inset-0 z-40 pt-20 ${isPortfolio ? 'bg-white' : 'bg-black'}`}
+            className={`fixed inset-0 z-40 pt-20 ${isPortfolio ? "bg-white" : "bg-black"}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -103,7 +119,9 @@ const Navigation = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className="absolute top-6 right-4 z-50 text-3xl"
             >
-              <span className={`${isPortfolio ? 'text-black' : 'text-white'} hover:opacity-60 transition-opacity`}>
+              <span
+                className={`${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
+              >
                 ✕
               </span>
             </button>
@@ -111,25 +129,25 @@ const Navigation = () => {
             <div className="flex flex-col gap-8 px-6 py-8">
               <Link
                 to="/portfolio"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? 'text-black' : 'text-white'} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
               >
                 PORTFOLIO
               </Link>
               <Link
                 to="/about"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? 'text-black' : 'text-white'} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
               >
                 ABOUT
               </Link>
               <Link
                 to="/services"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? 'text-black' : 'text-white'} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
               >
                 SERVICES
               </Link>
               <Link
                 to="/contact"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? 'text-black' : 'text-white'} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
               >
                 CONTACT
               </Link>

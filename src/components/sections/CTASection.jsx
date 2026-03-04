@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import cta from "../../assets/CTA.JPG";
 
 const CTASection = () => {
   const containerRef = useRef(null);
@@ -10,11 +11,23 @@ const CTASection = () => {
   });
 
   // Phase 1: Image expands from 35% to 100%
-  const imageWidth = useTransform(scrollYProgress, [0, 0.05, 0.28], ["35%", "35%", "100%"]);
-  const imageHeight = useTransform(scrollYProgress, [0, 0.05, 0.28], ["50%", "50%", "100%"]);
+  const imageWidth = useTransform(
+    scrollYProgress,
+    [0, 0.05, 0.28],
+    ["35%", "35%", "100%"],
+  );
+  const imageHeight = useTransform(
+    scrollYProgress,
+    [0, 0.05, 0.28],
+    ["50%", "50%", "100%"],
+  );
 
   // Phase 2: Card fades in and slides up (appears earlier)
-  const cardOpacity = useTransform(scrollYProgress, [0.12, 0.28, 0.85, 1], [0, 1, 1, 0]);
+  const cardOpacity = useTransform(
+    scrollYProgress,
+    [0.12, 0.28, 0.85, 1],
+    [0, 1, 1, 0],
+  );
   const cardY = useTransform(scrollYProgress, [0.12, 0.32], [60, 0]);
 
   return (
@@ -38,7 +51,7 @@ const CTASection = () => {
           }}
         >
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F14c23c9745ba45e7b628e58f869989ba%2Fd410dac294ba4437ababa1e6e2d40aeb?format=webp&width=800&height=1200"
+            src={cta}
             alt="Makeup styling"
             className="w-full h-full object-cover"
           />
@@ -96,9 +109,14 @@ const CTASection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.8 }}
                 className="font-body text-sm md:text-base leading-relaxed mb-10"
-                style={{ maxWidth: "520px", margin: "0 auto 40px", color: "rgba(255, 255, 255, 0.8)" }}
+                style={{
+                  maxWidth: "520px",
+                  margin: "0 auto 40px",
+                  color: "rgba(255, 255, 255, 0.8)",
+                }}
               >
-                Let's create a look that makes you feel confident, beautiful, and absolutely radiant. Book a consultation or session today.
+                Let's create a look that makes you feel confident, beautiful,
+                and absolutely radiant. Book a consultation or session today.
               </motion.p>
 
               {/* CTA Button */}

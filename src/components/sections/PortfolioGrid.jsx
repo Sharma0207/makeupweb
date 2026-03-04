@@ -6,15 +6,31 @@ const gridPattern = [
   { position: "left", widthClass: "w-[45%]", alignClass: "mr-auto" },
   { position: "right", widthClass: "w-[48%]", alignClass: "ml-auto -mt-[15%]" },
   { position: "center", widthClass: "w-[40%]", alignClass: "mx-auto" },
-  { position: "full-right", widthClass: "w-[55%]", alignClass: "ml-auto -mt-[10%]" },
-  { position: "full-left", widthClass: "w-[42%]", alignClass: "mr-auto -mt-[8%]" },
+  {
+    position: "full-right",
+    widthClass: "w-[55%]",
+    alignClass: "ml-auto -mt-[10%]",
+  },
+  {
+    position: "full-left",
+    widthClass: "w-[42%]",
+    alignClass: "mr-auto -mt-[8%]",
+  },
   { position: "right", widthClass: "w-[50%]", alignClass: "ml-auto" },
   { position: "left", widthClass: "w-[38%]", alignClass: "mr-auto -mt-[12%]" },
   { position: "center", widthClass: "w-[45%]", alignClass: "mx-auto" },
-  { position: "full-left", widthClass: "w-[48%]", alignClass: "mr-auto -mt-[5%]" },
+  {
+    position: "full-left",
+    widthClass: "w-[48%]",
+    alignClass: "mr-auto -mt-[5%]",
+  },
 ];
 
-const defaultSlot = { position: "center", widthClass: "w-[45%]", alignClass: "mx-auto" };
+const defaultSlot = {
+  position: "center",
+  widthClass: "w-[45%]",
+  alignClass: "mx-auto",
+};
 
 const PortfolioCard = React.forwardRef(({ item, index, slot }, ref) => {
   const safeSlot = slot || defaultSlot;
@@ -25,7 +41,11 @@ const PortfolioCard = React.forwardRef(({ item, index, slot }, ref) => {
       initial={{ opacity: 0, y: 60 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 30 }}
-      transition={{ duration: 0.7, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{
+        duration: 0.7,
+        delay: index * 0.1,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
       className={`${safeSlot.widthClass} ${safeSlot.alignClass} mb-8`}
     >
       <div className="portfolio-item group relative overflow-hidden bg-gray-50">
@@ -63,7 +83,12 @@ const PortfolioGrid = ({ activeFilter }) => {
           {filteredItems.map((item, index) => {
             const slot = gridPattern[index % gridPattern.length];
             return (
-              <PortfolioCard key={item.id} item={item} index={index} slot={slot} />
+              <PortfolioCard
+                key={item.id}
+                item={item}
+                index={index}
+                slot={slot}
+              />
             );
           })}
         </AnimatePresence>

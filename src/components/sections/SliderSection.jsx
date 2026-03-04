@@ -3,56 +3,69 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+// Import all images from slidersection folder
+
+import image1 from "../../assets/slidersection/image1.JPG";
+import image2 from "../../assets/slidersection/image2.jpeg";
+import image3 from "../../assets/slidersection/image3.jpg";
+import image4 from "../../assets/slidersection/image4.jpg";
+import image5 from "../../assets/slidersection/image5.jpg";
+import image6 from "../../assets/slidersection/image6.JPG";
+import image7 from "../../assets/slidersection/image7.JPG";
+import image8 from "../../assets/slidersection/image8.JPG";
+import image9 from "../../assets/slidersection/image9.jpeg";
+import image10 from "../../assets/slidersection/image10.JPG";
+
 const slides = [
   {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fe80c961db7c84ec385e75f32294c73a3?format=webp&width=800&height=1200",
+    image: image1,
     name: "Golden Bride",
     category: "Bridal Makeup",
   },
   {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F40e21f4c79254d1a9ad29e02af942dd3?format=webp&width=800&height=1200",
+    image: image8,
+    name: "Royal Red Bride",
+    category: "Bridal Makeup",
+  },
+  {
+    image: image7,
     name: "Professional Finish",
     category: "Editorial & Shoot",
   },
   {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fce7379d7b22948ef847fa670e71769bc?format=webp&width=800&height=1200",
-    name: "Elegant Evening",
+    image: image5,
+    name: "Timeless Beauty Look",
     category: "Party & Occasion",
   },
   {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F6f9a4cda2b0946c789882fe84a0224bc?format=webp&width=800&height=1200",
-    name: "Artistic Expression",
-    category: "Creative Art",
+    image: image4,
+    name: "Elegant Walima Glam",
+    category: "Bridal Makeup",
   },
   {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F75a7d68bbbc3493f993fa3942769c6a0?format=webp&width=800&height=1200",
+    image: image3,
+    name: "Signature Wedding Glam",
+    category: "Bridal Makeup",
+  },
+  {
+    image: image2,
+    name: "Cinematic Bronze Editorial",
+    category: "Editorial & Shoot",
+  },
+  {
+    image: image6,
     name: "Royal Glamour",
     category: "Bridal Makeup",
   },
   {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fa544e5250f6e404b8e7887d239ab8bbd?format=webp&width=800&height=1200",
-    name: "Vintage Romance",
-    category: "Bridal Makeup",
-  },
-  {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F9755293d269d472a843981addbee219d?format=webp&width=800&height=1200",
-    name: "Modern Editorial",
-    category: "Editorial & Shoot",
-  },
-  {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fe5ab4c8bf524420194bb974eacfbf1db?format=webp&width=800&height=1200",
-    name: "Celebration Glow",
+    image: image9,
+    name: "Timeless Red Elegance",
     category: "Party & Occasion",
   },
   {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2F5a13c68f766e4f0a9a5d5b8f2662ae7a?format=webp&width=800&height=1200",
-    name: "Creative Vision",
-    category: "Creative Art",
-  },
-  {
-    image: "https://cdn.builder.io/api/v1/image/assets%2F05446b98d075402fa4c86116c3d88bca%2Fa18c3b2976f74c2ab18f0c4f4445a6f8?format=webp&width=800&height=1200",
-    name: "Bridal Elegance",
-    category: "Bridal Makeup",
+    image: image10,
+    name: "Creative Editorial",
+    category: "Editorial & Shoot",
   },
 ];
 
@@ -63,9 +76,21 @@ const SliderCard = ({ slide, index }) => {
     offset: ["start end", "end start"],
   });
 
-  const rotateZ = useTransform(scrollYProgress, [0, 0.5, 1], [index * 0.8, 0, -index * 0.5]);
-  const translateY = useTransform(scrollYProgress, [0, 0.5, 1], [index * 8, 0, -index * 4]);
-  const imageX = useTransform(scrollYProgress, [0, 1], [-15 - index * 5, 5 + index * 3]);
+  const rotateZ = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [index * 0.8, 0, -index * 0.5],
+  );
+  const translateY = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [index * 8, 0, -index * 4],
+  );
+  const imageX = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [-15 - index * 5, 5 + index * 3],
+  );
 
   return (
     <motion.div
