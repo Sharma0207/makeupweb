@@ -73,52 +73,55 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
             {/* Contact Information - Left */}
             <motion.div
-              className="space-y-12 md:space-y-16"
+              className="space-y-6 md:space-y-8"
               initial="hidden"
               animate="visible"
             >
               {/* Call Us */}
               <motion.div custom={0} variants={fadeUp}>
-                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-gray-400">
+                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-black">
                   CALL US
                 </h3>
-                <div className="space-y-2 font-body text-sm md:text-base">
-                  <p className="text-white">
-                    <span className="block">+61 4XX XXX XXX</span>
-                    <span className="text-gray-400 text-xs">Primary Contact</span>
+                <div className="bg-white p-6 rounded-lg space-y-3 font-body text-sm md:text-base">
+                  <p className="text-black">
+                    <span className="block font-semibold">+91 XXXXXXXXXX</span>
+                    <span className="text-gray-600 text-xs">Primary Contact</span>
                   </p>
-                  <p className="text-white mt-3">
-                    <span className="block">+61 4XX XXX XXX</span>
-                    <span className="text-gray-400 text-xs">Booking Assistant</span>
+                  <p className="text-black border-t border-gray-200 pt-3">
+                    <span className="block font-semibold">+91 XXXXXXXXXX</span>
+                    <span className="text-gray-600 text-xs">Booking Assistant</span>
                   </p>
                 </div>
               </motion.div>
 
               {/* Write Us */}
               <motion.div custom={1} variants={fadeUp}>
-                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-gray-400">
+                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-black">
                   EMAIL US
                 </h3>
-                <a
-                  href="mailto:anchala@makeup.com"
-                  className="text-white hover:text-gray-300 transition-colors duration-300 font-body text-sm md:text-base"
-                >
-                  anchala@makeup.com
-                </a>
+                <div className="bg-white p-6 rounded-lg">
+                  <a
+                    href="mailto:anchala@makeup.com"
+                    className="text-black hover:text-pink-600 transition-colors duration-300 font-body text-sm md:text-base font-semibold break-all"
+                  >
+                    anchala@makeup.com
+                  </a>
+                </div>
               </motion.div>
 
               {/* Location */}
               <motion.div custom={2} variants={fadeUp}>
-                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-gray-400">
+                <h3 className="text-xs md:text-sm font-bold tracking-widest uppercase mb-3 text-black">
                   VISIT US
                 </h3>
-                <p className="text-white font-body text-sm md:text-base leading-relaxed">
-                  Mumbai, India
-                  <br />
-                  Available for destination makeup artistry
-                  <br />
-                  Wedding • Events • Photoshoots
-                </p>
+                <div className="bg-white p-6 rounded-lg">
+                  <p className="text-black font-body text-sm md:text-base leading-relaxed font-semibold">
+                    Mumbai, India
+                    <br />
+                    <span className="text-gray-600 font-normal text-xs mt-2 block">Available for destination makeup artistry</span>
+                    <span className="text-gray-600 font-normal text-xs block">Wedding • Events • Photoshoots</span>
+                  </p>
+                </div>
               </motion.div>
             </motion.div>
 
@@ -130,7 +133,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 {/* Name Field */}
                 <motion.div custom={0} variants={fadeUp}>
-                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-gray-400">
+                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
                     Your Name –{" "}
                     <span className="text-pink-400">*</span>
                   </label>
@@ -141,13 +144,13 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="Full name"
                     required
-                    className="w-full bg-transparent border-b border-white/20 py-4 text-sm font-body outline-none text-white placeholder:text-gray-600 focus:border-white transition-colors duration-300"
+                    className="w-full bg-white border-none py-3 px-4 text-sm font-body outline-none text-black placeholder:text-gray-500 focus:ring-2 focus:ring-pink-400 transition-all duration-300 rounded"
                   />
                 </motion.div>
 
                 {/* Email Field */}
                 <motion.div custom={1} variants={fadeUp}>
-                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-gray-400">
+                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
                     Your Email –{" "}
                     <span className="text-pink-400">*</span>
                   </label>
@@ -158,13 +161,13 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="your@email.com"
                     required
-                    className="w-full bg-transparent border-b border-white/20 py-4 text-sm font-body outline-none text-white placeholder:text-gray-600 focus:border-white transition-colors duration-300"
+                    className="w-full bg-white border-none py-3 px-4 text-sm font-body outline-none text-black placeholder:text-gray-500 focus:ring-2 focus:ring-pink-400 transition-all duration-300 rounded"
                   />
                 </motion.div>
 
                 {/* Phone Field */}
                 <motion.div custom={2} variants={fadeUp}>
-                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-gray-400">
+                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
                     Your Phone Number
                   </label>
                   <input
@@ -173,55 +176,55 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="+91 98xxx xxxxx"
-                    className="w-full bg-transparent border-b border-white/20 py-4 text-sm font-body outline-none text-white placeholder:text-gray-600 focus:border-white transition-colors duration-300"
+                    className="w-full bg-white border-none py-3 px-4 text-sm font-body outline-none text-black placeholder:text-gray-500 focus:ring-2 focus:ring-pink-400 transition-all duration-300 rounded"
                   />
                 </motion.div>
 
                 {/* Service Dropdown */}
                 <motion.div custom={3} variants={fadeUp}>
-                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-gray-400">
+                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
                     Service Type
                   </label>
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full bg-transparent border-b border-white/20 py-4 text-sm font-body outline-none text-white focus:border-white transition-colors duration-300 appearance-none cursor-pointer"
+                    className="w-full bg-white border-none py-3 px-4 text-sm font-body outline-none text-black focus:ring-2 focus:ring-pink-400 transition-all duration-300 rounded appearance-none cursor-pointer"
                   >
-                    <option value="" className="bg-black text-white">Select a service</option>
-                    <option value="bridal" className="bg-black text-white">Bridal Makeup</option>
-                    <option value="party" className="bg-black text-white">Party & Event Makeup</option>
-                    <option value="editorial" className="bg-black text-white">Editorial & Photoshoot</option>
-                    <option value="training" className="bg-black text-white">Makeup Training & Workshops</option>
-                    <option value="personal" className="bg-black text-white">Personal Makeup Session</option>
-                    <option value="other" className="bg-black text-white">Other</option>
+                    <option value="">Select a service</option>
+                    <option value="bridal">Bridal Makeup</option>
+                    <option value="party">Party & Event Makeup</option>
+                    <option value="editorial">Editorial & Photoshoot</option>
+                    <option value="training">Makeup Training & Workshops</option>
+                    <option value="personal">Personal Makeup Session</option>
+                    <option value="other">Other</option>
                   </select>
                 </motion.div>
 
                 {/* Referral Dropdown */}
                 <motion.div custom={4} variants={fadeUp}>
-                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-gray-400">
+                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
                     How did you find us?
                   </label>
                   <select
                     name="referral"
                     value={formData.referral}
                     onChange={handleInputChange}
-                    className="w-full bg-transparent border-b border-white/20 py-4 text-sm font-body outline-none text-white focus:border-white transition-colors duration-300 appearance-none cursor-pointer"
+                    className="w-full bg-white border-none py-3 px-4 text-sm font-body outline-none text-black focus:ring-2 focus:ring-pink-400 transition-all duration-300 rounded appearance-none cursor-pointer"
                   >
-                    <option value="" className="bg-black text-white">Select an option</option>
-                    <option value="friend" className="bg-black text-white">Through A Friend</option>
-                    <option value="instagram" className="bg-black text-white">Instagram</option>
-                    <option value="google" className="bg-black text-white">Google Search</option>
-                    <option value="facebook" className="bg-black text-white">Facebook</option>
-                    <option value="portfolio" className="bg-black text-white">Portfolio Website</option>
-                    <option value="other" className="bg-black text-white">Other</option>
+                    <option value="">Select an option</option>
+                    <option value="friend">Through A Friend</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="google">Google Search</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="portfolio">Portfolio Website</option>
+                    <option value="other">Other</option>
                   </select>
                 </motion.div>
 
                 {/* Message Field */}
                 <motion.div custom={5} variants={fadeUp}>
-                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-gray-400">
+                  <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
                     Tell us more – <span className="text-pink-400">*</span>
                   </label>
                   <textarea
@@ -231,7 +234,7 @@ const Contact = () => {
                     placeholder="Event details, date, theme, and any special requests..."
                     required
                     rows={5}
-                    className="w-full bg-transparent border-b border-white/20 py-4 text-sm font-body outline-none text-white placeholder:text-gray-600 focus:border-white transition-colors duration-300 resize-none"
+                    className="w-full bg-white border-none py-3 px-4 text-sm font-body outline-none text-black placeholder:text-gray-500 focus:ring-2 focus:ring-pink-400 transition-all duration-300 rounded resize-none"
                   />
                 </motion.div>
 
@@ -240,10 +243,10 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={!isFormValid || submitted}
-                    className={`mt-8 px-8 py-4 text-xs font-bold tracking-widest uppercase font-body border transition-all duration-300 ${
+                    className={`mt-8 px-8 py-4 text-xs font-bold tracking-widest uppercase font-body rounded transition-all duration-300 ${
                       submitted
-                        ? "bg-pink-500 border-pink-500 text-white"
-                        : "border-white text-white hover:bg-white hover:text-black disabled:opacity-50 disabled:cursor-not-allowed disabled:border-gray-600"
+                        ? "bg-pink-500 text-white"
+                        : "bg-white text-black hover:bg-pink-500 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed"
                     }`}
                   >
                     {submitted ? "Message Sent!" : "Send Inquiry"}
@@ -257,19 +260,36 @@ const Contact = () => {
 
       {/* Footer */}
       <footer className="border-t border-white/10 px-6 md:px-12 py-12">
-        <div className="max-w-[1800px] mx-auto text-center">
+        <div className="max-w-[1800px] mx-auto text-center space-y-6">
+          {/* Phone & Email */}
+          <div className="text-xs font-body tracking-wider space-y-2">
+            <p className="text-white">
+              <span className="font-bold">Call:</span> +91 XXXXXXXXXX
+            </p>
+            <p className="text-white">
+              <span className="font-bold">Email:</span> anchala@makeup.com
+            </p>
+          </div>
+
+          {/* Social Links */}
           <p className="text-gray-400 text-xs font-body tracking-wider">
             Follow us on{" "}
-            <a href="#" className="text-white hover:text-pink-400 transition-colors">
+            <a
+              href="https://www.instagram.com/makeupbyanchla/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-pink-400 transition-colors font-semibold"
+            >
               Instagram
             </a>
             {" · "}
-            <a href="#" className="text-white hover:text-pink-400 transition-colors">
+            <a
+              href="https://www.facebook.com/profile.php?id=61558218356668"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-pink-400 transition-colors font-semibold"
+            >
               Facebook
-            </a>
-            {" · "}
-            <a href="#" className="text-white hover:text-pink-400 transition-colors">
-              Pinterest
             </a>
           </p>
         </div>
