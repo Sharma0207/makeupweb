@@ -12,7 +12,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -24,85 +24,163 @@ const Navigation = () => {
 
   return (
     <>
-      <motion.nav
-        className={`fixed top-0 left-0 right-0 flex items-center justify-between px-4 md:px-16 py-5 md:py-8 z-20 transition-all duration-300 ${
-          isScrolled
-            ? isHome
-              ? "bg-black/30 backdrop-blur-md"
-              : "bg-white/50 backdrop-blur-md"
-            : ""
-        }`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
-      >
-        <div className="hidden md:flex gap-8">
-          <Link
-            to="/portfolio"
-            className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
-          >
-            Portfolio
-          </Link>
-          <Link
-            to="/about"
-            className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
-          >
-            About
-          </Link>
-        </div>
-
-        <Link
-          to="/"
-          className="cursor-pointer hover:opacity-70 transition-opacity"
+      {/* Full Navbar - Top */}
+      {!isScrolled && (
+        <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8 }}
+          className="fixed top-0 left-0 right-0 flex items-center justify-between px-4 md:px-16 py-5 md:py-8 z-20"
         >
-          <div className="flex flex-col items-center gap-1">
-            <span
-              className={`logo-text text-lg md:text-2xl tracking-[0.08em] ${logoColor} font-bold`}
+          <div className="hidden md:flex gap-8">
+            <Link
+              to="/portfolio"
+              className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
             >
-              MAKEUP
+              Portfolio
+            </Link>
+            <Link
+              to="/about"
+              className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
+            >
+              About
+            </Link>
+          </div>
+
+          <Link
+            to="/"
+            className="cursor-pointer hover:opacity-70 transition-opacity"
+          >
+            <div className="flex flex-col items-center gap-1">
+              <span
+                className={`logo-text text-lg md:text-2xl tracking-[0.08em] ${logoColor} font-bold`}
+              >
+                MAKEUP
+              </span>
+              <span
+                className={`${logoColor} text-xs md:text-sm tracking-[0.15em] font-body`}
+              >
+                <span className="font-display italic text-[1.05em] relative -top-[0.02em]">
+                  BY
+                </span>{" "}
+                ANCHALA
+              </span>
+            </div>
+          </Link>
+
+          <div className="hidden md:flex gap-8">
+            <Link
+              to="/services"
+              className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
+            >
+              Services
+            </Link>
+            <Link
+              to="/contact"
+              className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
+            >
+              Contact
+            </Link>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden flex flex-col gap-[5px] cursor-pointer z-50"
+          >
+            <span
+              className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block w-3 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
+          </button>
+        </motion.nav>
+      )}
+
+      {/* Compact Navbar - On Scroll */}
+      {isScrolled && (
+        <motion.nav
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.4 }}
+          className={`fixed top-0 left-0 right-0 flex items-center justify-between px-4 md:px-16 py-3 md:py-4 z-20 ${
+            isHome ? "bg-black/20 backdrop-blur-sm" : "bg-white/30 backdrop-blur-sm"
+          }`}
+        >
+          {/* Left Links */}
+          <div className="hidden md:flex gap-6 items-center">
+            <span className={`text-xs tracking-[0.2em] ${textColor} opacity-50`}>
+              {"{"}
             </span>
-            <span
-              className={`${logoColor} text-xs md:text-sm tracking-[0.15em] font-body`}
+            <Link
+              to="/portfolio"
+              className={`nav-link ${textColor} text-xs md:text-sm font-body hover:opacity-70 transition-opacity tracking-[0.15em]`}
             >
-              <span className="font-display italic text-[1.05em] relative -top-[0.02em]">
-                BY
-              </span>{" "}
-              ANCHALA
+              PORTFOLIO
+            </Link>
+            <Link
+              to="/about"
+              className={`nav-link ${textColor} text-xs md:text-sm font-body hover:opacity-70 transition-opacity tracking-[0.15em]`}
+            >
+              ABOUT
+            </Link>
+            <span className={`text-xs tracking-[0.2em] ${textColor} opacity-50`}>
+              {"}"}
             </span>
           </div>
-        </Link>
 
-        <div className="hidden md:flex gap-8">
-          <Link
-            to="/services"
-            className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
-          >
-            Services
+          {/* Center Logo - Minimal */}
+          <Link to="/" className="md:flex-1 flex justify-center cursor-pointer">
+            <span className={`text-xs tracking-[0.15em] font-body ${logoColor}`}>
+              MAKEUP BY ANCHALA
+            </span>
           </Link>
-          <Link
-            to="/contact"
-            className={`nav-link ${textColor} text-sm md:text-base font-body hover:opacity-70 transition-opacity`}
-          >
-            Contact
-          </Link>
-        </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex flex-col gap-[5px] cursor-pointer z-50"
-        >
-          <span
-            className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <span
-            className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block w-3 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-          />
-        </button>
-      </motion.nav>
+          {/* Right Links */}
+          <div className="hidden md:flex gap-6 items-center">
+            <span className={`text-xs tracking-[0.2em] ${textColor} opacity-50`}>
+              {"{"}
+            </span>
+            <Link
+              to="/services"
+              className={`nav-link ${textColor} text-xs md:text-sm font-body hover:opacity-70 transition-opacity tracking-[0.15em]`}
+            >
+              SERVICES
+            </Link>
+            <Link
+              to="/contact"
+              className={`nav-link ${textColor} text-xs md:text-sm font-body hover:opacity-70 transition-opacity tracking-[0.15em]`}
+            >
+              CONTACT
+            </Link>
+            <span className={`text-xs tracking-[0.2em] ${textColor} opacity-50`}>
+              {"}"}
+            </span>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden flex flex-col gap-[5px] cursor-pointer z-50"
+          >
+            <span
+              className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block w-3 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
+          </button>
+        </motion.nav>
+      )}
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
