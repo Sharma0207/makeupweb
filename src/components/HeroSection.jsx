@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 // Import images from HeroSection folder
 import bg1 from "../assets/HeroSection/bg1.png";
@@ -325,16 +326,20 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            {["About", "Contact"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="font-body text-[0.65rem] tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-300"
-                style={{ writingMode: "vertical-rl" }}
-              >
-                {item}
-              </a>
-            ))}
+            <Link
+              to="/about"
+              className="font-body text-[0.65rem] tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-300"
+              style={{ writingMode: "vertical-rl" }}
+            >
+              About
+            </Link>
+            <Link
+              to="/contact"
+              className="font-body text-[0.65rem] tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-300"
+              style={{ writingMode: "vertical-rl" }}
+            >
+              Contact
+            </Link>
           </motion.div>
         </motion.div>
       </div>

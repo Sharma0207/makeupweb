@@ -75,7 +75,7 @@ const Footer = () => {
           className="flex gap-4 justify-center items-center mb-16"
         >
           <motion.a
-            href="https://instagram.com/makeupbyanchla"
+            href="https://www.instagram.com/makeupbyanchla/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.15, y: -2 }}

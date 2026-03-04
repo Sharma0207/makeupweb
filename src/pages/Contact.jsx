@@ -12,6 +12,7 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,23 +22,53 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    console.log("Form submitted:", formData);
     setSubmitted(true);
-    // Reset form after 2 seconds
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        referral: "",
-        message: "",
+    setSubmitError(false);
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwEnsakCfPHvLbWsDcqDC72PPoqDE_5_HMIsv5CILjfg_rsxwv892BS_YMwu6tPOeLh/exec";
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          source: formData.referral,
+          message: formData.message,
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      await response.json();
+
+      // Reset form after 2 seconds on success
+      setTimeout(() => {
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          referral: "",
+          message: "",
+        });
+        setSubmitted(false);
+      }, 2000);
+    } catch (err) {
+      console.error("Error:", err);
+      setSubmitError(true);
       setSubmitted(false);
-    }, 2000);
+      // Reset error after 3 seconds
+      setTimeout(() => {
+        setSubmitError(false);
+      }, 3000);
+    }
   };
 
   const fadeUp = {
@@ -244,12 +275,14 @@ const Contact = () => {
                     type="submit"
                     disabled={!isFormValid || submitted}
                     className={`mt-8 px-8 py-4 text-xs font-bold tracking-widest uppercase font-body rounded transition-all duration-300 ${
-                      submitted
+                      submitError
+                        ? "bg-red-500 text-white"
+                        : submitted
                         ? "bg-pink-500 text-white"
                         : "bg-white text-black hover:bg-pink-500 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed"
                     }`}
                   >
-                    {submitted ? "Message Sent!" : "Send Inquiry"}
+                    {submitError ? "Error Sending" : submitted ? "Message Sent!" : "Send Inquiry"}
                   </button>
                 </motion.div>
               </form>
