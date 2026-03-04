@@ -64,6 +64,7 @@ const VideoGallerySection = () => {
   const [loadingVideos, setLoadingVideos] = useState(new Set());
   const [failedVideos, setFailedVideos] = useState(new Set());
   const [isPlaying, setIsPlaying] = useState({});
+  const [isMuted, setIsMuted] = useState({});
   const swiperRef = useRef(null);
   const videoRefs = useRef({});
 
@@ -132,6 +133,7 @@ const VideoGallerySection = () => {
     const videoEl = videoRefs.current[activeVideo.id];
     if (videoEl) {
       videoEl.muted = !videoEl.muted;
+      setIsMuted((prev) => ({ ...prev, [activeVideo.id]: videoEl.muted }));
     }
   };
 
@@ -257,7 +259,7 @@ const VideoGallerySection = () => {
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        {videoRefs.current[video.id]?.muted ? (
+                        {isMuted[video.id] ? (
                           <path d="M16.6915026,12.4744748 L17.1272231,8.47 C17.1272231,8.47 17.1272231,7.429 16.1562889,7.429 C15.1853547,7.429 15.1853547,8.47 15.1853547,8.47 L14.748035,12.4744748 L15.1853547,16.5258506 C15.1853547,16.5258506 15.1853547,17.5668 16.1562889,17.5668 C17.1272231,17.5668 17.1272231,16.5258506 17.1272231,16.5258506 L17.6915026,12.4744748 Z M11.5815828,3.70919189 C11.5815828,3.70919189 11.5815828,2.667 10.6106485,2.667 C9.70508275,2.667 9.70508275,3.70919189 9.70508275,3.70919189 L1.50742679,12.4744748 L9.70508275,21.2910027 C9.70508275,21.2910027 9.70508275,22.3321808 10.6106485,22.3321808 C11.5815828,22.3321808 11.5815828,21.2910027 11.5815828,21.2910027 L19.7792388,12.4744748 L11.5815828,3.70919189 Z" />
                         ) : (
                           <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
