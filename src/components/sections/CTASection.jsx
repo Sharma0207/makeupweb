@@ -1,9 +1,24 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import cta from "../../assets/CTA.jpg";
 
 const CTASection = () => {
-  // High-quality portrait image with clear face visibility
-  const ctaImage = "https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fc77fae4c728f49a1b22707e4c073bec6?format=webp&width=800&height=1200";
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Mobile image: original CTA.jpg
+  const mobileImage = cta;
+  // Desktop image: new high-quality portrait
+  const desktopImage = "https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fc77fae4c728f49a1b22707e4c073bec6?format=webp&width=800&height=1200";
+
+  const ctaImage = isMobile ? mobileImage : desktopImage;
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -23,11 +38,11 @@ const CTASection = () => {
     ["50%", "50%", "100%"],
   );
 
-  // Adjust vertical position on desktop to show face clearly
+  // Adjust vertical position: keep original for mobile, adjust for desktop face visibility
   const imageY = useTransform(
     scrollYProgress,
     [0, 0.05, 0.28],
-    ["-50%", "-50%", "-45%"],
+    isMobile ? ["-50%", "-50%", "-50%"] : ["-50%", "-50%", "-45%"],
   );
 
   // Phase 2: Card fades in and slides up (appears earlier)
