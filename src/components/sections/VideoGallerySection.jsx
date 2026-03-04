@@ -323,21 +323,7 @@ const VideoGallerySection = () => {
 
       {/* Overlay UI - Bottom (Desktop only) */}
       <div className="hidden md:block absolute bottom-0 left-0 right-0 z-20 px-6 md:px-16 pb-8 md:pb-12">
-        <div className="flex flex-col gap-6 max-w-7xl mx-auto">
-          {/* Instagram Button */}
-          <div className="flex justify-center">
-            <a
-              href="https://www.instagram.com/makeupbyanchla"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-full font-body text-sm tracking-[0.15em] uppercase transition-all duration-300 font-semibold"
-            >
-              Follow on Instagram
-            </a>
-          </div>
-
-          {/* Navigation controls */}
-          <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between max-w-7xl mx-auto">
             {/* Navigation buttons */}
             <div className="flex gap-4">
               <button
@@ -372,27 +358,12 @@ const VideoGallerySection = () => {
                 />
               ))}
             </div>
-          </div>
         </div>
       </div>
 
       {/* Mobile Navigation - Below video */}
       <div className="md:hidden absolute bottom-0 left-0 right-0 z-20 px-4 pb-6 pointer-events-none">
-        <div className="flex flex-col gap-4">
-          {/* Instagram Button */}
-          <div className="flex justify-center pointer-events-auto">
-            <a
-              href="https://www.instagram.com/makeupbyanchla"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white rounded-full font-body text-xs tracking-[0.15em] uppercase transition-all duration-300 font-semibold"
-            >
-              Follow on Instagram
-            </a>
-          </div>
-
-          {/* Mobile controls row */}
-          <div className="flex items-center justify-between pointer-events-auto">
+        <div className="flex items-center justify-between pointer-events-auto">
             <button
               onClick={goPrev}
               className="group relative px-4 py-3 bg-white/20 hover:bg-white/30 text-white rounded-full font-body text-xs tracking-[0.15em] uppercase transition-all duration-300 backdrop-blur-sm border border-white/30 hover:border-white/50"
@@ -424,7 +395,6 @@ const VideoGallerySection = () => {
             >
               <span className="relative z-10">Next →</span>
             </button>
-          </div>
         </div>
       </div>
 
