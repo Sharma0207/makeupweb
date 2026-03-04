@@ -247,7 +247,7 @@ const BeforeAfterSection = () => {
             className="text-center mt-16"
           >
             <a
-              href="https://wa.me/+919876543210"
+              href="https://wa.me/919876543210"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border-2 border-white text-white px-8 py-3 font-body text-xs tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 rounded-lg group"

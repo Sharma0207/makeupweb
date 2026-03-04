@@ -52,16 +52,10 @@ const Header = () => {
         {/* Mobile menu trigger can go here if needed, but the design is ultra-minimalist */}
       </div>
 
-      {/* Right side vertical nav strings - Mood & Contact */}
+      {/* Right side vertical nav strings - Contact */}
       <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-16 pointer-events-auto">
-        <Link 
-          to="/mood" 
-          className="nav-link vertical-text opacity-40 hover:opacity-100 transition-all duration-500 hover:scale-110"
-        >
-          MOOD
-        </Link>
-        <Link 
-          to="/contact" 
+        <Link
+          to="/contact"
           className={`nav-link vertical-text transition-all duration-500 hover:scale-110 ${currentPath === '/contact' ? 'nav-link-active' : 'opacity-40 hover:opacity-100'}`}
         >
           CONTACT
