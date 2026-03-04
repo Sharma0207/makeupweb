@@ -1,0 +1,24 @@
+# Robots.txt for Makeup by Anchala
+# https://www.makeupbyanchala.in
+
+User-agent: *
+Allow: /
+
+# Disallow specific paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://www.makeupbyanchala.in/sitemap.xml
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Allow Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Google Mobile Bot
+User-agent: Googlebot-Mobile
+Allow: /

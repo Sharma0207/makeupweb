@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -27,7 +28,8 @@ const Contact = () => {
     setSubmitted(true);
     setSubmitError(false);
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwEnsakCfPHvLbWsDcqDC72PPoqDE_5_HMIsv5CILjfg_rsxwv892BS_YMwu6tPOeLh/exec";
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbwEnsakCfPHvLbWsDcqDC72PPoqDE_5_HMIsv5CILjfg_rsxwv892BS_YMwu6tPOeLh/exec";
 
     try {
       const response = await fetch(scriptURL, {
@@ -81,14 +83,40 @@ const Contact = () => {
   };
 
   const isFormValid =
-    formData.name.trim() &&
-    formData.email.trim() &&
-    formData.message.trim();
+    formData.name.trim() && formData.email.trim() && formData.message.trim();
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Helmet>
+        <title>
+          Contact | Book Makeup Appointment | Makeup by Anchala Patna
+        </title>
+        <meta
+          name="description"
+          content="Contact Anchala Sharma - Best bridal makeup artist in Patna, Bihar. Book your makeup appointment for weddings, parties, and special occasions. Call +91 9110939727."
+        />
+        <meta
+          name="keywords"
+          content="contact makeup artist patna, book bridal makeup patna, makeup appointment bihar, anchala sharma contact, wedding makeup booking patna"
+        />
+        <link rel="canonical" href="https://www.makeupbyanchala.in/contact" />
+        <meta
+          property="og:title"
+          content="Contact | Book Makeup Appointment | Makeup by Anchala Patna"
+        />
+        <meta
+          property="og:description"
+          content="Contact Anchala Sharma - Best bridal makeup artist in Patna, Bihar. Book your makeup appointment today."
+        />
+        <meta
+          property="og:url"
+          content="https://www.makeupbyanchala.in/contact"
+        />
+      </Helmet>
+
       {/* Main Content */}
       <main className="pt-20 md:pt-32 px-6 md:px-12 pb-24">
+        {/* add in contact page */}
         <div className="max-w-[1800px] mx-auto">
           {/* Main Heading */}
           <motion.h1
@@ -116,11 +144,15 @@ const Contact = () => {
                 <div className="space-y-3 font-body text-sm md:text-base">
                   <p className="text-white">
                     <span className="block font-semibold">+91 9110939727</span>
-                    <span className="text-gray-400 text-xs">Primary Contact</span>
+                    <span className="text-gray-400 text-xs">
+                      Primary Contact
+                    </span>
                   </p>
                   <p className="text-white border-t border-gray-700 pt-3">
                     <span className="block font-semibold">+91 9934242539</span>
-                    <span className="text-gray-400 text-xs">Booking Assistant</span>
+                    <span className="text-gray-400 text-xs">
+                      Booking Assistant
+                    </span>
                   </p>
                 </div>
               </motion.div>
@@ -149,24 +181,24 @@ const Contact = () => {
                   <p className="text-white font-body text-sm md:text-base leading-relaxed font-semibold">
                     Patna, Bihar, India
                     <br />
-                    <span className="text-gray-400 font-normal text-xs mt-2 block">Available for destination makeup artistry</span>
-                    <span className="text-gray-400 font-normal text-xs block">Wedding • Events • Photoshoots</span>
+                    <span className="text-gray-400 font-normal text-xs mt-2 block">
+                      Available for destination makeup artistry
+                    </span>
+                    <span className="text-gray-400 font-normal text-xs block">
+                      Wedding • Events • Photoshoots
+                    </span>
                   </p>
                 </div>
               </motion.div>
             </motion.div>
 
             {/* Contact Form - Right */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-            >
+            <motion.div initial="hidden" animate="visible">
               <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
                 {/* Name Field */}
                 <motion.div custom={0} variants={fadeUp}>
                   <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
-                    Your Name –{" "}
-                    <span className="text-pink-400">*</span>
+                    Your Name – <span className="text-pink-400">*</span>
                   </label>
                   <input
                     type="text"
@@ -182,8 +214,7 @@ const Contact = () => {
                 {/* Email Field */}
                 <motion.div custom={1} variants={fadeUp}>
                   <label className="block text-xs font-bold tracking-widest uppercase mb-2 text-white">
-                    Your Email –{" "}
-                    <span className="text-pink-400">*</span>
+                    Your Email – <span className="text-pink-400">*</span>
                   </label>
                   <input
                     type="email"
@@ -226,7 +257,9 @@ const Contact = () => {
                     <option value="bridal">Bridal Makeup</option>
                     <option value="party">Party & Event Makeup</option>
                     <option value="editorial">Editorial & Photoshoot</option>
-                    <option value="training">Makeup Training & Workshops</option>
+                    <option value="training">
+                      Makeup Training & Workshops
+                    </option>
                     <option value="personal">Personal Makeup Session</option>
                     <option value="other">Other</option>
                   </select>
@@ -278,11 +311,15 @@ const Contact = () => {
                       submitError
                         ? "bg-red-500 text-white"
                         : submitted
-                        ? "bg-pink-500 text-white"
-                        : "bg-white text-black hover:bg-pink-500 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed"
+                          ? "bg-pink-500 text-white"
+                          : "bg-white text-black hover:bg-pink-500 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed"
                     }`}
                   >
-                    {submitError ? "Error Sending" : submitted ? "Message Sent!" : "Send Inquiry"}
+                    {submitError
+                      ? "Error Sending"
+                      : submitted
+                        ? "Message Sent!"
+                        : "Send Inquiry"}
                   </button>
                 </motion.div>
               </form>

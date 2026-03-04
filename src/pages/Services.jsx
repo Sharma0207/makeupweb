@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import ServiceList, { services } from "../components/ServiceList";
 import Footer from "../components/common/Footer";
@@ -21,7 +22,39 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>
+          Services | Bridal Makeup & Party Makeup in Patna | Makeup by Anchala
+        </title>
+        <meta
+          name="description"
+          content="Professional makeup services in Patna, Bihar by Anchala Sharma. Bridal makeup, party makeup, wedding makeup, and special occasion makeup. Book your appointment today."
+        />
+        <meta
+          name="keywords"
+          content="bridal makeup services patna, party makeup artist patna, wedding makeup bihar, professional makeup services, makeup by anchala services"
+        />
+        <link rel="canonical" href="https://www.makeupbyanchala.in/services" />
+        <meta
+          property="og:title"
+          content="Services | Bridal Makeup & Party Makeup in Patna | Makeup by Anchala"
+        />
+        <meta
+          property="og:description"
+          content="Professional makeup services in Patna, Bihar. Bridal makeup, party makeup, wedding makeup, and special occasion makeup services."
+        />
+        <meta
+          property="og:url"
+          content="https://www.makeupbyanchala.in/services"
+        />
+        <meta
+          property="og:image"
+          content="https://www.makeupbyanchala.in/og-image.jpg"
+        />
+      </Helmet>
+
       {/* Main Services Section */}
+      {/* add this in servoce section */}
       <main className="flex flex-col lg:flex-row min-h-screen pt-20">
         {/* Left: Hero Image - Sticky */}
         <div className="w-full lg:w-[48%] h-[50vh] lg:h-screen sticky top-0 overflow-hidden bg-black/5">
@@ -75,27 +108,42 @@ const Services = () => {
               className="lg:col-span-8 space-y-8"
             >
               <div>
-                <h3 className="font-display text-white text-lg mb-3">1. Consultation</h3>
+                <h3 className="font-display text-white text-lg mb-3">
+                  1. Consultation
+                </h3>
                 <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
-                  We discuss your vision, preferences, and event details. Understanding your style and requirements is the first step to creating the perfect look.
+                  We discuss your vision, preferences, and event details.
+                  Understanding your style and requirements is the first step to
+                  creating the perfect look.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-white text-lg mb-3">2. Planning</h3>
+                <h3 className="font-display text-white text-lg mb-3">
+                  2. Planning
+                </h3>
                 <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
-                  I create a customized makeup plan tailored to your features, skin tone, and desired results. For special occasions, we schedule trial sessions.
+                  I create a customized makeup plan tailored to your features,
+                  skin tone, and desired results. For special occasions, we
+                  schedule trial sessions.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-white text-lg mb-3">3. Application</h3>
+                <h3 className="font-display text-white text-lg mb-3">
+                  3. Application
+                </h3>
                 <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
-                  Using premium products and professional techniques, I apply makeup with precision and care, ensuring your comfort throughout the process.
+                  Using premium products and professional techniques, I apply
+                  makeup with precision and care, ensuring your comfort
+                  throughout the process.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-white text-lg mb-3">4. Perfection</h3>
+                <h3 className="font-display text-white text-lg mb-3">
+                  4. Perfection
+                </h3>
                 <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
-                  Final touches and adjustments ensure you look absolutely radiant and feel confident for your moment.
+                  Final touches and adjustments ensure you look absolutely
+                  radiant and feel confident for your moment.
                 </p>
               </div>
             </motion.div>

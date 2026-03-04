@@ -1,5 +1,10 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { generateBuilderSrcSet, getResponsiveSizes } from "../utils/imageOptimization";
+import {
+  generateBuilderSrcSet,
+  getResponsiveSizes,
+} from "../utils/imageOptimization";
 import Footer from "../components/common/Footer";
 
 const fadeUp = {
@@ -7,7 +12,11 @@ const fadeUp = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, delay: i * 0.15, ease: [0.25, 0.46, 0.45, 0.94] },
+    transition: {
+      duration: 0.8,
+      delay: i * 0.15,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
   }),
 };
 
@@ -34,6 +43,33 @@ const clients = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>
+          About Anchala Sharma | Professional Makeup Artist in Patna, Bihar
+        </title>
+        <meta
+          name="description"
+          content="Meet Anchala Sharma, Patna's leading professional makeup artist specializing in bridal makeup, party makeup, and special occasions. Trained expert with years of experience in Bihar."
+        />
+        <meta
+          name="keywords"
+          content="about anchala sharma, makeup artist patna, professional makeup artist bihar, anchala sharma story, makeup artist background patna"
+        />
+        <link rel="canonical" href="https://www.makeupbyanchala.in/about" />
+        <meta
+          property="og:title"
+          content="About Anchala Sharma | Professional Makeup Artist in Patna"
+        />
+        <meta
+          property="og:description"
+          content="Meet Anchala Sharma, Patna's leading professional makeup artist specializing in bridal makeup and special occasions."
+        />
+        <meta
+          property="og:url"
+          content="https://www.makeupbyanchala.in/about"
+        />
+      </Helmet>
+
       <main className="pt-20">
         {/* Hero intro section */}
         <section className="relative min-h-[80vh] flex items-center overflow-hidden px-6 md:px-12 lg:px-16">
@@ -80,7 +116,9 @@ const About = () => {
                   variants={fadeUp}
                   className="font-body text-muted-foreground text-sm md:text-base leading-relaxed max-w-2xl mt-8"
                 >
-                  Transforming beauty through precision, artistry, and passion. Creating looks that celebrate individuality and enhance natural radiance.
+                  Transforming beauty through precision, artistry, and passion.
+                  Creating looks that celebrate individuality and enhance
+                  natural radiance.
                 </motion.p>
               </div>
             </div>
@@ -89,7 +127,11 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              transition={{
+                duration: 1,
+                delay: 0.3,
+                ease: [0.25, 0.46, 0.45, 0.94],
+              }}
               className="flex items-center justify-center"
             >
               <div className="relative overflow-hidden rounded-lg">
@@ -99,8 +141,15 @@ const About = () => {
                   className="w-full h-auto object-cover"
                   style={{ aspectRatio: "3/4" }}
                   loading="lazy"
-                  srcSet={generateBuilderSrcSet("https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F8e682a29c35e4ae39103d1f8e17e9f1a", [400, 600, 800, 1000])}
-                  sizes={getResponsiveSizes({ mobile: '100vw', tablet: '50vw', desktop: '45vw' })}
+                  srcSet={generateBuilderSrcSet(
+                    "https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F8e682a29c35e4ae39103d1f8e17e9f1a",
+                    [400, 600, 800, 1000],
+                  )}
+                  sizes={getResponsiveSizes({
+                    mobile: "100vw",
+                    tablet: "50vw",
+                    desktop: "45vw",
+                  })}
                 />
               </div>
             </motion.div>
@@ -118,7 +167,8 @@ const About = () => {
               className="font-display text-foreground leading-[1.2]"
               style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)" }}
             >
-              A makeup artist dedicated to bringing out the best in every person through creative expression and technical excellence.
+              A makeup artist dedicated to bringing out the best in every person
+              through creative expression and technical excellence.
             </motion.h1>
           </div>
         </section>
@@ -147,16 +197,29 @@ const About = () => {
                 className="lg:col-span-8 space-y-6"
               >
                 <p className="font-body text-muted-foreground leading-relaxed text-sm md:text-base">
-                  With a passion for makeup artistry that began years ago, I have dedicated myself to mastering the craft of beauty enhancement. My journey in professional makeup has been shaped by continuous learning and an unwavering commitment to excellence.
+                  With a passion for makeup artistry that began years ago, I
+                  have dedicated myself to mastering the craft of beauty
+                  enhancement. My journey in professional makeup has been shaped
+                  by continuous learning and an unwavering commitment to
+                  excellence.
                 </p>
                 <p className="font-body text-muted-foreground leading-relaxed text-sm md:text-base">
-                  I believe that makeup is not about creating a mask, but rather about celebrating and enhancing each individual's unique features. Every face tells a story, and my role is to help express that story through artistry and technique.
+                  I believe that makeup is not about creating a mask, but rather
+                  about celebrating and enhancing each individual's unique
+                  features. Every face tells a story, and my role is to help
+                  express that story through artistry and technique.
                 </p>
                 <p className="font-body text-muted-foreground leading-relaxed text-sm md:text-base">
-                  From bridal transformations to editorial fashion looks, from creative special effects to everyday glamour, I approach each project with meticulous attention to detail and a deep understanding of color, texture, and form.
+                  From bridal transformations to editorial fashion looks, from
+                  creative special effects to everyday glamour, I approach each
+                  project with meticulous attention to detail and a deep
+                  understanding of color, texture, and form.
                 </p>
                 <p className="font-body text-muted-foreground leading-relaxed text-sm md:text-base">
-                  My ultimate goal is to make every client feel confident, beautiful, and authentically themselves—whether they're walking down the aisle, stepping onto a photo shoot, or preparing for a special event.
+                  My ultimate goal is to make every client feel confident,
+                  beautiful, and authentically themselves—whether they're
+                  walking down the aisle, stepping onto a photo shoot, or
+                  preparing for a special event.
                 </p>
               </motion.div>
             </div>
