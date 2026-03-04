@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ServiceList, { services } from "../components/ServiceList";
+import Footer from "../components/common/Footer";
 
 const Services = () => {
   const [currentImage, setCurrentImage] = useState(services[0].image);
@@ -137,8 +138,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Footer spacer */}
-      <div className="h-24" />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

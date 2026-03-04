@@ -16,7 +16,7 @@ const UnderstatedBeautySection = () => {
   return (
     <motion.section
       ref={sectionRef}
-      className="relative bg-black"
+      className="relative bg-background"
       style={{
         scale: scaleAnimation,
         opacity: opacityAnimation,
