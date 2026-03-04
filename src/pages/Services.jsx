@@ -23,7 +23,7 @@ const Services = () => {
       {/* Main Services Section */}
       <main className="flex flex-col lg:flex-row min-h-screen pt-20">
         {/* Left: Hero Image - Sticky */}
-        <div className="w-full lg:w-[48%] h-[50vh] lg:h-screen lg:sticky lg:top-0 overflow-hidden bg-black/5">
+        <div className="w-full lg:w-[48%] h-[50vh] lg:h-screen sticky top-0 overflow-hidden bg-black/5">
           <motion.img
             src={displayedImage}
             alt="Makeup service"
