@@ -177,12 +177,9 @@ const ServiceList = ({ onHover }) => {
               {service.name}
             </span>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center">
             <span className="text-black text-xs md:text-sm font-light tracking-widest hidden sm:block transition-transform duration-300 group-hover:scale-105 origin-right">
               {service.category}
-            </span>
-            <span className="text-black/40 group-hover:text-black/70 transition-colors duration-300">
-              →
             </span>
           </div>
         </button>
