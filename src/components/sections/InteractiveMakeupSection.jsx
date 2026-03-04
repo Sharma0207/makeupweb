@@ -1,5 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Helper function to get position based on screen size
+const getPosition = (positionObj, isDesktop) => {
+  if (!positionObj) return { top: "50%", left: "50%" };
+  // Use lg (desktop) position if screen is >= 900px, otherwise use base (mobile)
+  return isDesktop && positionObj.lg ? positionObj.lg : positionObj.base;
+};
 
 const makeupProducts = [
   {
@@ -10,7 +17,10 @@ const makeupProducts = [
       "I enhance the eyes using deep kajal to define the waterline and create a bold, expressive look. It adds depth to the eyes and completes traditional as well as modern makeup styles while staying long-lasting and smudge resistant.",
     category: "Eye Makeup",
     emoji: "🖤",
-    position: { top: "28%", left: "42%" },
+    position: {
+      base: { top: "32%", left: "45%" }, // mobile (< 900px)
+      lg: { top: "32%", left: "47%" }, // desktop (>= 900px)
+    },
   },
   {
     id: "lipstick",
@@ -20,17 +30,23 @@ const makeupProducts = [
       "I carefully select lipstick shades that complement the skin tone, outfit, and overall makeup style. From soft nude tones to bold bridal reds, I ensure the lip color enhances the face and stays fresh throughout the event.",
     category: "Lip Makeup",
     emoji: "💋",
-    position: { top: "52%", left: "48%" },
+    position: {
+      base: { top: "49%", left: "48%" }, // mobile
+      lg: { top: "49%", left: "50%" }, // desktop
+    },
   },
   {
     id: "foundation",
     number: "03",
     title: "FOUNDATION",
     description:
-      "I apply professional HD foundation techniques to create a smooth and flawless base. Using high-quality products suited to the client’s skin type, I blend the foundation seamlessly for a natural, radiant, and long-lasting finish.",
+      "I apply professional HD foundation techniques to create a smooth and flawless base. Using high-quality products suited to the client's skin type, I blend the foundation seamlessly for a natural, radiant, and long-lasting finish.",
     category: "Base Makeup",
     emoji: "✨",
-    position: { top: "42%", left: "55%" },
+    position: {
+      base: { top: "42%", left: "20%" }, // mobile
+      lg: { top: "43%", left: "56%" }, // desktop
+    },
   },
   {
     id: "eyeshadow",
@@ -40,7 +56,10 @@ const makeupProducts = [
       "I design custom eyeshadow looks that match the outfit and occasion, from soft bridal shimmer to bold glam styles. By blending premium pigments and textures, I create depth, dimension, and beautifully defined eyes.",
     category: "Eye Makeup",
     emoji: "👁️",
-    position: { top: "32%", left: "58%" },
+    position: {
+      base: { top: "31%", left: "85%" }, // mobile
+      lg: { top: "32%", left: "55%" }, // desktop
+    },
   },
   {
     id: "blush",
@@ -50,7 +69,10 @@ const makeupProducts = [
       "I apply blush to bring warmth and natural glow to the face. The shade and placement are chosen carefully to enhance facial features and give a healthy, radiant finish that looks beautiful both in person and on camera.",
     category: "Face Makeup",
     emoji: "🌸",
-    position: { top: "45%", left: "40%" },
+    position: {
+      base: { top: "35%", left: "30%" }, // mobile
+      lg: { top: "40%", left: "42%" }, // desktop
+    },
   },
   {
     id: "mascara",
@@ -60,12 +82,15 @@ const makeupProducts = [
       "I finish the eye makeup by applying mascara to lift, lengthen, and volumize the lashes. This step opens up the eyes and adds the final touch of drama and elegance to the complete makeup look.",
     category: "Lash Enhancement",
     emoji: "💫",
-    position: { top: "26%", left: "52%" },
+    position: {
+      base: { top: "26%", left: "22%" }, // mobile
+      lg: { top: "25%", left: "59%" }, // desktop
+    },
   },
 ];
 
 const MarqueeBackground = () => {
-  const text = "BEAUTY IN EVERY DETAIL · ";
+  const text = "ANCHMAHALA";
   const repeats = 8;
   const fullText = text.repeat(repeats);
 
@@ -85,6 +110,19 @@ const MarqueeBackground = () => {
 
 const InteractiveMakeupSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 900);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const active = makeupProducts[activeIndex];
 
   return (
@@ -98,36 +136,39 @@ const InteractiveMakeupSection = () => {
           src="https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F5afe148e7955446c981b8ef1e6be66e5?format=webp&width=800&height=1200"
           alt="Makeup Model"
           className="h-full w-auto max-w-none object-cover"
-          style={{ transform: "rotate(-10deg)" }}
+          style={{ transform: "rotate(-90deg)" }}
           loading="eager"
         />
       </div>
 
       {/* Scattered number circles with blur effect */}
       <div className="absolute inset-0 z-[3]">
-        {makeupProducts.map((product, i) => (
-          <motion.button
-            key={product.id}
-            onClick={() => setActiveIndex(i)}
-            className={`absolute w-14 h-14 rounded-full flex items-center justify-center font-display text-xs tracking-wider cursor-pointer transition-all duration-500 ${
-              i === activeIndex
-                ? "bg-white/40 text-foreground backdrop-blur-lg border border-white/60 shadow-lg"
-                : "bg-white/20 text-foreground/80 backdrop-blur-md border border-white/30 hover:bg-white/35"
-            }`}
-            style={{
-              top: product.position.top,
-              left: product.position.left,
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="font-semibold">{product.number}</span>
-          </motion.button>
-        ))}
+        {makeupProducts.map((product, i) => {
+          const pos = getPosition(product.position, isDesktop);
+          return (
+            <motion.button
+              key={product.id}
+              onClick={() => setActiveIndex(i)}
+              className={`absolute w-14 h-14 rounded-full flex items-center justify-center font-display text-xs tracking-wider cursor-pointer transition-all duration-500 ${
+                i === activeIndex
+                  ? "bg-white/40 text-foreground backdrop-blur-lg border border-white/60 shadow-lg"
+                  : "bg-white/20 text-foreground/80 backdrop-blur-md border border-white/30 hover:bg-white/35"
+              }`}
+              style={{
+                top: pos.top,
+                left: pos.left,
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="font-semibold">{product.number}</span>
+            </motion.button>
+          );
+        })}
       </div>
 
       {/* Description card - bottom left */}
-      <div className="absolute bottom-12 left-12 z-[4] max-w-[520px]">
+      <div className="absolute bottom-12 left-12 z-[4] max-w-[400px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={active.id}

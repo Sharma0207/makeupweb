@@ -56,6 +56,29 @@ import makeup24 from "./makeupPics/makeup24.jpg";
 import makeup25 from "./makeupPics/makeup25.jpg";
 import makeup26 from "./makeupPics/makeup26.jpg";
 
+// service images (1-21)
+import service1 from "./services/1.jpg";
+import service2 from "./services/2service.jpg";
+import service3 from "./services/3service.webp";
+import service4 from "./services/4.jpg";
+import service5 from "./services/5.jpg";
+import service6 from "./services/6.jpg";
+import service7 from "./services/7.jpg";
+import service8 from "./services/8.jpg";
+import service9 from "./services/9.jpg";
+import service10 from "./services/10.jpg";
+import service11 from "./services/11.jpg";
+import service12 from "./services/12.JPG";
+import service13 from "./services/13.jpg";
+import service14 from "./services/14.jpg";
+import service15 from "./services/15.jpg";
+import service16 from "./services/16.jpg";
+import service17 from "./services/17.jpg";
+import service18 from "./services/18.jpg";
+import service19 from "./services/19.jpg";
+import service20 from "./services/20.jpg";
+import service21 from "./services/21.webp";
+
 //experience logo
 import dazlogo from "./dazlogo.png";
 import lakmelogo from "./lakmelogo.png";
@@ -89,11 +112,15 @@ import firstTestimonial from "./Tars Ken.webp";
 import secondTestimonial from "./image.webp";
 import thirdTestimonial from "./third testimonial.webp";
 
+// video portfolio
+
 export {
   lipstic,
   brush,
   hero3,
   hero2,
+  //video portfolio
+
   //craousal
   makeup1,
   makeup2,
@@ -174,4 +201,27 @@ export {
   redux,
   tailwind,
   threejs,
+
+  // service images (1-21)
+  service1,
+  service2,
+  service3,
+  service4,
+  service5,
+  service6,
+  service7,
+  service8,
+  service9,
+  service10,
+  service11,
+  service12,
+  service13,
+  service14,
+  service15,
+  service16,
+  service17,
+  service18,
+  service19,
+  service20,
+  service21,
 };

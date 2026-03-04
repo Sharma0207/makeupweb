@@ -44,9 +44,7 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3
-          className="font-display text-lg md:text-xl tracking-widest uppercase font-semibold text-primary"
-        >
+        <h3 className="font-display text-lg md:text-xl tracking-widest uppercase font-semibold text-primary">
           {experience.title}
         </h3>
         <p
@@ -75,7 +73,7 @@ const ExperienceCard = ({ experience }) => {
 
 const ExperienceSection = () => {
   return (
-    <section className="bg-background py-32 lg:py-44 border-t border-primary/10">
+    <section className="bg-background -mt-[100vh] py-32 lg:py-44 border-t border-primary/10">
       <div className="mx-auto max-w-6xl px-6 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -94,7 +92,10 @@ const ExperienceSection = () => {
             transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             viewport={{ once: true }}
             className="font-display tracking-widest uppercase text-primary"
-            style={{ fontSize: "clamp(2rem, 4vw, 4rem)", transformOrigin: "center center" }}
+            style={{
+              fontSize: "clamp(2rem, 4vw, 4rem)",
+              transformOrigin: "center center",
+            }}
           >
             My Work in Motion
           </motion.h2>

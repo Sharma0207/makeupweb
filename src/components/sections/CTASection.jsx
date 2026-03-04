@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import cta from "../../assets/CTA.jpg";
+import desktop from "../../assets/portfolio/25.jpg";
 
 const CTASection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -8,9 +9,8 @@ const CTASection = () => {
   // Mobile image: original CTA.jpg
   const mobileImage = cta;
   // Desktop image: new high-quality portrait
-  const desktopImage = "https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fc77fae4c728f49a1b22707e4c073bec6?format=webp&width=800&height=1200";
 
-  const ctaImage = isMobile ? mobileImage : desktopImage;
+  const ctaImage = isMobile ? mobileImage : desktop;
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);

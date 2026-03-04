@@ -1,53 +1,61 @@
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCreative, Parallax } from "swiper/modules";
 import { motion } from "framer-motion";
+
 import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/parallax";
+import reel1 from "../../assets/videoportfolio/reel1.mp4";
+import reel2 from "../../assets/videoportfolio/reel2.mp4";
+import reel3 from "../../assets/videoportfolio/reel3.mp4";
+import reel4 from "../../assets/videoportfolio/reel4.mp4";
+import reel8 from "../../assets/videoportfolio/reel8.mp4";
+import reel6 from "../../assets/videoportfolio/reel6.mp4";
+import reel7 from "../../assets/videoportfolio/reel7.mp4";
 
 const videos = [
   {
     id: 1,
     title: "Bridal Elegance",
     description: "Complete bridal makeup transformation",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fbd50714122a34609a21b77a8cd173c12?alt=media&token=671f95a5-4119-40a1-a524-0f4f588923a7&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: reel1,
   },
   {
     id: 2,
     title: "Party Glam",
     description: "Bold and vibrant evening makeup look",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9b1ccdd8a5d046da918cc8731cf30082?alt=media&token=5741c996-4be7-43eb-8798-e6276282b2c5&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: reel2,
   },
   {
     id: 3,
     title: "Everyday Elegance",
     description: "Natural everyday makeup tutorial",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F3e9a7e27a97e4636bd01fc2480c59b7a?alt=media&token=656b2f12-24f3-42fc-99a6-df434ea43087&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: reel3,
   },
   {
     id: 4,
     title: "Riya's Makeover",
     description: "Beautiful transformation makeup look",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F7ac92690dfeb44c9a920447afd32bc83?alt=media&token=7d652419-c531-4869-baf5-47000231b140&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: reel4,
   },
   {
     id: 5,
     title: "Creative Special FX",
     description: "Artistic and creative makeup styling",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2Feb654abf447f46889fbf64d6284bb721?alt=media&token=b4f125ec-1cad-475a-b814-f575f654345d&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: reel6,
   },
   {
     id: 6,
     title: "Flawless Finish",
     description: "Professional makeup application",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F97eb93cdb56e46418885512c93f11e35?alt=media&token=1917814b-3252-4502-a650-6a9b196462b2&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: reel7,
   },
   {
     id: 7,
     title: "Radiant Glow",
     description: "Stunning makeup transformation",
-    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fe55ed8c3a4ee4969a71e006ea8e5ffc8?alt=media&token=5067e2ba-f021-438c-9f59-49f825161a4a&apiKey=37ad2b39330a492489c1a509e5a35af1",
+    url: reel8,
   },
 ];
 
@@ -56,6 +64,28 @@ const VideoGallerySection = () => {
   const [loadingVideos, setLoadingVideos] = useState(new Set());
   const [failedVideos, setFailedVideos] = useState(new Set());
   const swiperRef = useRef(null);
+  const videoRefs = useRef({});
+
+  // Handle play/pause based on active slide
+  useEffect(() => {
+    Object.entries(videoRefs.current).forEach(([id, videoEl]) => {
+      if (videoEl) {
+        const videoId = parseInt(id);
+        if (videoId === videos[activeIndex]?.id) {
+          videoEl.play().catch(() => {}); // Auto-play active video, ignore errors
+        } else {
+          videoEl.pause();
+          videoEl.currentTime = 0;
+        }
+      }
+    });
+  }, [activeIndex]);
+
+  const handleVideoRef = (id) => (el) => {
+    if (el) {
+      videoRefs.current[id] = el;
+    }
+  };
 
   const handleVideoLoadStart = (videoId) => {
     setLoadingVideos((prev) => new Set(prev).add(videoId));
@@ -122,12 +152,15 @@ const VideoGallerySection = () => {
                 className="relative mx-4 md:mx-6"
               >
                 {/* Video container - 9:16 aspect ratio */}
-                <div className="relative rounded-xl overflow-hidden shadow-2xl" style={{
-                  aspectRatio: "9/16",
-                  width: "clamp(260px, 85vw, 380px)",
-                  maxWidth: "calc(100vh * 9 / 16)",
-                  maxHeight: "100vh"
-                }}>
+                <div
+                  className="relative rounded-xl overflow-hidden shadow-2xl"
+                  style={{
+                    aspectRatio: "9/16",
+                    width: "clamp(260px, 85vw, 380px)",
+                    maxWidth: "calc(100vh * 9 / 16)",
+                    maxHeight: "100vh",
+                  }}
+                >
                   {/* Loading indicator */}
                   {loadingVideos.has(video.id) && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-10">
@@ -138,6 +171,7 @@ const VideoGallerySection = () => {
                   {/* Video element */}
                   {!failedVideos.has(video.id) ? (
                     <video
+                      ref={handleVideoRef(video.id)}
                       src={video.url}
                       alt={video.title}
                       className="w-full h-full object-cover bg-black transition-opacity duration-300"
@@ -153,8 +187,12 @@ const VideoGallerySection = () => {
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
                       <div className="text-center text-white">
-                        <p className="text-lg font-semibold mb-2">Video Unavailable</p>
-                        <p className="text-sm text-white/60">Please contact support to view this video</p>
+                        <p className="text-lg font-semibold mb-2">
+                          Video Unavailable
+                        </p>
+                        <p className="text-sm text-white/60">
+                          Please contact support to view this video
+                        </p>
                       </div>
                     </div>
                   )}
@@ -202,7 +240,9 @@ const VideoGallerySection = () => {
 
           {/* Counter */}
           <div className="text-white font-display text-sm md:text-base tracking-wide">
-            <span className="text-lg md:text-xl font-semibold">{activeIndex + 1}</span>
+            <span className="text-lg md:text-xl font-semibold">
+              {activeIndex + 1}
+            </span>
             <span className="text-white/50 mx-2">/</span>
             <span className="text-white/50">{videos.length}</span>
           </div>

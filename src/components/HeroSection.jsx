@@ -325,7 +325,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            {["Mood", "Contact"].map((item) => (
+            {["About", "Contact"].map((item) => (
               <a
                 key={item}
                 href="#"
