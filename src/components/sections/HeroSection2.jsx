@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 // Placeholder images - replace with actual local images when ready
-import mobile from "../../assets/hero2/mobile1.jpg";
+import mobile from "../../assets/hero2/mobile.JPG";
 import desktopImage1 from "../../assets/hero2/artofmakeupimage1.png";
 import desktopImage2 from "../../assets/hero2/artofmakeupimage2.png";
 
