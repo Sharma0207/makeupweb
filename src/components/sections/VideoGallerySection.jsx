@@ -54,6 +54,7 @@ const videos = [
 const VideoGallerySection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [loadingVideos, setLoadingVideos] = useState(new Set());
+  const [failedVideos, setFailedVideos] = useState(new Set());
   const swiperRef = useRef(null);
 
   const handleVideoLoadStart = (videoId) => {
@@ -66,6 +67,12 @@ const VideoGallerySection = () => {
       newSet.delete(videoId);
       return newSet;
     });
+  };
+
+  const handleVideoError = (videoId, error) => {
+    console.error(`Video ${videoId} failed to load:`, error);
+    setFailedVideos((prev) => new Set(prev).add(videoId));
+    handleVideoLoadComplete(videoId);
   };
 
   const handleSlideChange = useCallback((swiper) => {
@@ -129,20 +136,28 @@ const VideoGallerySection = () => {
                   )}
 
                   {/* Video element */}
-                  <video
-                    src={video.url}
-                    alt={video.title}
-                    className="w-full h-full object-cover bg-black transition-opacity duration-300"
-                    controls
-                    controlsList="nodownload"
-                    playsInline
-                    preload="metadata"
-                    crossOrigin="anonymous"
-                    muted={false}
-                    onLoadStart={() => handleVideoLoadStart(video.id)}
-                    onCanPlay={() => handleVideoLoadComplete(video.id)}
-                    onError={() => handleVideoLoadComplete(video.id)}
-                  />
+                  {!failedVideos.has(video.id) ? (
+                    <video
+                      src={video.url}
+                      alt={video.title}
+                      className="w-full h-full object-cover bg-black transition-opacity duration-300"
+                      controls
+                      controlsList="nodownload"
+                      playsInline
+                      preload="auto"
+                      muted={false}
+                      onLoadStart={() => handleVideoLoadStart(video.id)}
+                      onCanPlay={() => handleVideoLoadComplete(video.id)}
+                      onError={(e) => handleVideoError(video.id, e)}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <p className="text-lg font-semibold mb-2">Video Unavailable</p>
+                        <p className="text-sm text-white/60">Please contact support to view this video</p>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Gradient overlay for text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
