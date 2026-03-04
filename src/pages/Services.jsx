@@ -50,7 +50,7 @@ const Services = () => {
       </main>
 
       {/* My Approach Section */}
-      <section className="px-6 md:px-12 lg:px-16 py-16 md:py-24 border-t border-black/10 bg-white">
+      <section className="px-6 md:px-12 lg:px-16 py-16 md:py-24 border-t border-white/10 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-12">
             <motion.div
@@ -60,7 +60,7 @@ const Services = () => {
               transition={{ duration: 0.6 }}
               className="lg:col-span-4"
             >
-              <h2 className="font-display text-foreground tracking-[0.15em] text-lg md:text-xl uppercase">
+              <h2 className="font-display text-white tracking-[0.15em] text-lg md:text-xl uppercase">
                 My Approach
               </h2>
             </motion.div>
@@ -73,26 +73,26 @@ const Services = () => {
               className="lg:col-span-8 space-y-8"
             >
               <div>
-                <h3 className="font-display text-foreground text-lg mb-3">1. Consultation</h3>
-                <p className="font-body text-black/70 text-sm md:text-base leading-relaxed">
+                <h3 className="font-display text-white text-lg mb-3">1. Consultation</h3>
+                <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
                   We discuss your vision, preferences, and event details. Understanding your style and requirements is the first step to creating the perfect look.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-foreground text-lg mb-3">2. Planning</h3>
-                <p className="font-body text-black/70 text-sm md:text-base leading-relaxed">
+                <h3 className="font-display text-white text-lg mb-3">2. Planning</h3>
+                <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
                   I create a customized makeup plan tailored to your features, skin tone, and desired results. For special occasions, we schedule trial sessions.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-foreground text-lg mb-3">3. Application</h3>
-                <p className="font-body text-black/70 text-sm md:text-base leading-relaxed">
+                <h3 className="font-display text-white text-lg mb-3">3. Application</h3>
+                <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
                   Using premium products and professional techniques, I apply makeup with precision and care, ensuring your comfort throughout the process.
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-foreground text-lg mb-3">4. Perfection</h3>
-                <p className="font-body text-black/70 text-sm md:text-base leading-relaxed">
+                <h3 className="font-display text-white text-lg mb-3">4. Perfection</h3>
+                <p className="font-body text-white/70 text-sm md:text-base leading-relaxed">
                   Final touches and adjustments ensure you look absolutely radiant and feel confident for your moment.
                 </p>
               </div>
