@@ -53,10 +53,10 @@ const Services = () => {
                 className="font-display text-foreground leading-[1.1] mb-4"
                 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
               >
-                Beauty <span className="block">Treatments</span>
+                Makeup <span className="block">Artistry</span>
               </h1>
               <p className="font-body text-black/70 text-sm md:text-base leading-relaxed max-w-sm">
-                Discover our comprehensive range of premium beauty and lash services designed to enhance your natural beauty.
+                Professional makeup services for every occasion—from party events to bridal makeovers, editorial shoots, and personalized makeup training.
               </p>
             </div>
 
