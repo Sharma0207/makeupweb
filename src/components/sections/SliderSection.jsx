@@ -11,10 +11,10 @@ import image3 from "../../assets/slidersection/image3.jpg";
 import image4 from "../../assets/slidersection/image4.jpg";
 import image5 from "../../assets/slidersection/image5.jpg";
 import image6 from "../../assets/slidersection/image6.JPG";
-import image7 from "../../assets/slidersection/image7.JPG";
-import image8 from "../../assets/slidersection/image8.JPG";
+import image7 from "../../assets/slidersection/image7.jpg";
+import image8 from "../../assets/slidersection/image8.jpg";
 import image9 from "../../assets/slidersection/image9.jpeg";
-import image10 from "../../assets/slidersection/image10.JPG";
+import image10 from "../../assets/slidersection/image10.jpg";
 
 const slides = [
   {

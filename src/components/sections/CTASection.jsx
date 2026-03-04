@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import cta from "../../assets/CTA.JPG";
+import cta from "../../assets/CTA.jpg";
 
 const CTASection = () => {
   const containerRef = useRef(null);
