@@ -6,9 +6,9 @@ const Navigation = () => {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const isPortfolio = location.pathname === "/portfolio";
-  const textColor = isPortfolio ? "text-black" : "text-white";
-  const logoColor = isPortfolio ? "text-black" : "text-white";
+  const isHome = location.pathname === "/";
+  const textColor = isHome ? "text-white" : "text-black";
+  const logoColor = isHome ? "text-white" : "text-black";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,9 +27,9 @@ const Navigation = () => {
       <motion.nav
         className={`fixed top-0 left-0 right-0 flex items-center justify-between px-4 md:px-16 py-5 md:py-8 z-20 transition-all duration-300 ${
           isScrolled
-            ? isPortfolio
-              ? "bg-white/50 backdrop-blur-md"
-              : "bg-black/30 backdrop-blur-md"
+            ? isHome
+              ? "bg-black/30 backdrop-blur-md"
+              : "bg-white/50 backdrop-blur-md"
             : ""
         }`}
         initial={{ opacity: 0 }}
@@ -93,13 +93,13 @@ const Navigation = () => {
           className="md:hidden flex flex-col gap-[5px] cursor-pointer z-50"
         >
           <span
-            className={`block w-5 h-[1.5px] transition-all duration-300 ${isPortfolio ? "bg-black" : "bg-white"} ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`block w-5 h-[1.5px] transition-all duration-300 ${isPortfolio ? "bg-black" : "bg-white"} ${isMobileMenuOpen ? "opacity-0" : ""}`}
+            className={`block w-5 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block w-3 h-[1.5px] transition-all duration-300 ${isPortfolio ? "bg-black" : "bg-white"} ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block w-3 h-[1.5px] transition-all duration-300 ${isHome ? "bg-white" : "bg-black"} ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </motion.nav>
@@ -108,7 +108,7 @@ const Navigation = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className={`fixed inset-0 z-40 pt-20 ${isPortfolio ? "bg-white" : "bg-black"}`}
+            className={`fixed inset-0 z-40 pt-20 ${isHome ? "bg-black" : "bg-white"}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -120,7 +120,7 @@ const Navigation = () => {
               className="absolute top-6 right-4 z-50 text-3xl"
             >
               <span
-                className={`${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
+                className={`${isHome ? "text-white" : "text-black"} hover:opacity-60 transition-opacity`}
               >
                 ✕
               </span>
@@ -129,25 +129,25 @@ const Navigation = () => {
             <div className="flex flex-col gap-8 px-6 py-8">
               <Link
                 to="/portfolio"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isHome ? "text-white" : "text-black"} hover:opacity-60 transition-opacity`}
               >
                 PORTFOLIO
               </Link>
               <Link
                 to="/about"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isHome ? "text-white" : "text-black"} hover:opacity-60 transition-opacity`}
               >
                 ABOUT
               </Link>
               <Link
                 to="/services"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isHome ? "text-white" : "text-black"} hover:opacity-60 transition-opacity`}
               >
                 SERVICES
               </Link>
               <Link
                 to="/contact"
-                className={`text-lg font-body tracking-widest ${isPortfolio ? "text-black" : "text-white"} hover:opacity-60 transition-opacity`}
+                className={`text-lg font-body tracking-widest ${isHome ? "text-white" : "text-black"} hover:opacity-60 transition-opacity`}
               >
                 CONTACT
               </Link>
