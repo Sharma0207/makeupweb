@@ -101,10 +101,10 @@ const Contact = () => {
                 </h3>
                 <div>
                   <a
-                    href="mailto:Ssha@GMAIL.COM"
+                    href="mailto:anchalas133@gmail.com"
                     className="text-white hover:text-pink-400 transition-colors duration-300 font-body text-sm md:text-base font-semibold break-all"
                   >
-                    Ssha@GMAIL.COM
+                    anchalas133@gmail.com
                   </a>
                 </div>
               </motion.div>
@@ -267,7 +267,7 @@ const Contact = () => {
               <span className="font-bold">Call:</span> +91 9110939727
             </p>
             <p className="text-white">
-              <span className="font-bold">Email:</span> Ssha@GMAIL.COM
+              <span className="font-bold">Email:</span> anchalas133@gmail.com
             </p>
           </div>
 
