@@ -10,6 +10,7 @@ import ExperienceSection from '../components/sections/ExperienceSection';
 import ProductMarqueeSection from '../components/sections/ProductMarqueeSection';
 import BeforeAfterSection from '../components/sections/BeforeAfterSection';
 import VideoGallerySection from '../components/sections/VideoGallerySection';
+import InstagramCTASection from '../components/sections/InstagramCTASection';
 import TestimonialsSection from '../components/sections/TestimonialsSection';
 import FAQSection from '../components/sections/FAQSection';
 import Footer from '../components/common/Footer';
@@ -25,6 +26,12 @@ const Home = () => {
 
       {/* Featured Work Slider */}
       <SliderSection />
+
+      {/* Video Gallery Section */}
+      <VideoGallerySection />
+
+      {/* Instagram CTA Section */}
+      <InstagramCTASection />
 
       {/* Marquee Section */}
       <MarqueeSection />
@@ -46,9 +53,6 @@ const Home = () => {
 
       {/* Before & After Section */}
       <BeforeAfterSection />
-
-      {/* Video Gallery Section */}
-      <VideoGallerySection />
 
       {/* Testimonials Section */}
       <TestimonialsSection />
