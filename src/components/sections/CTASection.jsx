@@ -23,6 +23,13 @@ const CTASection = () => {
     ["50%", "50%", "100%"],
   );
 
+  // Adjust vertical position on desktop to show face clearly
+  const imageY = useTransform(
+    scrollYProgress,
+    [0, 0.05, 0.28],
+    ["-50%", "-50%", "-45%"],
+  );
+
   // Phase 2: Card fades in and slides up (appears earlier)
   const cardOpacity = useTransform(
     scrollYProgress,
@@ -48,14 +55,13 @@ const CTASection = () => {
             left: "50%",
             top: "50%",
             x: "-50%",
-            y: "-50%",
+            y: imageY,
           }}
         >
           <img
             src={ctaImage}
             alt="Makeup styling"
-            className="w-full h-full object-cover md:object-center"
-            style={{ objectPosition: "50% 40%" }}
+            className="w-full h-full object-cover"
             loading="lazy"
           />
         </motion.div>
