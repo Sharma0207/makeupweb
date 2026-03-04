@@ -2,8 +2,8 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const CTASection = () => {
-  // High-quality portrait image with better face visibility
-  const ctaImage = "https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fe0f79e70476c48368bf2a669648180f0?format=webp&width=800&height=1200";
+  // High-quality portrait image with clear face visibility
+  const ctaImage = "https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2Fc77fae4c728f49a1b22707e4c073bec6?format=webp&width=800&height=1200";
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -54,7 +54,8 @@ const CTASection = () => {
           <img
             src={ctaImage}
             alt="Makeup styling"
-            className="w-full h-full object-cover md:object-left"
+            className="w-full h-full object-cover md:object-center"
+            style={{ objectPosition: "50% 40%" }}
             loading="lazy"
           />
         </motion.div>
