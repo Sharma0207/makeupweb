@@ -13,7 +13,30 @@ const videos = [
     description: "Complete bridal makeup transformation",
     url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
   },
-  // Add more videos here as needed
+  {
+    id: 2,
+    title: "Party Glam",
+    description: "Bold and vibrant evening makeup look",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+  },
+  {
+    id: 3,
+    title: "Everyday Elegance",
+    description: "Natural everyday makeup tutorial",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+  },
+  {
+    id: 4,
+    title: "Editorial Look",
+    description: "High fashion editorial makeup styling",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+  },
+  {
+    id: 5,
+    title: "Creative Special FX",
+    description: "Artistic and creative makeup transformation",
+    url: "https://cdn.builder.io/o/assets%2F37ad2b39330a492489c1a509e5a35af1%2F9e2f3b73587a4a668d1489b06ad332af?alt=media&token=963c741c-f70b-404c-9605-4bd1925c5926&apiKey=37ad2b39330a492489c1a509e5a35af1",
+  },
 ];
 
 const VideoGallerySection = () => {
