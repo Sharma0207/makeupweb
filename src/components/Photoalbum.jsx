@@ -47,6 +47,7 @@ export default function Photoalbum() {
                   src={slide}
                   alt={`Slide ${idx + 1}`}
                   className="max-h-full max-w-full object-contain rounded-md"
+                  loading="lazy"
                 />
               </div>
             </div>

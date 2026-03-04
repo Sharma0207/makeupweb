@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { generateBuilderSrcSet, getResponsiveSizes } from "../utils/imageOptimization";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -96,6 +97,9 @@ const About = () => {
                   alt="Anchala Sharma - Makeup Artist"
                   className="w-full h-auto object-cover"
                   style={{ aspectRatio: "3/4" }}
+                  loading="lazy"
+                  srcSet={generateBuilderSrcSet("https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F8e682a29c35e4ae39103d1f8e17e9f1a", [400, 600, 800, 1000])}
+                  sizes={getResponsiveSizes({ mobile: '100vw', tablet: '50vw', desktop: '45vw' })}
                 />
               </div>
             </motion.div>

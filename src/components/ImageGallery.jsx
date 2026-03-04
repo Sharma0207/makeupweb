@@ -78,6 +78,7 @@ const ImageGallery = () => {
             className="w-full h-full object-cover cursor-pointer filter grayscale-[80%] hover:filter-none hover:scale-[1.03] transition-all duration-300"
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.3 }}
+            loading="lazy"
           />
         ))}
       </div>
