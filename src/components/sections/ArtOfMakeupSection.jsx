@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { generateBuilderSrcSet, getResponsiveSizes } from "../../utils/imageOptimization";
 
 const ArtOfMakeupSection = () => {
   const sectionRef = useRef(null);
@@ -29,6 +30,9 @@ const ArtOfMakeupSection = () => {
           src="https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F1d5f396cd5d94da5a9854672ddeec6b7?format=webp&width=800&height=1200"
           alt="Art of Makeup"
           className="w-full h-full object-cover"
+          loading="lazy"
+          srcSet={generateBuilderSrcSet("https://cdn.builder.io/api/v1/image/assets%2F37ad2b39330a492489c1a509e5a35af1%2F1d5f396cd5d94da5a9854672ddeec6b7", [400, 800, 1200, 1600])}
+          sizes={getResponsiveSizes({ mobile: '100vw', tablet: '100vw', desktop: '100vw' })}
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/40" />

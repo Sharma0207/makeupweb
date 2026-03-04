@@ -39,6 +39,7 @@ const HeroSection2 = () => {
           src={mobile}
           alt="Art of Makeup"
           className="absolute inset-0 w-full h-full object-cover md:hidden"
+          loading="lazy"
         />
 
         {/* Desktop images - smooth cross-fade */}
@@ -49,6 +50,7 @@ const HeroSection2 = () => {
             alt="Art of Makeup - Image 1"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ opacity: image1Opacity }}
+            loading="lazy"
           />
 
           {/* Image 2 - fades in */}
@@ -57,6 +59,7 @@ const HeroSection2 = () => {
             alt="Art of Makeup - Image 2"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ opacity: image2Opacity }}
+            loading="lazy"
           />
         </div>
 

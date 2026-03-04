@@ -158,6 +158,7 @@ const InstagramModal = () => {
                   src={makeup26}
                   alt="Makeup By Anchala"
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
 
