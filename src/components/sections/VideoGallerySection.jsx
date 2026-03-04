@@ -54,6 +54,7 @@ const videos = [
 const VideoGallerySection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [loadingVideos, setLoadingVideos] = useState(new Set());
+  const [failedVideos, setFailedVideos] = useState(new Set());
   const swiperRef = useRef(null);
 
   const handleVideoLoadStart = (videoId) => {
@@ -66,6 +67,12 @@ const VideoGallerySection = () => {
       newSet.delete(videoId);
       return newSet;
     });
+  };
+
+  const handleVideoError = (videoId, error) => {
+    console.error(`Video ${videoId} failed to load:`, error);
+    setFailedVideos((prev) => new Set(prev).add(videoId));
+    handleVideoLoadComplete(videoId);
   };
 
   const handleSlideChange = useCallback((swiper) => {
@@ -129,20 +136,28 @@ const VideoGallerySection = () => {
                   )}
 
                   {/* Video element */}
-                  <video
-                    src={video.url}
-                    alt={video.title}
-                    className="w-full h-full object-cover bg-black transition-opacity duration-300"
-                    controls
-                    controlsList="nodownload"
-                    playsInline
-                    preload="metadata"
-                    crossOrigin="anonymous"
-                    muted={false}
-                    onLoadStart={() => handleVideoLoadStart(video.id)}
-                    onCanPlay={() => handleVideoLoadComplete(video.id)}
-                    onError={() => handleVideoLoadComplete(video.id)}
-                  />
+                  {!failedVideos.has(video.id) ? (
+                    <video
+                      src={video.url}
+                      alt={video.title}
+                      className="w-full h-full object-cover bg-black transition-opacity duration-300"
+                      controls
+                      controlsList="nodownload"
+                      playsInline
+                      preload="auto"
+                      muted={false}
+                      onLoadStart={() => handleVideoLoadStart(video.id)}
+                      onCanPlay={() => handleVideoLoadComplete(video.id)}
+                      onError={(e) => handleVideoError(video.id, e)}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <p className="text-lg font-semibold mb-2">Video Unavailable</p>
+                        <p className="text-sm text-white/60">Please contact support to view this video</p>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Gradient overlay for text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -194,8 +209,8 @@ const VideoGallerySection = () => {
         </div>
       </div>
 
-      {/* Overlay UI - Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 px-6 md:px-16 pb-8 md:pb-12">
+      {/* Overlay UI - Bottom (Desktop only) */}
+      <div className="hidden md:block absolute bottom-0 left-0 right-0 z-20 px-6 md:px-16 pb-8 md:pb-12">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Navigation buttons */}
           <div className="flex gap-4">
@@ -232,6 +247,41 @@ const VideoGallerySection = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Mobile Navigation - Overlay on video */}
+      <div className="md:hidden absolute inset-0 z-20 flex items-end justify-between px-4 pb-6 pointer-events-none">
+        <button
+          onClick={goPrev}
+          className="pointer-events-auto group relative px-4 py-3 bg-white/20 hover:bg-white/30 text-white rounded-full font-body text-xs tracking-[0.15em] uppercase transition-all duration-300 backdrop-blur-sm border border-white/30 hover:border-white/50"
+        >
+          <span className="relative z-10">← Prev</span>
+        </button>
+
+        {/* Mobile Pagination dots */}
+        <div className="flex gap-2 pointer-events-auto">
+          {videos.map((_, i) => (
+            <motion.button
+              key={i}
+              onClick={() => goTo(i)}
+              className={`transition-all duration-300 rounded-full ${
+                i === activeIndex
+                  ? "bg-white w-6 h-2"
+                  : "bg-white/40 hover:bg-white/60 w-2 h-2"
+              }`}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label={`Go to video ${i + 1}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={goNext}
+          className="pointer-events-auto group relative px-4 py-3 bg-white hover:bg-white/90 text-black rounded-full font-body text-xs tracking-[0.15em] uppercase transition-all duration-300 font-semibold"
+        >
+          <span className="relative z-10">Next →</span>
+        </button>
       </div>
 
       {/* Decorative elements */}

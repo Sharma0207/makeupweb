@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { generateBuilderSrcSet, getResponsiveSizes } from "../utils/imageOptimization";
+import Footer from "../components/common/Footer";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -237,8 +238,8 @@ const About = () => {
           </div>
         </section>
 
-        {/* Footer spacer */}
-        <div className="h-24" />
+        {/* Footer */}
+        <Footer />
       </main>
     </div>
   );
