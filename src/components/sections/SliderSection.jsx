@@ -3,67 +3,54 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-// Import all images from slidersection folder
-
-import image1 from "../../assets/slidersection/image1.JPG";
-import image2 from "../../assets/slidersection/image2.jpeg";
-import image3 from "../../assets/slidersection/image3.jpg";
-import image4 from "../../assets/slidersection/image4.jpg";
-import image5 from "../../assets/slidersection/image5.jpg";
-import image6 from "../../assets/slidersection/image6.JPG";
-import image7 from "../../assets/slidersection/image7.JPG";
-import image8 from "../../assets/slidersection/image8.JPG";
-import image9 from "../../assets/slidersection/image9.jpeg";
-import image10 from "../../assets/slidersection/image10.JPG";
-
 const slides = [
   {
-    image: image1,
+    image: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=600&fit=crop",
     name: "Golden Bride",
     category: "Bridal Makeup",
   },
   {
-    image: image8,
+    image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=500&h=600&fit=crop",
     name: "Royal Red Bride",
     category: "Bridal Makeup",
   },
   {
-    image: image7,
+    image: "https://images.unsplash.com/photo-1512207736139-c97394bf8c1e?w=500&h=600&fit=crop",
     name: "Professional Finish",
     category: "Editorial & Shoot",
   },
   {
-    image: image5,
+    image: "https://images.unsplash.com/photo-1599494653162-411aa46bbd59?w=500&h=600&fit=crop",
     name: "Timeless Beauty Look",
     category: "Party & Occasion",
   },
   {
-    image: image4,
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop",
     name: "Elegant Walima Glam",
     category: "Bridal Makeup",
   },
   {
-    image: image3,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop",
     name: "Signature Wedding Glam",
     category: "Bridal Makeup",
   },
   {
-    image: image2,
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=600&fit=crop",
     name: "Cinematic Bronze Editorial",
     category: "Editorial & Shoot",
   },
   {
-    image: image6,
+    image: "https://images.unsplash.com/photo-1470252649378-9c29740ff023?w=500&h=600&fit=crop",
     name: "Royal Glamour",
     category: "Bridal Makeup",
   },
   {
-    image: image9,
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=600&fit=crop",
     name: "Timeless Red Elegance",
     category: "Party & Occasion",
   },
   {
-    image: image10,
+    image: "https://images.unsplash.com/photo-1530268729831-4be0ea6c3681?w=500&h=600&fit=crop",
     name: "Creative Editorial",
     category: "Editorial & Shoot",
   },

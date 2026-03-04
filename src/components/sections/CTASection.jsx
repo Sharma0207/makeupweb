@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import cta from "../../assets/CTA.JPG";
+
+const ctaImage = "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1200&h=800&fit=crop";
 
 const CTASection = () => {
   const containerRef = useRef(null);
@@ -51,7 +52,7 @@ const CTASection = () => {
           }}
         >
           <img
-            src={cta}
+            src={ctaImage}
             alt="Makeup styling"
             className="w-full h-full object-cover"
           />

@@ -1,10 +1,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-// Placeholder images - replace with actual local images when ready
-import mobile from "../../assets/hero2/mobile1.jpg";
-import desktopImage1 from "../../assets/hero2/artofmakeupimage1.png";
-import desktopImage2 from "../../assets/hero2/artofmakeupimage2.png";
+const mobileImage = "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=500&h=800&fit=crop";
+const desktopImage1 = "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1200&h=800&fit=crop";
+const desktopImage2 = "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1200&h=800&fit=crop";
 
 const HeroSection2 = () => {
   const sectionRef = useRef(null);
@@ -36,7 +35,7 @@ const HeroSection2 = () => {
       >
         {/* Mobile image - single image */}
         <img
-          src={mobile}
+          src={mobileImage}
           alt="Art of Makeup"
           className="absolute inset-0 w-full h-full object-cover md:hidden"
         />
