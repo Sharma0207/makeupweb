@@ -71,6 +71,9 @@ const About = () => {
       </Helmet>
 
       <main className="pt-20">
+        {/* SEO: Visually hidden H1 for search engine ranking */}
+        <h1 className="sr-only">About Anchala Sharma – Best Professional Makeup Artist in Patna, Bihar</h1>
+
         {/* Hero intro section */}
         <section className="relative min-h-[80vh] flex items-center overflow-hidden px-6 md:px-12 lg:px-16">
           <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -137,7 +140,7 @@ const About = () => {
               <div className="relative overflow-hidden rounded-lg">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Fd555ff5d715946eea839700686a8452e%2F8e682a29c35e4ae39103d1f8e17e9f1a?format=webp&width=800&height=1200"
-                  alt="Anchala Sharma - Makeup Artist"
+                  alt="Anchala Sharma professional makeup artist in Patna Bihar"
                   className="w-full h-auto object-cover"
                   style={{ aspectRatio: "3/4" }}
                   loading="lazy"
@@ -159,7 +162,7 @@ const About = () => {
         {/* Heading statement */}
         <section className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
           <div className="max-w-6xl mx-auto">
-            <motion.h1
+            <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -169,7 +172,7 @@ const About = () => {
             >
               A makeup artist dedicated to bringing out the best in every person
               through creative expression and technical excellence.
-            </motion.h1>
+            </motion.h2>
           </div>
         </section>
 

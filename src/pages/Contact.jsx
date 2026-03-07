@@ -116,17 +116,18 @@ const Contact = () => {
 
       {/* Main Content */}
       <main className="pt-20 md:pt-32 px-6 md:px-12 pb-24">
-        {/* add in contact page */}
+        {/* SEO: Visually hidden H1 for search engine ranking */}
+        <h1 className="sr-only">Contact Best Makeup Artist in Patna – Book Bridal Makeup Appointment with Anchala Sharma</h1>
         <div className="max-w-[1800px] mx-auto">
           {/* Main Heading */}
-          <motion.h1
+          <motion.h2
             className="font-display text-5xl md:text-7xl lg:text-8xl font-light tracking-wider mb-16 md:mb-24 leading-tight"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Get In Touch
-          </motion.h1>
+          </motion.h2>
 
           {/* Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">

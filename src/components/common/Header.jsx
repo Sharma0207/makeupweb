@@ -27,9 +27,9 @@ const Header = () => {
         {/* Center - Logo */}
         <div className="absolute left-1/2 -translate-x-1/2 text-center">
           <Link to="/" className="group">
-            <h1 className="font-display text-xl md:text-2xl tracking-[0.2em] transition-all duration-500 group-hover:tracking-[0.25em]">
+            <span className="font-display text-xl md:text-2xl tracking-[0.2em] transition-all duration-500 group-hover:tracking-[0.25em]">
               ANCHALA <span className="italic font-normal">S</span>HARMA
-            </h1>
+            </span>
           </Link>
         </div>
 

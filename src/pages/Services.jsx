@@ -53,14 +53,16 @@ const Services = () => {
         />
       </Helmet>
 
+      {/* SEO: Visually hidden H1 for search engine ranking */}
+      <h1 className="sr-only">Professional Bridal Makeup & Wedding Makeup Services in Patna, Bihar by Anchala Sharma</h1>
+
       {/* Main Services Section */}
-      {/* add this in servoce section */}
       <main className="flex flex-col lg:flex-row min-h-screen pt-20">
         {/* Left: Hero Image - Sticky */}
         <div className="w-full lg:w-[48%] h-[50vh] lg:h-screen sticky top-0 overflow-hidden bg-black/5">
           <motion.img
             src={displayedImage}
-            alt="Makeup service"
+            alt="Professional bridal and party makeup service in Patna by Anchala Sharma"
             className={`w-full h-full object-cover transition-opacity duration-500 ease-in-out ${
               fading ? "opacity-0" : "opacity-100"
             }`}

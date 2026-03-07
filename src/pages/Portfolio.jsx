@@ -37,6 +37,9 @@ const Portfolio = () => {
         />
       </Helmet>
 
+      {/* SEO: Visually hidden H1 for search engine ranking */}
+      <h1 className="sr-only">Bridal & Wedding Makeup Portfolio – Best Makeup Artist in Patna, Bihar | Anchala Sharma</h1>
+
       <div className="flex flex-col w-full">
         <PortfolioHero
           activeFilter={activeFilter}

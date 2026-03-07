@@ -42,7 +42,7 @@ const HeroSection = () => {
             <motion.img
               key={currentIndex}
               src={heroImages[currentIndex]}
-              alt="Hero portrait"
+              alt="Anchala Sharma bridal makeup artist in Patna Bihar"
               className="absolute inset-0 w-full h-full object-cover object-top"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

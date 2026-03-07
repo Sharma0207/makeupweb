@@ -112,7 +112,7 @@ const Footer = () => {
         className="mx-auto max-w-7xl px-6 lg:px-16 py-6 text-center"
       >
         <p className="font-body text-xs text-white/50 uppercase tracking-[0.2em]">
-          © {currentYear} Makeup by Anchla &nbsp;
+          © {currentYear} Makeup by Anchala &nbsp;
           <span className="text-white/30">·</span>&nbsp;
           Site by{" "}
           <a

@@ -48,6 +48,9 @@ const Home = () => {
         />
       </Helmet>
 
+      {/* SEO: Visually hidden H1 for search engine ranking */}
+      <h1 className="sr-only">Best Makeup Artist in Patna, Bihar – Bridal Makeup, Wedding Makeup & Party Makeup by Anchala Sharma</h1>
+
       {/* Hero Section 2 - with image and parallax effects */}
       <HeroSection2 />
 

@@ -37,7 +37,7 @@ const HeroSection2 = () => {
         {/* Mobile image - single image */}
         <img
           src={mobile}
-          alt="Art of Makeup"
+          alt="Bridal makeup look by Anchala Sharma Patna"
           className="absolute inset-0 w-full h-full object-cover md:hidden"
           loading="lazy"
         />
@@ -47,7 +47,7 @@ const HeroSection2 = () => {
           {/* Image 1 - fades out */}
           <motion.img
             src={desktopImage1}
-            alt="Art of Makeup - Image 1"
+            alt="Wedding makeup transformation by Anchala Sharma"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ opacity: image1Opacity }}
             loading="lazy"
@@ -56,7 +56,7 @@ const HeroSection2 = () => {
           {/* Image 2 - fades in */}
           <motion.img
             src={desktopImage2}
-            alt="Art of Makeup - Image 2"
+            alt="Professional party makeup in Patna by Anchala"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ opacity: image2Opacity }}
             loading="lazy"
@@ -65,9 +65,9 @@ const HeroSection2 = () => {
 
         {/* Fixed text overlay - stays on both images */}
         <div className="relative z-10 text-center px-6">
-          <motion.h1 className="font-display text-2xl md:text-4xl tracking-widest text-white leading-tight drop-shadow-lg">
+          <motion.h2 className="font-display text-2xl md:text-4xl tracking-widest text-white leading-tight drop-shadow-lg">
             THE ART OF MAKEUP
-          </motion.h1>
+          </motion.h2>
         </div>
 
         {/* Scroll to explore - fixed on image */}
